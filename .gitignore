@@ -1,0 +1,56 @@
+# Spec Kit workflow execution context
+.specify/feature.json
+.specify/runs/
+.specify/state/
+.specify/scratch/
+.specify/tmp/
+.specify/extensions/*/local-config.yml
+specs/**/.scratch/
+specs/**/.tmp/
+
+# Agent and IDE execution context
+.agents/scratch/
+.agents/runs/
+.agents/logs/
+.agents/sessions/
+scratch/
+tmp/
+temp/
+.gemini/
+.claude/
+.copilot/
+.cursor/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Secrets, credentials, and local environment files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*.json
+*secret*.json
+
+# Python and Google App Engine runtime artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.gcloud/
+.appcfg_cookies
+*.appcfg_oauth2_tokens
+
+# Operating system files
+.DS_Store
+Thumbs.db
