@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DrLebedevContentStore",
+  "description": "Unified JSON schema for drlebedev.com professional data store",
+  "type": "object",
+  "required": [
+    "profile",
+    "experience",
+    "patents",
+    "education",
+    "skills"
+  ],
+  "properties": {
+    "profile": {
+      "type": "object",
+      "required": [
+        "fullName",
+        "title",
+        "headline",
+        "location",
+        "email",
+        "linkedInUrl"
+      ],
+      "properties": {
+        "fullName": { "type": "string" },
+        "title": { "type": "string" },
+        "headline": { "type": "string" },
+        "location": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "linkedInUrl": { "type": "string", "format": "uri" },
+        "phone": { "type": "string" },
+        "resumePdfUrl": { "type": "string" },
+        "summary": { "type": "string" }
+      }
+    },
+    "experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "company",
+          "role",
+          "startDate",
+          "isCurrent",
+          "metrics",
+          "highlights"
+        ],
+        "properties": {
+          "id": { "type": "string" },
+          "company": { "type": "string" },
+          "role": { "type": "string" },
+          "startDate": { "type": "string" },
+          "endDate": { "type": "string" },
+          "isCurrent": { "type": "boolean" },
+          "orgScope": { "type": "string" },
+          "metrics": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "highlights": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "technologies": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "patents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "patentNumber",
+          "title",
+          "grantDate",
+          "usptoUrl",
+          "abstract"
+        ],
+        "properties": {
+          "patentNumber": { "type": "string" },
+          "title": { "type": "string" },
+          "grantDate": { "type": "string" },
+          "usptoUrl": { "type": "string", "format": "uri" },
+          "abstract": { "type": "string" }
+        }
+      }
+    },
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "institution",
+          "degree",
+          "field",
+          "period"
+        ],
+        "properties": {
+          "id": { "type": "string" },
+          "institution": { "type": "string" },
+          "degree": { "type": "string" },
+          "field": { "type": "string" },
+          "period": { "type": "string" },
+          "honors": { "type": "string" },
+          "thesisTitle": { "type": "string" },
+          "thesisSummary": { "type": "string" }
+        }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "skills"
+        ],
+        "properties": {
+          "category": { "type": "string" },
+          "skills": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

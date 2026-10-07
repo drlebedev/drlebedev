@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Review: Dr. Kirill Lebedev Personal Brand (Stitch Official Prototype)</title>
+  <style>
+    :root {
+      --bg: #050b14;
+      --card-bg: #0d1a30;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --gold: #f59e0b;
+      --emerald: #10b981;
+      --sapphire: #60a5fa;
+      --border: rgba(245, 158, 11, 0.22);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 24px;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    header {
+      margin-bottom: 36px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    h1 {
+      font-size: 2.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      color: #f9fafb;
+    }
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+    .badge-bar {
+      margin-top: 14px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .source-truth-badge {
+      display: inline-block;
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border: 1px solid #f59e0b;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .approved-badge {
+      background: #064e3b;
+      color: #34d399;
+      border: 1px solid #059669;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .section-title {
+      font-size: 1.35rem;
+      margin: 40px 0 16px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #f9fafb;
+    }
+    .mock-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 40px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+    }
+    .mock-header {
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .mock-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #f9fafb;
+    }
+    .mock-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    .preview-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, #d97706, #f59e0b);
+      color: #050b14;
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .preview-btn:hover {
+      opacity: 0.9;
+    }
+    .mock-img-wrapper {
+      padding: 20px;
+      background: #03070d;
+      text-align: center;
+    }
+    .mock-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.8);
+    }
+    .notes-list {
+      padding: 18px 24px;
+      background: rgba(255,255,255,0.015);
+      border-top: 1px solid var(--border);
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+    .notes-list li {
+      margin-left: 20px;
+      margin-bottom: 6px;
+    }
+    .notes-list strong {
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Executive Design Prototype (Stitch Source of Truth)</h1>
+      <p class="subtitle">Dr. Kirill Lebedev Personal Brand (drlebedev.com) — Executive Scholar Dossier Design System</p>
+      <div class="badge-bar">
+        <span class="source-truth-badge">&#9670; Source of Truth: Stitch Design System &amp; Prototypes</span>
+        <span class="approved-badge">&#10003; Terminal UI: Approved</span>
+      </div>
+    </header>
+
+    <!-- 1. Stitch Dark Mode Prototype -->
+    <section>
+      <div class="section-title">
+        <span>1. Executive Interactive &amp; Motion Portfolio (Dark Mode)</span>
+        <span class="source-truth-badge">Stitch Official Prototype</span>
+      </div>
+      <div class="mock-card">
+        <div class="mock-header">
+          <div>
+            <div class="mock-title">Executive Scholar Dossier (Dark Mode)</div>
+            <div class="mock-desc">Deep obsidian navy (#050B14, #0D1A30), burnished prestige gold, textured triangle hatching, and mathematical systems rigor</div>
+          </div>
+          <a class="preview-btn" href="./stitch-dark.html" target="_blank">Open Interactive Prototype &rarr;</a>
+        </div>
+        <div class="mock-img-wrapper">
+          <img class="mock-img" src="./stitch-dark.png" alt="Stitch Executive Dark Portfolio Screen">
+        </div>
+        <div class="notes-list">
+          <ul>
+            <li><strong>Design System:</strong> Fully defined in <code>specs/001-personal-brand-website/proto/executive_prestige_mathematical_rigor/DESIGN.md</code>.</li>
+            <li><strong>Palette:</strong> Surface <code>#050B14</code>, Container <code>#0D1A30</code>, Prestige Gold <code>#F59E0B</code>, Telemetry Blue <code>#60A5FA</code>, Emerald <code>#10B981</code>.</li>
+            <li><strong>Geometry &amp; Hatching:</strong> Triangular hatch texture (<code>.triangle-hatch-gold</code>, <code>.triangle-hatch-emerald</code>) and mathematical grid lines.</li>
+            <li><strong>Full Content Integration:</strong> Executive headline, $1B+ Ads Line, $100M+ ARR, 70+ Org, complete career chronology (LinkedIn, Apple, Playtika), issued US patents, and interactive CRT CLI drawer.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Stitch Light Mode Prototype -->
+    <section>
+      <div class="section-title">
+        <span>2. Executive Light Editorial Portfolio (Light Mode)</span>
+        <span class="source-truth-badge">Stitch Official Prototype</span>
+      </div>
+      <div class="mock-card">
+        <div class="mock-header">
+          <div>
+            <div class="mock-title">Executive Scholar Dossier (Light Mode)</div>
+            <div class="mock-desc">Warm archival ivory paper aesthetic, deep botanical slate, prestige gold rules, and high-authority serif typography</div>
+          </div>
+          <a class="preview-btn" href="./stitch-light.html" target="_blank">Open Interactive Prototype &rarr;</a>
+        </div>
+        <div class="mock-img-wrapper">
+          <img class="mock-img" src="./stitch-light.png" alt="Stitch Executive Light Portfolio Screen">
+        </div>
+        <div class="notes-list">
+          <ul>
+            <li><strong>100% Structural Parity:</strong> Exact same 12-column architectural grid, section rhythm, and components as the dark mode.</li>
+            <li><strong>Warm Archival Canvas:</strong> Ivory/alabaster foundation with crisp dark typography and gold hairline accents.</li>
+            <li><strong>Interactive Code:</strong> Standalone live code ready in <code>specs/001-personal-brand-website/proto/dr._kirill_lebedev_phd_executive_light_editorial_portfolio/code.html</code>.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Web Console Terminal UI (Approved) -->
+    <section>
+      <div class="section-title">
+        <span>3. Web Console Terminal UI</span>
+        <span class="approved-badge">Approved by User</span>
+      </div>
+      <div class="mock-card">
+        <div class="mock-header">
+          <div>
+            <div class="mock-title">Terminal Console UI (Desktop)</div>
+            <div class="mock-desc">Retro-modern phosphor green &amp; cyan monospace terminal with ASCII header and interactive CLI prompt</div>
+          </div>
+        </div>
+        <div class="mock-img-wrapper">
+          <img class="mock-img" src="./terminal-cli.jpg" alt="Approved Web Console Terminal UI">
+        </div>
+        <div class="notes-list">
+          <ul>
+            <li>Supports interactive commands: <code>bio</code>, <code>exp</code>, <code>patents</code>, <code>edu</code>, <code>skills</code>, <code>contact</code>, <code>gui</code>, <code>clear</code>.</li>
+            <li>Includes touch-friendly mobile command chips at bottom.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
