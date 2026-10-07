@@ -111,7 +111,7 @@ The education entity details academic credentials and research contributions.
 | `degree` | String | Yes | Degree awarded (PhD, Bachelor of Engineering) |
 | `field` | String | Yes | Field of study (Computer Science) |
 | `period` | String | Yes | Year span of study |
-| `honors` | String | No | Academic distinctions (Diploma with Distinction) |
+| `honors` | String | No | Academic distinctions (Summa cum laude, GPA 5.0 / 5.0) |
 | `thesisTitle` | String | No | Title of doctoral dissertation |
 | `thesisSummary` | String | No | Core research contributions of dissertation |
 

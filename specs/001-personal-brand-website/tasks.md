@@ -36,7 +36,7 @@ Text explanation: The workflow executes vocabulary, message alignment, full text
 
 **Purpose**: Establish standardized vocabulary, align on strategic positioning pillars, generate complete text content, and obtain formal user sign-offs.
 
-- [ ] T001 [Step 0] Define standardized vocabulary, approved terminology, and disallowed buzzwords per ASD-STE100 in specs/001-personal-brand-website/content/vocabulary.md
+- [X] T001 [Step 0] Define standardized vocabulary, approved terminology, and disallowed buzzwords per ASD-STE100 in specs/001-personal-brand-website/content/vocabulary.md
 - [ ] T002 [Step 1] Formulate executive brand narrative and three core messaging pillars in specs/001-personal-brand-website/content/key-messages.md
 - [ ] T003 [Step 1] Secure user sign-off and approval on key messaging pillars in specs/001-personal-brand-website/content/key-messages.md
 - [ ] T004 [Step 2] Generate comprehensive full text copy for bio, work history, patents, education, and terminal commands in specs/001-personal-brand-website/content/full-content.md

@@ -54,3 +54,9 @@ htmlcov/
 # Operating system files
 .DS_Store
 Thumbs.db
+
+# Node.js and build output
+node_modules/
+dist/
+build/
+*.log
