@@ -1,6 +1,6 @@
 # Resume: Kirill Lebedev, PhD
 
-**Contact**: kirill@drlebedev.com | (415) 912-6320 | SF Bay Area, California  
+**Contact**: kirill@drlebedev.com | (415) 799-9995 | SF Bay Area  
 **LinkedIn**: [linkedin.com/in/drlebedev](https://www.linkedin.com/in/drlebedev/)  
 **Website**: [drlebedev.com](http://www.drlebedev.com)  
 **Reference Document**: [resume.pdf](file:///mnt/data/ws/drlebedev.com/specs/001-personal-brand-website/content/resume.pdf)

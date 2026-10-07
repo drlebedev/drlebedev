@@ -1,4 +1,4 @@
-# Standardized Vocabulary and Terminology: Dr. Kirill Lebedev Personal Brand
+# Standardized Vocabulary and Terminology: Kirill Lebedev, PhD Personal Brand
 
 **Feature**: `001-personal-brand-website`  
 **Date**: 2026-10-06  
@@ -9,7 +9,7 @@
 
 ## 1. Overview and Scope
 
-This document establishes the official terminology for the Dr. Kirill Lebedev brand portfolio.
+This document establishes the official terminology for the Kirill Lebedev, PhD brand portfolio.
 It defines approved terms across executive leadership, AdTech, AI/ML, architecture, and cloud platforms.
 It also lists disallowed buzzwords and defines strict formatting rules for all professional metrics.
 
@@ -85,11 +85,12 @@ This domain defines advertising business lines, monetization scale, measurement 
 | **Conversions API (CAPI)** | Server-to-server data integration for privacy-safe conversion tracking. | Enterprise conversion tracking infrastructure. |
 | **Multi-Touch Attribution (MTA)** | Fractional credit allocation across multi-channel customer journeys. | Algorithmic attribution methodology. |
 | **3rd-Party Incrementality ($500M)**| Strategic measurement integration with external measurement partners. | Scaled to $500M with Nielsen, Kantar, and Dynata. |
-| **B2B Company-Level Measurement** | Measurement framework evaluating enterprise business impact. | Spans $3B in spend; validated 2x incremental spend increase. |
+| **B2B Company-Level Measurement** | Measurement framework evaluating enterprise business impact. | Covers 25% of total ad revenue; validated 2x incremental spend increase. |
 | **Advertiser Recommendations ($20M ARR)** | AI-driven optimization system recommending budget and targeting adjustments. | Generates ~$20M ARR with 2–3x YoY sustained growth for 7 years. |
 | **Advertiser A/B Testing Platform** | Self-serve testing tool allowing advertisers to test campaign variants. | GA product improved advertiser ROI by average 40%. |
 | **Reach & Frequency Optimization** | Algorithmic media planning controlling unique exposure and repetition. | Core engine for Brand Advertising expansion. |
 | **Connected TV (CTV) & Live Events** | Streaming video advertising environments and live event inventory. | Market expansion unlocked by media planning tools. |
+| **Identity Graph & Pairwise Resolution** | Multi-source graph resolving pairwise entity links from 1st-party and 3rd-party signals. | Powers privacy-safe entity resolution and targeting at platform scale. |
 
 ---
 
@@ -197,7 +198,7 @@ All numbers, financial figures, patents, and credentials must use exact formats.
 - **Hundreds of Millions**: Format as `$100M ARR` (e.g., "AI Ads solution to $100M ARR in 6 months, 6x growth").
 - **Tens of Millions**: Format as `~$20M ARR` (e.g., "Advertiser recommendations generating ~$20M in incremental annual revenue").
 - **External Measurement Scale**: Format as `$500M` (e.g., "3rd-party incrementality scaled to $500M with Nielsen, Kantar, and Dynata").
-- **Total Spend Evaluated**: Format as `$3B in spend` (e.g., "B2B company-level measurement across $3B in spend").
+- **Incrementality Revenue Coverage**: Format as `25% of advertising revenue` (e.g., "B2B company-level measurement covering 25% of total advertising revenue, validating a 2x incremental spend increase for adopters").
 
 ### 9.2 Organizational, Governance and Operational Scale
 - **Current Executive Scope**: `40–70+ person full-stack organization`.
@@ -229,9 +230,9 @@ All numbers, financial figures, patents, and credentials must use exact formats.
 
 The website supports two presentation modes over one shared data store.
 
-| Functional Section | Executive Scholar Dossier (GUI) | Web Console Terminal (CLI) |
+| Functional Section | Executive Dossier (GUI) | Web Console Terminal (CLI) |
 |---|---|---|
-| **Executive Bio & Summary** | Executive Dossier / Scholar Bio | `bio` command |
+| **Executive Bio & Summary** | Executive Dossier / Executive Bio | `bio` command |
 | **Career Experience** | Leadership Journey / Timeline | `exp` command |
 | **Issued Patents** | Issued Patents / Intellectual Property | `patents` command |
 | **Education & Honors** | Doctoral Credentials / Academic Foundation | `edu` command |

@@ -1,0 +1,338 @@
+{
+  "$schema": "../../specs/001-personal-brand-website/contracts/content-schema.json",
+  "profile": {
+    "fullName": "Kirill Lebedev, PhD",
+    "title": "Director of Engineering | AI & Ads Measurement Leader",
+    "headline": "Bridging foundational computer science with massive commercial scale.",
+    "location": "SF Bay Area",
+    "email": "kirill@drlebedev.com",
+    "linkedInUrl": "https://www.linkedin.com/in/drlebedev/",
+    "phone": "+1 (415) 799-9995",
+    "resumePdfUrl": "/assets/drlebedev-resume.pdf",
+    "summary": "I lead engineering organizations that bridge foundational computer science with massive commercial scale. At LinkedIn, as Director of Engineering and overall Ads Measurement leader, I direct a 40–70+ person full-stack organization across Audience, Identity, Incrementality, Recommendations, and Measurement. I bootstrapped our Brand Advertising business line from zero to over $1B in annual revenue (~20% of total ad revenue) and served as Engineering DRI accelerating our AI Ads solution 6x to $100M ARR in six months. I hold a PhD in Computer Science, graduated Summa cum laude in Systems Engineering and Low-Level System and Software Design, served as university Professor and Deputy Vice-Rector, and hold three issued US patents."
+  },
+  "metricsSummary": [
+    {
+      "value": "$1B+",
+      "label": "Brand Advertising Business Line Bootstrap",
+      "subtext": "~20% of total LinkedIn ad revenue from 0 to 1"
+    },
+    {
+      "value": "$100M+ ARR",
+      "label": "AI Ads Solution Acceleration",
+      "subtext": "6x revenue growth achieved in six months (LinkedIn Accelerate)"
+    },
+    {
+      "value": "40–70+",
+      "label": "Scientific & Engineering Organization",
+      "subtext": "Full-stack scope across Audience, Identity, Incrementality, Recommendations & Measurement"
+    },
+    {
+      "value": "25%",
+      "label": "Total Ad Revenue Covered by Incremental Measurement",
+      "subtext": "Validated 2x incremental spend lift for enterprise adopters"
+    }
+  ],
+  "doctrine": [
+    {
+      "number": "01",
+      "title": "Bayesian Causal Inference & Account-Based Marketing",
+      "quote": "Heuristic last-touch models misallocate significant capital toward organic converters. In our systems, we isolate selection bias from true ad intervention using Bayesian incrementality and company-level audience splits.",
+      "narrative": "In advertising, correlation is not causation. If an advertiser was going to buy anyway, claiming attribution for that conversion is an illusion. I architected our incrementality systems to measure true economic causality across 25% of LinkedIn's total advertising revenue. By deploying Bayesian calculation, company-level audience splitting, and frequency-aware sampling, we prove an incremental impact for enterprise adopters with mathematical certainty."
+    },
+    {
+      "number": "02",
+      "title": "Differential Privacy & Privacy-Safe Signal Consolidation",
+      "quote": "In advertising, as in physics: if your measurement instruments distort what they observe, your conclusions are worthless. We extract signal from noise while preserving mathematical privacy.",
+      "narrative": "Regulatory barriers require cross-entity analytics without exposing raw personal data. I directed the comprehensive overhaul of LinkedIn's outcomes infrastructure, unifying Conversions API (CAPI) with privacy-safe cryptographic compute and differential privacy noise reduction in a new version of attribution platform. We ensure strict mathematical privacy guarantees without destroying the statistical utility of conversion signals."
+    },
+    {
+      "number": "03",
+      "title": "Scaled Identity Graph & Pairwise Multi-Source Resolution",
+      "quote": "An advertising platform is only as coherent as its understanding of identity. By resolving fragmented signals into a unified graph, you turn disconnected events into actionable enterprise intelligence.",
+      "narrative": "Modern measurement and targeting collapse when identity is fractured across devices, browsers, and enterprise ecosystems. I directed the architecture of our identity graph infrastructure that ingests and resolves pairwise observations from both 1st-party platform signals and 3rd-party data providers at scale. By reconciling deterministic and probabilistic link graphs while preserving strict privacy enclaves, our platform establishes high-fidelity entity resolution that powers accurate audience targeting, frequency control, and robust causal attribution across the entire monetization ecosystem."
+    }
+  ],
+  "experience": [
+    {
+      "id": "linkedin-director",
+      "company": "LinkedIn",
+      "role": "Director of Engineering",
+      "startDate": "2024-03",
+      "endDate": "Present",
+      "isCurrent": true,
+      "orgScope": "Overall Ads Measurement Leader • 40–70+ Person Full-Stack Organization",
+      "metrics": [
+        "$100M ARR reached in 6 months for AI Ads products (6x growth)",
+        "25% of total ad revenue covered with incremental measurement",
+        "2x incremental spend increase validated for enterprise adopters",
+        "40–70+ person organization across Audience, Identity, Incrementality, Recommendations, and Measurement"
+      ],
+      "highlights": [
+        "Own the complete business, technological, and talent strategy for a 40–70+ person organization spanning five core charters: Audience, Identity, Incrementality, Recommendations, and Measurement.",
+        "Served as Engineering DRI unifying Product, Design, Data Science, PMM, and Sales teams to build LinkedIn's AI-powered ads solution (LinkedIn Accelerate), accelerating revenue 6x to $100M ARR in six months.",
+        "Strategically revamped outcomes infrastructure, consolidating conversion signals, mitigating differential privacy noise, and ensuring global privacy compliance.",
+        "Championed B2B company-level measurement covering 25% of total ad revenue, validating 2x incremental spend increase for adopters through Bayesian calculation and company-level audience splitting.",
+        "Spearheaded organization-wide developer transformation, targeting a 2X engineering productivity boost through AI tooling.",
+        "Active multi-year member of company-wide hiring committees calibrating senior technical talent; represent engineering in corporate M&A technical evaluations."
+      ],
+      "technologies": [
+        "Artificial Intelligence",
+        "Bayesian Causal Inference",
+        "Differential Privacy",
+        "Identity Graph",
+        "Distributed Systems",
+        "Conversions API (CAPI)"
+      ]
+    },
+    {
+      "id": "linkedin-sr-mgr",
+      "company": "LinkedIn",
+      "role": "Senior Engineering Manager",
+      "startDate": "2020-09",
+      "endDate": "2024-03",
+      "isCurrent": false,
+      "orgScope": "Head of Engineering for Brand Advertising • Scaled Org from 18 to 40",
+      "metrics": [
+        "Bootstrapped Brand Advertising from ground up to $1B+ in annual revenue (~20% of total LinkedIn ad revenue)",
+        "Pioneered $500M 3rd-party incrementality measurement partnerships (Nielsen, Kantar, Dynata)",
+        "Scaled team from 18 to 40 engineers",
+        "Reduced bug introduction rate by 75% and alert volume by 70%"
+      ],
+      "highlights": [
+        "Championed a grassroots initiative that grew from an idea into an enterprise business generating over $1B annually (~20% of total LinkedIn ad revenue).",
+        "Led creation of end-to-end product suite: Reach & Frequency optimization, Brand Lift measurement (BLT), and modern Media Planning tools unlocking expansion into Connected TV (CTV) and live events.",
+        "Partnered with BizDev to pioneer privacy-first incrementality measurement with Nielsen, Kantar, and Dynata, scaling to $500M.",
+        "Partnered with FP&A to build company-wide revenue forecasting platform used daily for the CEO's executive report.",
+        "Created two-layer management structure, promoted key leads, and instituted engineering excellence initiatives cutting bug introduction by 75% and alert volume by 70%."
+      ],
+      "technologies": [
+        "Brand Lift (BLT)",
+        "Reach & Frequency Optimization",
+        "Connected TV (CTV)",
+        "Revenue Forecasting Engine",
+        "Java",
+        "Scala",
+        "Distributed Systems"
+      ]
+    },
+    {
+      "id": "linkedin-mgr",
+      "company": "LinkedIn",
+      "role": "Engineering Manager",
+      "startDate": "2018-07",
+      "endDate": "2020-09",
+      "isCurrent": false,
+      "orgScope": "Head of Engineering for Advertiser A/B Testing & Ads Forecasting • Scaled Team 5 to 15",
+      "metrics": [
+        "Improved advertiser ROI by an average of 40% via first experimentation platform",
+        "Generated ~$20M in incremental annual revenue with sustained 2–3x YoY adoption",
+        "Scaled team from 5 to 15 engineers"
+      ],
+      "highlights": [
+        "Architected and launched LinkedIn's first advertiser-facing experimentation platform, collaborating with Data Science, Product, and Design to deliver a GA product improving advertiser ROI by 40%.",
+        "Re-chartered forecasting team to build an AI-driven advertiser recommendations product, generating ~$20M ARR with sustained 2–3x YoY adoption over 7 years.",
+        "Mentored and promoted multiple engineers to the Staff Software Engineer level."
+      ],
+      "technologies": [
+        "A/B Testing Platform",
+        "Advertiser Recommendations",
+        "Time-Series Forecasting",
+        "Machine Learning",
+        "Distributed Systems"
+      ]
+    },
+    {
+      "id": "linkedin-staff",
+      "company": "LinkedIn",
+      "role": "Staff Software Engineer",
+      "startDate": "2016-01",
+      "endDate": "2018-07",
+      "isCurrent": false,
+      "orgScope": "Technical Lead for Platform Integrity & Content Review",
+      "metrics": [
+        "90% reduction in manual ad review workload",
+        "80% reduction in ad-related member escalations"
+      ],
+      "highlights": [
+        "Architected and delivered LinkedIn's first machine-learning system for automated ad content review.",
+        "Reduced manual review workload by 90% and cut ad-related member escalations by 80% through direct user feedback loops."
+      ],
+      "technologies": [
+        "Machine Learning",
+        "Locality-Sensitive Hashing",
+        "Automated Content Review",
+        "High-Throughput Scoring",
+        "Java"
+      ]
+    },
+    {
+      "id": "organizer-chief",
+      "company": "Organizer Inc.",
+      "role": "Chief Software Engineer",
+      "startDate": "2012-11",
+      "endDate": "2016-07",
+      "isCurrent": false,
+      "orgScope": "Real-Time Mobile & Cloud Canvassing Platform • 15+ Onsite & Offshore Engineers",
+      "metrics": [
+        "Guaranteed 24/7 mission-critical uptime during major US political campaigns",
+        "Reduced bug introduction rate by 80% through automated CI/CD"
+      ],
+      "highlights": [
+        "Directed end-to-end design and implementation of a real-time political canvassing system, including native Android and iOS mobile applications backed by Google Cloud Platform and BigQuery high-throughput analytics.",
+        "Guaranteed 24/7 reliability for high-profile political campaigns across the US, including the Ed Lee San Francisco mayoral campaign and the 2016 Hillary Clinton presidential campaign.",
+        "Managed engineering craft for 15+ engineers, cutting bug introduction rate by 80% through automated testing and continuous integration."
+      ],
+      "technologies": [
+        "Google Cloud Platform (GCP)",
+        "BigQuery",
+        "Google App Engine",
+        "Android",
+        "iOS",
+        "Real-Time Analytics"
+      ]
+    },
+    {
+      "id": "ipoint-cto",
+      "company": "i.Point LLC",
+      "role": "Co-Founder & Chief Technology Officer (CTO)",
+      "startDate": "2002-01",
+      "endDate": "2021-11",
+      "isCurrent": false,
+      "orgScope": "Enterprise Web & Mobile Software Company • Scaled to 20+ Engineers",
+      "metrics": [
+        "Delivered 10+ major enterprise client systems and portals",
+        "Scaled company engineering organization to 20+ engineers"
+      ],
+      "highlights": [
+        "Co-founded company, scaled engineering organization to 20+ professionals, established software development lifecycle, and managed technology budgeting and hardware provisioning.",
+        "Served as technical strategy lead and chief architect for the successful delivery of 10+ major enterprise client projects and web portals."
+      ],
+      "technologies": [
+        "Enterprise Web Architecture",
+        "Model-Driven Development",
+        "Relational Persistence",
+        "Mobile Applications"
+      ]
+    },
+    {
+      "id": "inrtu-faculty",
+      "company": "Irkutsk National Research Technical University",
+      "role": "Deputy Vice-Rector / Professor",
+      "startDate": "2004-09",
+      "endDate": "2012-01",
+      "isCurrent": false,
+      "orgScope": "University Internet Technology Center • Academic Faculty",
+      "metrics": [
+        "Deployed campus-wide online LMS supporting 300+ courses",
+        "Led 3 full redesigns and 2 infrastructure migrations of university web platforms"
+      ],
+      "highlights": [
+        "Managed University Internet Technology Center, overseeing team operations, deploying an online learning management system with 300+ courses, and leading university web platforms through 3 full redesigns and 2 infrastructure migrations.",
+        "Taught university undergraduate and graduate courses in Software Engineering, Operating Systems, and Statistics & Probability Theory."
+      ],
+      "technologies": [
+        "Learning Management Systems",
+        "Operating Systems",
+        "Software Engineering",
+        "Probability Theory & Statistics",
+        "Web Infrastructure"
+      ]
+    }
+  ],
+  "patents": [
+    {
+      "patentNumber": "US 11,968,185",
+      "title": "On-Device Experimentation",
+      "grantDate": "2024-04-23",
+      "usptoUrl": "https://patents.google.com/patent/US11968185",
+      "abstract": "A system and method for on-device experimentation allowing mobile and client devices to locally execute randomized treatment assignments, collect telemetry in cryptographic buffers, and perform privacy-preserving statistical inference directly on-device without server round-trips."
+    },
+    {
+      "patentNumber": "US 11,232,254",
+      "title": "Editing Mechanism for Electronic Content Items",
+      "grantDate": "2022-01-25",
+      "usptoUrl": "https://patents.google.com/patent/US11232254",
+      "abstract": "An algorithmic framework for dynamic multi-variant digital content composition and runtime structural validation, enabling dynamic layout adaptation and cryptographic content integrity across distributed surfaces."
+    },
+    {
+      "patentNumber": "US 11,102,534",
+      "title": "Content Item Similarity Detection",
+      "grantDate": "2021-08-24",
+      "usptoUrl": "https://patents.google.com/patent/US11102534",
+      "abstract": "A scalable similarity detection system using locality-sensitive hashing and high-dimensional vector embeddings capable of sub-millisecond similarity matching for automated content review and duplicate creative suppression at enterprise scale."
+    }
+  ],
+  "education": [
+    {
+      "id": "inrtu-phd",
+      "institution": "Irkutsk National Research Technical University (INRTU)",
+      "degree": "Doctor of Philosophy (PhD)",
+      "field": "Computer Science (Specialty 05.13.11: Mathematical and Software Support of Computing Machines, Complexes and Computer Networks)",
+      "period": "2004 – 2008",
+      "thesisTitle": "Development of a method and tools for creating applications for a website content management system",
+      "thesisSummary": "Developed a unified multilevel engineering framework for web content systems (i.Portal) integrating formal Model-Driven Architecture (MDA), automated code generation from UML/Eclipse EMF models, dynamic structured metadata persistence, and a modular multi-tenant kernel architecture deployed across regional university distance learning systems."
+    },
+    {
+      "id": "inrtu-meng",
+      "institution": "Irkutsk National Research Technical University (INRTU)",
+      "degree": "Master of Engineering / Degree in Computer Science",
+      "field": "Systems Engineering and Low-Level System and Software Design (Minor: Software Engineering)",
+      "period": "1999 – 2004",
+      "honors": "Summa cum laude (GPA 5.0 / 5.0)"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Executive Leadership, Strategy & Governance",
+      "skills": [
+        "Company-Wide Hiring Committee Member & Bar-Raiser",
+        "Engineering Organization Design & Scaling (40–70+ Full-Stack)",
+        "Two-Layer Management Hierarchies & Leadership Bench Development",
+        "AI-Native Developer Transformation (2X Productivity)",
+        "M&A Technical Due Diligence & Strategic Evaluations",
+        "Capital Planning, Business & Hardware Budgeting"
+      ]
+    },
+    {
+      "category": "AdTech Product Incubation & Monetization (0 to 1)",
+      "skills": [
+        "$1B+ Brand Advertising Business Line Bootstrap",
+        "AI Ads Acceleration to $100M ARR (LinkedIn Accelerate)",
+        "Bayesian Incrementality (25% Ad Revenue Coverage)",
+        "Differential Privacy & Conversions API (CAPI) Integration",
+        "3rd-Party Measurement Partnerships ($500M Nielsen, Kantar, Dynata)",
+        "Reach & Frequency Optimization & Media Planning",
+        "Connected TV (CTV) & Live Events Monetization",
+        "AI-Driven Advertiser Recommendations ($20M ARR)"
+      ]
+    },
+    {
+      "category": "Artificial Intelligence & Machine Learning",
+      "skills": [
+        "Causal Inference & Bayesian Econometric Modeling",
+        "Counterfactual Estimation & Frequency-Aware Sampling",
+        "Real-Time Recommendation Engines",
+        "ML Automated Content Review & Platform Integrity (90% Review Cut)",
+        "Locality-Sensitive Hashing & Vector Similarity Retrieval",
+        "Time-Series Revenue Forecasting Models"
+      ]
+    },
+    {
+      "category": "Distributed Systems & Cloud Architecture",
+      "skills": [
+        "Cloud-Native Distributed Systems (Microsoft Azure, GCP, App Engine)",
+        "High-Throughput Analytics & Data Pipelines (BigQuery)",
+        "Sub-10ms P99 Real-Time Event Processing & Telemetry",
+        "Identity Graph & Pairwise Multi-Source Resolution",
+        "Native Mobile Systems Engineering (Android, iOS)",
+        "Enterprise Backend Engineering (Java, Scala, Python)"
+      ]
+    }
+  ],
+  "terminalCommands": {
+    "help": "======================================================================\n  KIRILL LEBEDEV, PhD — INTERACTIVE WEB CONSOLE\n======================================================================\nAvailable commands:\n  help       - Display this list of available commands\n  bio        - View my executive background, personal credo, and story\n  exp        - View my leadership chronology and career milestones\n  patents    - List my issued United States patents and USPTO links\n  edu        - View my academic major, doctoral thesis, and honors\n  skills     - View my competency matrix across leadership, AI, and systems\n  contact    - View my verified direct communication channels\n  gui        - Switch display to the Executive Dossier graphical interface\n  clear      - Clear the console screen buffer\n======================================================================",
+    "bio": "======================================================================\n  EXECUTIVE DOSSIER: KIRILL LEBEDEV, PhD\n  Director of Engineering | AI & Ads Measurement Leader\n======================================================================\n\"I have always believed that real engineering breakthroughs do not\ncome from chasing trends. They come from understanding the fundamentals\nso deeply that you can see where reality is heading before anyone else.\nWhen you build from first principles—whether in mathematics, distributed\nsystems, or artificial intelligence—you don't just follow industry\nwaves. You build the bedrock they ride on.\"\n\nOverview:\n• Director of Engineering at LinkedIn; overall Ads Measurement leader.\n• Lead 40-70+ person full-stack organization across 5 core charters.\n• Bootstrapped Brand Advertising from 0 to 1 to $1B+ in annual revenue.\n• Engineering DRI for AI Ads products: 6x growth to $100M ARR in 6 mo.\n• Multi-year member of company-wide hiring committee.\n• PhD in Computer Science | Summa cum laude | 3 Issued US Patents.\n• Location: SF Bay Area\n======================================================================",
+    "contact": "======================================================================\n  VERIFIED DIRECT COMMUNICATION CHANNELS\n======================================================================\n• Direct Email : kirill@drlebedev.com\n• Phone        : +1 (415) 799-9995\n• LinkedIn     : https://www.linkedin.com/in/drlebedev/\n• Website      : https://www.drlebedev.com\n• Location     : SF Bay Area\n• Resume PDF   : Download available via GUI header and /assets/\n• PhD Thesis   : Download available via /assets/download/thesis.pdf\n======================================================================"
+  }
+}
