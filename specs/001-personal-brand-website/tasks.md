@@ -99,21 +99,21 @@ Text explanation: The workflow executes vocabulary, message alignment, full text
 
 ### Tests for User Story 1
 
-- [ ] T024 [P] [US1] Create unit tests for ExecutiveHeader component in tests/unit/ExecutiveHeader.test.tsx
-- [ ] T025 [P] [US1] Create unit tests for ExperienceTimeline component in tests/unit/ExperienceTimeline.test.tsx
-- [ ] T026 [P] [US1] Create unit tests for HeroMetrics and PatentsSection components in tests/unit/ExecutiveSections.test.tsx
+- [X] T024 [P] [US1] Create unit tests for ExecutiveHeader component in tests/unit/ExecutiveHeader.test.tsx
+- [X] T025 [P] [US1] Create unit tests for ExperienceTimeline component in tests/unit/ExperienceTimeline.test.tsx
+- [X] T026 [P] [US1] Create unit tests for HeroMetrics and PatentsSection components in tests/unit/ExecutiveSections.test.tsx
 
 ### Implementation for User Story 1
 
-- [ ] T027 [P] [US1] Implement ExecutiveHeader with name, title, status beacon, and interface mode toggle button in src/components/executive/ExecutiveHeader.tsx
-- [ ] T028 [P] [US1] Implement HeroMetrics displaying $1B+ Ads line bootstrap, $100M+ ARR, and 70+ org scale in src/components/executive/HeroMetrics.tsx
-- [ ] T029 [P] [US1] Implement ExecutiveBio presenting doctoral background, portrait image, and leadership summary in src/components/executive/ExecutiveBio.tsx
-- [ ] T030 [US1] Implement ExperienceTimeline rendering career roles with metrics and expandable highlights in src/components/executive/ExperienceTimeline.tsx
-- [ ] T031 [P] [US1] Implement PatentsSection rendering issued US patents (11,968,185; 11,232,254; 11,102,534) and USPTO links in src/components/executive/PatentsSection.tsx
-- [ ] T032 [P] [US1] Implement EducationSection displaying INRTU PhD, thesis title, and academic honors in src/components/executive/EducationSection.tsx
-- [ ] T033 [P] [US1] Implement SkillsSection categorizing executive, distributed systems, and AI competencies in src/components/executive/SkillsSection.tsx
-- [ ] T034 [US1] Implement ExecutiveFooter with direct mailto link, LinkedIn URL, and resume PDF download in src/components/executive/ExecutiveFooter.tsx
-- [ ] T035 [US1] Assemble complete ExecutiveView component integrating all graphical dossier sections in src/components/executive/ExecutiveView.tsx
+- [X] T027 [P] [US1] Implement ExecutiveHeader with name, title, status beacon, and interface mode toggle button in src/components/executive/ExecutiveHeader.tsx
+- [X] T028 [P] [US1] Implement HeroMetrics displaying $1B+ Ads line bootstrap, $100M+ ARR, and 70+ org scale in src/components/executive/HeroMetrics.tsx
+- [X] T029 [P] [US1] Implement ExecutiveBio presenting doctoral background, portrait image, and leadership summary in src/components/executive/ExecutiveBio.tsx
+- [X] T030 [US1] Implement ExperienceTimeline rendering career roles with metrics and expandable highlights in src/components/executive/ExperienceTimeline.tsx
+- [X] T031 [P] [US1] Implement PatentsSection rendering issued US patents (11,968,185; 11,232,254; 11,102,534) and USPTO links in src/components/executive/PatentsSection.tsx
+- [X] T032 [P] [US1] Implement EducationSection displaying INRTU PhD, thesis title, and academic honors in src/components/executive/EducationSection.tsx
+- [X] T033 [P] [US1] Implement SkillsSection categorizing executive, distributed systems, and AI competencies in src/components/executive/SkillsSection.tsx
+- [X] T034 [US1] Implement ExecutiveFooter with direct mailto link, LinkedIn URL, and resume PDF download in src/components/executive/ExecutiveFooter.tsx
+- [X] T035 [US1] Assemble complete ExecutiveView component integrating all graphical dossier sections in src/components/executive/ExecutiveView.tsx
 
 **Checkpoint**: User Story 1 is functional. The website can serve as an independent executive MVP.
 
