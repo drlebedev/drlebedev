@@ -80,12 +80,12 @@ Text explanation: The workflow executes vocabulary, message alignment, full text
 
 **⚠️ CRITICAL**: You must complete this phase before starting any user story implementation.
 
-- [ ] T018 Configure Tailwind design system tokens, fonts, and color extensions per mocks/DESIGN.md in tailwind.config.ts
-- [ ] T019 Implement global styles, typography imports, and textured triangle hatch utility classes in src/index.css
-- [ ] T020 [P] Define TypeScript content interfaces for Profile, ExperienceItem, PatentItem, EducationItem, SkillDomain, and UserSessionState per data-model.md with verbatim field constraints in src/types/content.ts
-- [ ] T021 [P] Validate shared content fixture against JSON schema in tests/unit/contentSchema.test.ts
-- [ ] T022 Implement ViewModeContext and useViewMode hook managing activeMode ('editorial' | 'terminal') and activeTheme ('system' | 'light' | 'dark') in src/context/ViewModeContext.tsx
-- [ ] T023 [P] Implement unit tests for ViewModeContext mode and theme persistence in tests/unit/ViewModeContext.test.tsx
+- [X] T018 Configure Tailwind design system tokens, fonts, and color extensions per mocks/DESIGN.md in tailwind.config.ts
+- [X] T019 Implement global styles, typography imports, and textured triangle hatch utility classes in src/index.css
+- [X] T020 [P] Define TypeScript content interfaces for Profile, ExperienceItem, PatentItem, EducationItem, SkillDomain, and UserSessionState per data-model.md with verbatim field constraints in src/types/content.ts
+- [X] T021 [P] Validate shared content fixture against JSON schema in tests/unit/contentSchema.test.ts
+- [X] T022 Implement ViewModeContext and useViewMode hook managing activeMode ('editorial' | 'terminal') and activeTheme ('system' | 'light' | 'dark') in src/context/ViewModeContext.tsx
+- [X] T023 [P] Implement unit tests for ViewModeContext mode and theme persistence in tests/unit/ViewModeContext.test.tsx
 
 **Checkpoint**: Foundation ready. User story implementation can now begin.
 
