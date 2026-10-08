@@ -66,11 +66,11 @@ Text explanation: The workflow executes vocabulary, message alignment, full text
 
 **Purpose**: Project initialization, tool configuration, and development dependencies.
 
-- [ ] T013 Initialize React 18 TypeScript application with Vite in package.json
-- [ ] T014 [P] Install core runtime dependencies (react, react-dom, lucide-react, clsx, tailwindcss) in package.json
-- [ ] T015 [P] Install development and testing dependencies (typescript, vite, vitest, playwright, @types/react) in package.json
-- [ ] T016 [P] Configure TypeScript compiler options in tsconfig.json
-- [ ] T017 [P] Configure Vite build bundler and preview settings in vite.config.ts
+- [X] T013 Initialize React 18 TypeScript application with Vite in package.json
+- [X] T014 [P] Install core runtime dependencies (react, react-dom, lucide-react, clsx, tailwindcss) in package.json
+- [X] T015 [P] Install development and testing dependencies (typescript, vite, vitest, playwright, @types/react) in package.json
+- [X] T016 [P] Configure TypeScript compiler options in tsconfig.json
+- [X] T017 [P] Configure Vite build bundler and preview settings in vite.config.ts
 
 ---
 
