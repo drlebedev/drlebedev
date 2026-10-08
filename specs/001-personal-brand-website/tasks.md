@@ -51,12 +51,12 @@ Text explanation: The workflow executes vocabulary, message alignment, full text
 
 **Purpose**: Generate graphical assets, review visual quality, and validate marketing efficacy across target actor personas.
 
-- [ ] T007 [Step 4] Generate professional executive portrait and avatar image assets in public/assets/images/portrait.webp
-- [ ] T008 [P] [Step 4] Generate technical architecture schematics and patent diagrams in public/assets/diagrams/attribution-architecture.svg
-- [ ] T009 [P] [Step 4] Generate Open Graph / Twitter Card social share banner (1200x630) and site favicon in public/assets/images/og-card.png
-- [ ] T010 [Step 5] Assemble visual asset gallery and secure user sign-off on imagery in specs/001-personal-brand-website/mocks/asset-review.html
-- [ ] T011 [Step 6] Conduct multi-actor marketing validation across 5 personas (Executive Recruiter, VC, Tech Peer, Speaker Scout, AI Crawler) in specs/001-personal-brand-website/content/multi-actor-validation.md
-- [ ] T012 [Step 6] Secure user sign-off and approval on multi-actor marketing validation report in specs/001-personal-brand-website/content/multi-actor-validation.md
+- [X] T007 [Step 4] Generate professional executive portrait and avatar image assets in public/assets/images/portrait.webp
+- [X] T008 [P] [Step 4] Generate technical architecture schematics and patent diagrams in public/assets/diagrams/attribution-architecture.svg
+- [X] T009 [P] [Step 4] Generate Open Graph / Twitter Card social share banner (1200x630) and site favicon in public/assets/images/og-card.png
+- [X] T010 [Step 5] Assemble visual asset gallery and secure user sign-off on imagery in specs/001-personal-brand-website/mocks/asset-review.html
+- [X] T011 [Step 6] Conduct multi-actor marketing validation across 5 personas (Executive Recruiter, VC, Tech Peer, Speaker Scout, AI Crawler) in specs/001-personal-brand-website/content/multi-actor-validation.md
+- [X] T012 [Step 6] Secure user sign-off and approval on multi-actor marketing validation report in specs/001-personal-brand-website/content/multi-actor-validation.md
 
 **Checkpoint**: Visual assets and marketing validation are complete and signed off. Technical build can proceed.
 

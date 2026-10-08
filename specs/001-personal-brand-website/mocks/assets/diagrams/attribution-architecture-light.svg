@@ -1,0 +1,221 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%" style="background-color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif;">
+  <defs>
+    <!-- Light Gradients -->
+    <linearGradient id="lightBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+
+    <linearGradient id="lightTechPanelBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+
+    <linearGradient id="lightBizPanelBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#fffbeb"/>
+    </linearGradient>
+
+    <linearGradient id="lightPatentCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+
+    <linearGradient id="goldGlowLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d97706" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#2563eb" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <pattern id="dotGridLight" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#64748b" fill-opacity="0.12"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect x="0" y="0" width="1200" height="675" fill="url(#lightBg)"/>
+  <rect x="0" y="0" width="1200" height="675" fill="url(#dotGridLight)"/>
+  <rect x="15" y="15" width="1170" height="645" rx="8" fill="none" stroke="#d97706" stroke-opacity="0.3" stroke-width="1"/>
+
+  <!-- Corner Reticles -->
+  <path d="M 22 36 L 22 22 L 36 22" fill="none" stroke="#d97706" stroke-width="1.5" />
+  <path d="M 1178 36 L 1178 22 L 1164 22" fill="none" stroke="#d97706" stroke-width="1.5" />
+  <path d="M 22 639 L 22 653 L 36 653" fill="none" stroke="#d97706" stroke-width="1.5" />
+  <path d="M 1178 639 L 1178 653 L 1164 653" fill="none" stroke="#d97706" stroke-width="1.5" />
+
+  <!-- ==================== HEADER ==================== -->
+  <g id="header-light">
+    <text x="45" y="44" fill="#b45309" font-size="11" font-weight="700" letter-spacing="2">DR. KIRILL LEBEDEV, PHD • SYSTEMS ARCHITECTURE &amp; MONETIZATION PORTFOLIO</text>
+    <text x="45" y="72" fill="#0f172a" font-size="20" font-weight="600" letter-spacing="-0.3">Enterprise Ads Measurement, AI Monetization &amp; Patent Architecture</text>
+    <text x="45" y="91" fill="#475569" font-size="11">Executive technology portfolio across outcomes measurement, 0-to-1 product lines, and USPTO issued algorithmic patents.</text>
+    
+    <!-- Top-Right Metric Chips -->
+    <g transform="translate(670, 36)">
+      <rect x="0" y="0" width="115" height="24" rx="4" fill="#eff6ff" stroke="#93c5fd" stroke-width="1"/>
+      <text x="8" y="16" fill="#1d4ed8" font-size="10" font-weight="700">$1B+ BRAND ADS</text>
+
+      <rect x="122" y="0" width="115" height="24" rx="4" fill="#fef3c7" stroke="#fcd34d" stroke-width="1"/>
+      <text x="130" y="16" fill="#b45309" font-size="10" font-weight="700">$100M ARR (AI ADS)</text>
+
+      <rect x="244" y="0" width="115" height="24" rx="4" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1"/>
+      <text x="252" y="16" fill="#047857" font-size="10" font-weight="700">70+ ENG ORG</text>
+
+      <rect x="366" y="0" width="118" height="24" rx="4" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1"/>
+      <text x="373" y="16" fill="#6d28d9" font-size="10" font-weight="700">3 US PATENTS</text>
+    </g>
+
+    <line x1="45" y1="104" x2="1155" y2="104" stroke="url(#goldGlowLight)" stroke-width="1" />
+  </g>
+
+  <!-- ==================== MAIN CONTENT: 2 DUAL PANELS ==================== -->
+  
+  <!-- LEFT PANEL: CORE TECHNICAL & MEASUREMENT ARCHITECTURE (Pure Engineering & Systems) -->
+  <g id="panel-technical-light">
+    <!-- Panel Enclosure -->
+    <rect x="45" y="115" width="545" height="375" rx="8" fill="url(#lightTechPanelBg)" stroke="#cbd5e1" stroke-width="1"/>
+    
+    <!-- Panel Title Ribbon -->
+    <path d="M 45 115 L 590 115 L 590 152 L 45 152 Z" fill="#e0f2fe"/>
+    <text x="60" y="138" fill="#0369a1" font-size="11" font-weight="700" letter-spacing="1.5">SECTION 01: CORE TECHNICAL &amp; MEASUREMENT ARCHITECTURE</text>
+    <text x="500" y="138" fill="#64748b" font-size="10" font-weight="600">DEEP TECH</text>
+
+    <!-- Item 1.1: Outcomes Infrastructure -->
+    <g transform="translate(60, 162)">
+      <circle cx="8" cy="10" r="4" fill="#0284c7"/>
+      <text x="22" y="14" fill="#0f172a" font-size="13" font-weight="600">Outcomes &amp; Differential Privacy Infrastructure</text>
+      <text x="22" y="30" fill="#475569" font-size="11">Signal consolidation across conversion sources • Privacy-safe attribution pipelines</text>
+      <text x="22" y="44" fill="#0284c7" font-size="10" font-weight="600">Differential privacy noise reduction • Regulatory compliance (ATT &amp; DMA)</text>
+    </g>
+    <line x1="60" y1="216" x2="575" y2="216" stroke="#e2e8f0" stroke-width="1"/>
+
+    <!-- Item 1.2: Bayesian Incrementality & Lift -->
+    <g transform="translate(60, 224)">
+      <circle cx="8" cy="10" r="4" fill="#0284c7"/>
+      <text x="22" y="14" fill="#0f172a" font-size="13" font-weight="600">Bayesian Incrementality &amp; Lift Testing Platform</text>
+      <text x="22" y="30" fill="#475569" font-size="11">Bayesian calculation engine • Company-level audience split ($3B spend validation)</text>
+      <text x="22" y="44" fill="#059669" font-size="10" font-weight="600">Conversion Lift testing • Brand Lift (BLT) • Frequency-aware sampling</text>
+    </g>
+    <line x1="60" y1="278" x2="575" y2="278" stroke="#e2e8f0" stroke-width="1"/>
+
+    <!-- Item 1.3: Experimentation Engine -->
+    <g transform="translate(60, 286)">
+      <circle cx="8" cy="10" r="4" fill="#0284c7"/>
+      <text x="22" y="14" fill="#0f172a" font-size="13" font-weight="600">Advertiser-Facing A/B Testing &amp; Experimentation Engine</text>
+      <text x="22" y="30" fill="#475569" font-size="11">Company's first advertiser experimentation platform built from 0 to 1</text>
+      <text x="22" y="44" fill="#b45309" font-size="10" font-weight="600">+40% average advertiser ROI improvement • Foundation for US Patent 11,968,185</text>
+    </g>
+    <line x1="60" y1="340" x2="575" y2="340" stroke="#e2e8f0" stroke-width="1"/>
+
+    <!-- Item 1.4: ML Integrity & 3rd-Party Verification -->
+    <g transform="translate(60, 348)">
+      <circle cx="8" cy="10" r="4" fill="#0284c7"/>
+      <text x="22" y="14" fill="#0f172a" font-size="13" font-weight="600">Automated Content Review ML &amp; 3rd-Party Verification</text>
+      <text x="22" y="30" fill="#475569" font-size="11">ML system for ad content review (-90% manual review, -80% escalations)</text>
+      <text x="22" y="44" fill="#4338ca" font-size="10" font-weight="600">Nielsen, Kantar, Dynata $500M ecosystem • Tied to US Patent 11,102,534</text>
+    </g>
+
+    <!-- Technical Footer Bar -->
+    <rect x="55" y="458" width="525" height="22" rx="4" fill="#f1f5f9"/>
+    <text x="65" y="473" fill="#0369a1" font-size="10" font-weight="600">TECHNICAL CHARTER: Outcomes Infrastructure, Causal Inference &amp; ML Integrity</text>
+  </g>
+
+  <!-- RIGHT PANEL: MONETIZATION PRODUCTS & ORGANIZATIONAL SCALE (Business & Leadership) -->
+  <g id="panel-monetization-light">
+    <!-- Panel Enclosure -->
+    <rect x="610" y="115" width="545" height="375" rx="8" fill="url(#lightBizPanelBg)" stroke="#fcd34d" stroke-width="1"/>
+    
+    <!-- Panel Title Ribbon -->
+    <path d="M 610 115 L 1155 115 L 1155 152 L 610 152 Z" fill="#fef3c7"/>
+    <text x="625" y="138" fill="#92400e" font-size="11" font-weight="700" letter-spacing="1.5">SECTION 02: MONETIZATION PRODUCTS &amp; ORGANIZATIONAL SCALE</text>
+    <text x="1075" y="138" fill="#64748b" font-size="10" font-weight="600">P&amp;L SCALE</text>
+
+    <!-- Item 2.1: Accelerate AI Suite -->
+    <g transform="translate(625, 162)">
+      <circle cx="8" cy="10" r="4" fill="#d97706"/>
+      <text x="22" y="14" fill="#0f172a" font-size="13" font-weight="600">LinkedIn Accelerate AI Product Suite ($100M ARR)</text>
+      <text x="22" y="30" fill="#475569" font-size="11">Engineering DRI unifying Product, Design, DS, PMM, and Sales tiger team</text>
+      <text x="22" y="44" fill="#059669" font-size="10" font-weight="600">AI targeting, creative generation &amp; measurement • 6x growth to $100M ARR in 6 mo</text>
+    </g>
+    <line x1="625" y1="216" x2="1140" y2="216" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Item 2.2: Brand Advertising Bootstrap -->
+    <g transform="translate(625, 224)">
+      <circle cx="8" cy="10" r="4" fill="#d97706"/>
+      <text x="22" y="14" fill="#0f172a" font-size="13" font-weight="600">Brand Advertising Business Line ($1B+ Annual Revenue)</text>
+      <text x="22" y="30" fill="#475569" font-size="11">Bootstrapped grassroots initiative from 0 to 1 into &gt;$1B annual revenue (~20% total)</text>
+      <text x="22" y="44" fill="#b45309" font-size="10" font-weight="600">AI Reach &amp; Frequency optimization • Media Planning tools for CTV &amp; live events</text>
+    </g>
+    <line x1="625" y1="278" x2="1140" y2="278" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Item 2.3: AI Recommendations & Forecasting -->
+    <g transform="translate(625, 286)">
+      <circle cx="8" cy="10" r="4" fill="#d97706"/>
+      <text x="22" y="14" fill="#0f172a" font-size="13" font-weight="600">AI Advertiser Recommendations &amp; CEO Forecasting Platform</text>
+      <text x="22" y="30" fill="#475569" font-size="11">Automated campaign optimization engine generating ~$20M incremental ARR</text>
+      <text x="22" y="44" fill="#0284c7" font-size="10" font-weight="600">2–3x YoY adoption growth for 7 yrs • FP&amp;A platform powering CEO daily report</text>
+    </g>
+    <line x1="625" y1="340" x2="1140" y2="340" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Item 2.4: Organization Leadership & Governance -->
+    <g transform="translate(625, 348)">
+      <circle cx="8" cy="10" r="4" fill="#d97706"/>
+      <text x="22" y="14" fill="#0f172a" font-size="13" font-weight="600">Executive Organization &amp; Engineering Governance</text>
+      <text x="22" y="30" fill="#475569" font-size="11">40–70+ person full-stack org (Audience, Identity, Incrementality, Recs, Meas.)</text>
+      <text x="22" y="44" fill="#4338ca" font-size="10" font-weight="600">Multi-year company-wide hiring committee • Bug introduction reduced by 75%</text>
+    </g>
+
+    <!-- Business Footer Bar -->
+    <rect x="620" y="458" width="525" height="22" rx="4" fill="#fef9c3"/>
+    <text x="630" y="473" fill="#92400e" font-size="10" font-weight="600">EXECUTIVE CHARTER: 0-to-1 Incubation, Revenue Scaling &amp; Cross-Functional DRI</text>
+  </g>
+
+  <!-- ==================== BOTTOM SECTION: USPTO ISSUED PATENTS ==================== -->
+  <g id="section-patents-light">
+    <!-- Patent Outer Enclosure -->
+    <rect x="45" y="506" width="1110" height="148" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+    
+    <!-- Patent Header Ribbon -->
+    <path d="M 45 506 L 1155 506 L 1155 534 L 45 534 Z" fill="#e2e8f0"/>
+    <text x="60" y="525" fill="#334155" font-size="11" font-weight="700" letter-spacing="1.5">UNITED STATES PATENT &amp; TRADEMARK OFFICE (USPTO) • ISSUED ALGORITHMIC PATENTS</text>
+    <text x="1005" y="525" fill="#64748b" font-size="10" font-weight="600">100% VERIFIED PORTFOLIO</text>
+
+    <!-- Patent Card 1: US 11,968,185 -->
+    <g id="patent-1-light" transform="translate(58, 542)">
+      <rect x="0" y="0" width="345" height="102" rx="6" fill="url(#lightPatentCardBg)" stroke="#bfdbfe" stroke-width="1"/>
+      <rect x="12" y="10" width="125" height="18" rx="3" fill="#eff6ff" stroke="#93c5fd" stroke-width="0.8"/>
+      <text x="18" y="23" fill="#1d4ed8" font-size="10" font-weight="700">US PATENT 11,968,185</text>
+      <text x="260" y="23" fill="#64748b" font-size="9" font-weight="600">ISSUED APR 2024</text>
+      
+      <text x="12" y="46" fill="#0f172a" font-size="12" font-weight="600">On-Device Experimentation</text>
+      <text x="12" y="62" fill="#475569" font-size="10">Randomized treatment assignment &amp; experimentation</text>
+      <text x="12" y="76" fill="#475569" font-size="10">executed on client devices with local telemetry buffering.</text>
+      <text x="12" y="93" fill="#0284c7" font-size="9" font-weight="600">MAPPED SYSTEM: Advertiser A/B Testing &amp; Lift Testing</text>
+    </g>
+
+    <!-- Patent Card 2: US 11,232,254 -->
+    <g id="patent-2-light" transform="translate(427, 542)">
+      <rect x="0" y="0" width="345" height="102" rx="6" fill="url(#lightPatentCardBg)" stroke="#fde68a" stroke-width="1"/>
+      <rect x="12" y="10" width="125" height="18" rx="3" fill="#fffbeb" stroke="#fcd34d" stroke-width="0.8"/>
+      <text x="18" y="23" fill="#b45309" font-size="10" font-weight="700">US PATENT 11,232,254</text>
+      <text x="260" y="23" fill="#64748b" font-size="9" font-weight="600">ISSUED JAN 2022</text>
+      
+      <text x="12" y="46" fill="#0f172a" font-size="12" font-weight="600">Editing Mechanism for Content Items</text>
+      <text x="12" y="62" fill="#475569" font-size="10">Algorithmic mechanism enabling dynamic editing,</text>
+      <text x="12" y="76" fill="#475569" font-size="10">composition, and adaptation of electronic content items.</text>
+      <text x="12" y="93" fill="#b45309" font-size="9" font-weight="600">MAPPED SYSTEM: Creative Generation &amp; Media Planning</text>
+    </g>
+
+    <!-- Patent Card 3: US 11,102,534 -->
+    <g id="patent-3-light" transform="translate(797, 542)">
+      <rect x="0" y="0" width="345" height="102" rx="6" fill="url(#lightPatentCardBg)" stroke="#bfdbfe" stroke-width="1"/>
+      <rect x="12" y="10" width="125" height="18" rx="3" fill="#eff6ff" stroke="#93c5fd" stroke-width="0.8"/>
+      <text x="18" y="23" fill="#1d4ed8" font-size="10" font-weight="700">US PATENT 11,102,534</text>
+      <text x="260" y="23" fill="#64748b" font-size="9" font-weight="600">ISSUED AUG 2021</text>
+      
+      <text x="12" y="46" fill="#0f172a" font-size="12" font-weight="600">Content Item Similarity Detection</text>
+      <text x="12" y="62" fill="#475569" font-size="10">Scalable detection of similar electronic content items</text>
+      <text x="12" y="76" fill="#475569" font-size="10">for automated content review and ad integrity.</text>
+      <text x="12" y="93" fill="#0284c7" font-size="9" font-weight="600">MAPPED SYSTEM: Automated ML Ad Content Review</text>
+    </g>
+  </g>
+</svg>
