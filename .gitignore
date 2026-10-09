@@ -60,5 +60,7 @@ node_modules/
 dist/
 build/
 *.log
+test-results/
+playwright-report/
 
 specs/001-personal-brand-website/photo/

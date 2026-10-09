@@ -1,0 +1,27 @@
+runtime: python311
+instance_class: F1
+
+handlers:
+  # Static fingerprinted assets (JS, CSS, hashed media)
+  - url: /assets
+    static_dir: dist/assets
+    http_headers:
+      Cache-Control: "public, max-age=31536000, immutable"
+      X-Content-Type-Options: nosniff
+
+  # Static root discovery and agent crawler files
+  - url: /(robots\.txt|sitemap\.xml|llms\.txt|favicon\.ico)
+    static_files: dist/\1
+    upload: dist/(robots\.txt|sitemap\.xml|llms.txt|favicon\.ico)
+    http_headers:
+      Cache-Control: "public, max-age=86400"
+
+  # Single Page Application fallback for HTML
+  - url: /.*
+    static_files: dist/index.html
+    upload: dist/index.html
+    http_headers:
+      Cache-Control: "public, max-age=0, must-revalidate"
+      X-Frame-Options: DENY
+      X-Content-Type-Options: nosniff
+      Referrer-Policy: strict-origin-when-cross-origin
