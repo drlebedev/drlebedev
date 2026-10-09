@@ -216,7 +216,7 @@ export const TerminalView: React.FC<TerminalViewProps> = ({ onSwitchGui }) => {
             {/* Initial System Summary */}
             <div className="flex flex-col gap-1 text-[11px] sm:text-xs shrink-0">
               <div className="text-gold-light">
-                kirill@silicon-valley:~$ <span className="text-on-surface">dossier.summary</span>
+                kirill@silicon-valley:~$ <span className="text-on-surface">profile.summary</span>
               </div>
               <div className="text-emerald-accent pl-2 sm:pl-3 space-y-0.5">
                 <div>• ROLE: Director of Engineering &amp; Head of Ads Measurement @ LinkedIn</div>

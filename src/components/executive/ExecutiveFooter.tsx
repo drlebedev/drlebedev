@@ -90,7 +90,7 @@ export const ExecutiveFooter: React.FC<ExecutiveFooterProps> = ({ profile }) => 
                   Executive Resume (PDF)
                 </h3>
                 <p className="font-sans text-xs text-on-surface-variant">
-                  Download comprehensive dossier detailing $1B+ metrics and organizational scale.
+                  Download comprehensive resume detailing $1B+ metrics and organizational scale.
                 </p>
               </div>
               <div className="pt-4 mt-4 border-t border-gold-prestige/15">
