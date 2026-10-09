@@ -2,6 +2,7 @@ import React from 'react';
 import { Profile, MetricSummaryItem } from '../../types/content';
 import { HeroMetrics } from './HeroMetrics';
 import { BookOpen, Mail, Award, CheckCircle2 } from 'lucide-react';
+import { getAssetUrl } from '../../utils/assets';
 
 export interface ExecutiveBioProps {
   profile: Profile;
@@ -146,14 +147,14 @@ export const ExecutiveBio: React.FC<ExecutiveBioProps> = ({ profile, metrics }) 
               {/* Portrait Image Card */}
               <div className="relative z-20 w-[280px] sm:w-[320px] aspect-[4/5] rounded overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.95)] border-2 border-gold-prestige/60 group">
                 <img
-                  src="/assets/images/portrait.webp"
+                  src={getAssetUrl('assets/images/portrait.webp')}
                   alt={`Portrait of ${profile.fullName}`}
                   className="w-full h-full object-cover object-center group-hover:scale-[1.03] transition-transform duration-700 ease-out"
                   onError={(e) => {
                     // Fallback to portrait-dark.webp or dark asset
                     const target = e.currentTarget;
                     if (!target.src.includes('portrait-dark.webp')) {
-                      target.src = '/assets/images/portrait-dark.webp';
+                      target.src = getAssetUrl('assets/images/portrait-dark.webp');
                     }
                   }}
                 />

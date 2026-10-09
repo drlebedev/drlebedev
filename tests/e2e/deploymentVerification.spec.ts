@@ -34,19 +34,34 @@ test.describe('Deployment & Multi-Target Discovery Verification (Playwright)', (
       expect(text).toContain('Sitemap: https://drlebedev.com/sitemap.xml');
     });
 
-    test('serves key brand visual assets', async ({ request }) => {
+    test('serves key brand visual assets with valid content and headers', async ({ request }) => {
+      // Favicon SVG
       const faviconRes = await request.get('favicon.svg');
       expect(faviconRes.status()).toBe(200);
+      const faviconBody = await faviconRes.body();
+      expect(faviconBody.length).toBeGreaterThan(500);
 
+      // Open Graph Share Card (1200x630)
       const ogCardRes = await request.get('assets/images/og-card.png');
       expect(ogCardRes.status()).toBe(200);
+      const ogCardBody = await ogCardRes.body();
+      expect(ogCardBody.length).toBeGreaterThan(10000);
 
+      // Executive Portrait WebP
       const portraitRes = await request.get('assets/images/portrait.webp');
       expect(portraitRes.status()).toBe(200);
+      const portraitBody = await portraitRes.body();
+      expect(portraitBody.length).toBeGreaterThan(10000);
+
+      // Architecture Blueprint SVG
+      const diagramRes = await request.get('assets/diagrams/attribution-architecture.svg');
+      expect(diagramRes.status()).toBe(200);
+      const diagramBody = await diagramRes.body();
+      expect(diagramBody.length).toBeGreaterThan(5000);
     });
   });
 
-  test.describe('2. Live HTML Shell, Metadata & Schema.org JSON-LD', () => {
+  test.describe('2. Live HTML Shell, Metadata & Visual Rendering', () => {
     test('renders page title and executive headline', async ({ page }) => {
       await page.goto('./');
       await expect(page).toHaveTitle(/Kirill Lebedev/i);
@@ -54,6 +69,39 @@ test.describe('Deployment & Multi-Target Discovery Verification (Playwright)', (
       // Verify lead bio or title is present in DOM
       const nameHeading = page.locator('h1, h2').filter({ hasText: 'Kirill Lebedev' }).first();
       await expect(nameHeading).toBeVisible();
+    });
+
+    test('renders and successfully loads the executive portrait image', async ({ page }) => {
+      await page.goto('./');
+
+      // Locate the executive portrait in ExecutiveBio
+      const portraitImg = page.locator('img[alt*="Portrait of Kirill Lebedev"]').first();
+      await expect(portraitImg).toBeVisible();
+
+      // Ensure the src does NOT use a broken absolute path without base URL
+      const src = await portraitImg.getAttribute('src');
+      expect(src).toBeTruthy();
+      expect(src).toContain('portrait.webp');
+
+      // Verify the image was successfully loaded by the browser (not broken / 404)
+      const isLoaded = await portraitImg.evaluate((img: HTMLImageElement) => {
+        return img.complete && img.naturalWidth > 0 && img.naturalHeight > 0;
+      });
+      expect(isLoaded).toBe(true);
+    });
+
+    test('renders and successfully loads the architecture diagram image', async ({ page }) => {
+      await page.goto('./');
+
+      // Locate the architecture diagram in ExecutiveView
+      const diagramImg = page.locator('img[alt*="Executive Technology Portfolio"]').first();
+      await expect(diagramImg).toBeVisible();
+
+      // Verify the diagram image was successfully loaded by the browser
+      const isLoaded = await diagramImg.evaluate((img: HTMLImageElement) => {
+        return img.complete && img.naturalWidth > 0 && img.naturalHeight > 0;
+      });
+      expect(isLoaded).toBe(true);
     });
 
     test('injects Open Graph and Twitter card meta tags', async ({ page }) => {
