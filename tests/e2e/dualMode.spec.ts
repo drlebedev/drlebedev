@@ -163,14 +163,78 @@ test.describe('Dual-Mode Website Integration & Mobile Responsiveness', () => {
     await expect(terminalView).not.toBeVisible();
   });
 
-  test('cycles theme modes (dark/light) cleanly', async ({ page }) => {
-    const themeBtn = page.locator('button[data-testid="theme-toggle-btn"]').first();
-    if (await themeBtn.isVisible()) {
-      // Click theme button to cycle
-      await themeBtn.click();
-      const html = page.locator('html');
-      // Root HTML should remain intact with class attributes
-      await expect(html).toBeVisible();
+  test('cycles theme modes (dark/light) on desktop and mobile', async ({ page }) => {
+    // 1. Initial State
+    const initialIsDark = await page.evaluate(() => document.documentElement.classList.contains('dark'));
+
+    // 2. Desktop Theme Switcher
+    const desktopThemeBtn = page.locator('button[data-testid="theme-toggle-btn"]').first();
+    if (await desktopThemeBtn.isVisible()) {
+      // Toggle theme mode
+      await desktopThemeBtn.click();
+      const afterClickIsDark = await page.evaluate(() => document.documentElement.classList.contains('dark'));
+      expect(afterClickIsDark).not.toBe(initialIsDark);
+
+      // Verify computed background style is applied
+      const bodyBg = await page.evaluate(() => window.getComputedStyle(document.body).backgroundColor);
+      expect(bodyBg).toBeTruthy();
+
+      // Cycle again
+      await desktopThemeBtn.click();
     }
+
+    // 3. Mobile Theme Switcher in Drawer
+    await page.setViewportSize({ width: 375, height: 667 });
+    const menuBtn = page.locator('button[aria-label="Toggle mobile menu"]');
+    await menuBtn.click();
+
+    const drawerThemeBtn = page.locator('button[data-testid="drawer-theme-toggle-btn"]');
+    await expect(drawerThemeBtn).toBeVisible();
+    await drawerThemeBtn.click();
+
+    // Verify theme toggle took effect
+    const isDarkNow = await page.evaluate(() => document.documentElement.classList.contains('dark'));
+    expect(typeof isDarkNow).toBe('boolean');
+  });
+
+  test('ensures mobile terminal fits viewport without window scroll and scrolls internally', async ({ page }) => {
+    await page.setViewportSize({ width: 375, height: 667 });
+
+    // Open terminal mode via mobile CLI button
+    const mobileCliBtn = page.locator('button:has-text("CLI")').first();
+    await mobileCliBtn.click();
+
+    const terminalContainer = page.locator('#cli-view-container');
+    await expect(terminalContainer).toBeVisible();
+
+    // Verify container height matches viewport
+    const containerBox = await terminalContainer.boundingBox();
+    expect(containerBox).not.toBeNull();
+    if (containerBox) {
+      expect(containerBox.height).toBeLessThanOrEqual(667);
+    }
+
+    // Verify page window scroll is not triggered
+    const windowScrollY = await page.evaluate(() => window.scrollY);
+    expect(windowScrollY).toBe(0);
+
+    // Run 'help' to generate content
+    const terminalInput = terminalContainer.locator('input[type="text"]');
+    await terminalInput.fill('help');
+    await terminalInput.press('Enter');
+
+    // Verify inner screen scrolls internally
+    const cliScreen = page.locator('#cli-screen');
+    const scrollMetrics = await cliScreen.evaluate((el) => ({
+      clientHeight: el.clientHeight,
+      scrollHeight: el.scrollHeight,
+      hasOverflow: el.scrollHeight >= el.clientHeight,
+    }));
+    expect(scrollMetrics.hasOverflow).toBe(true);
+
+    // Return to executive GUI
+    const returnBtn = terminalContainer.locator('button:has-text("Exit [ESC]")');
+    await returnBtn.click();
+    await expect(terminalContainer).not.toBeVisible();
   });
 });

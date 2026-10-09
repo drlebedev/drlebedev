@@ -25,17 +25,26 @@ export const TerminalView: React.FC<TerminalViewProps> = ({ onSwitchGui }) => {
   const [historyIndex, setHistoryIndex] = useState<number | null>(null);
 
   const inputRef = useRef<HTMLInputElement>(null);
-  const screenEndRef = useRef<HTMLDivElement>(null);
+  const screenRef = useRef<HTMLDivElement>(null);
 
-  // Auto-focus input on mount
+  // Auto-focus input and lock body scroll on mount
   useEffect(() => {
     inputRef.current?.focus();
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    if (typeof window.scrollTo === 'function') {
+      window.scrollTo(0, 0);
+    }
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
   }, []);
 
-  // Auto-scroll when log changes
+  // Auto-scroll screen container smoothly when log changes without outer page jumping
   useEffect(() => {
-    if (typeof screenEndRef.current?.scrollIntoView === 'function') {
-      screenEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    if (screenRef.current) {
+      screenRef.current.scrollTop = screenRef.current.scrollHeight;
     }
   }, [log]);
 
@@ -148,19 +157,19 @@ export const TerminalView: React.FC<TerminalViewProps> = ({ onSwitchGui }) => {
       id="cli-view-container"
       role="region"
       aria-label="Web Console Terminal"
-      className="fixed inset-0 z-50 bg-[#050b14]/95 pt-16 sm:pt-20 pb-4 px-3 sm:px-6 overflow-y-auto crt-overlay backdrop-blur-md flex flex-col"
+      className="fixed inset-0 z-50 bg-[#050b14]/95 overflow-hidden crt-overlay backdrop-blur-md flex flex-col p-0 sm:p-4 sm:pt-16 sm:pb-6"
       onClick={handleFocusInput}
     >
-      <div className="max-w-5xl w-full mx-auto flex flex-col flex-1 justify-between">
+      <div className="max-w-5xl w-full mx-auto flex flex-col flex-1 h-full max-h-[100dvh] sm:max-h-[92vh] sm:my-auto overflow-hidden">
         {/* Terminal Chassis */}
-        <div className="w-full bg-[#081324] border border-emerald-accent/40 rounded-lg shadow-[0_0_50px_rgba(59,130,246,0.18)] overflow-hidden flex flex-col flex-1">
+        <div className="w-full bg-[#081324] border-0 sm:border border-emerald-accent/40 rounded-none sm:rounded-lg shadow-[0_0_50px_rgba(59,130,246,0.18)] overflow-hidden flex flex-col flex-1 min-h-0">
           {/* Terminal Window Header Bar */}
-          <div className="bg-[#0f1f3a] px-4 py-3 border-b border-emerald-accent/30 flex items-center justify-between select-none">
+          <div className="bg-[#0f1f3a] px-3 py-2 sm:px-4 sm:py-3 border-b border-emerald-accent/30 flex items-center justify-between select-none shrink-0">
             <div className="flex items-center gap-2">
               <span className="w-3 h-3 rounded-full bg-red-500/80 inline-block" />
               <span className="w-3 h-3 rounded-full bg-yellow-500/80 inline-block" />
               <span className="w-3 h-3 rounded-full bg-emerald-accent inline-block" />
-              <span className="font-mono text-xs text-gold-light font-medium ml-2">
+              <span className="font-mono text-[11px] sm:text-xs text-gold-light font-medium ml-1 sm:ml-2 truncate max-w-[200px] sm:max-w-none">
                 kirill@silicon-valley:~ (CAUSAL-V8.4-PROD)
               </span>
             </div>
@@ -170,39 +179,46 @@ export const TerminalView: React.FC<TerminalViewProps> = ({ onSwitchGui }) => {
                 e.stopPropagation();
                 handleReturnToGui();
               }}
-              className="px-3 py-1 bg-emerald-accent/20 hover:bg-emerald-accent hover:text-[#050b14] text-emerald-accent font-mono text-xs rounded transition-all flex items-center gap-1.5 focus:outline-none focus:ring-1 focus:ring-emerald-accent cursor-pointer"
+              className="px-2.5 py-1 bg-emerald-accent/20 hover:bg-emerald-accent hover:text-[#050b14] text-emerald-accent font-mono text-[11px] sm:text-xs rounded transition-all flex items-center gap-1.5 focus:outline-none focus:ring-1 focus:ring-emerald-accent cursor-pointer shrink-0"
             >
-              <span>Return to Executive View [ESC]</span>
+              <span className="hidden sm:inline">Return to Executive View [ESC]</span>
+              <span className="sm:hidden">Exit [ESC]</span>
             </button>
           </div>
 
           {/* Terminal Phosphor Screen */}
           <div
             id="cli-screen"
-            className="p-4 sm:p-6 font-mono text-xs sm:text-sm flex flex-col gap-3 overflow-y-auto flex-1 text-on-surface bg-[#081324]"
+            ref={screenRef}
+            className="p-3 sm:p-6 font-mono text-xs sm:text-sm flex flex-col gap-2.5 sm:gap-3 overflow-y-auto flex-1 min-h-0 overscroll-contain text-on-surface bg-[#081324]"
           >
             {/* System Banner */}
             <div className="text-gold-light font-mono text-[11px] sm:text-xs leading-tight select-none">
-              ********************************************************************************<br />
-              &nbsp;KIRILL LEBEDEV, PhD • APPLIED SYSTEMS WORKSTATION<br />
-              &nbsp;Respected AI Executive Leader • Scaled Distributed Systems &amp; Causal AI<br />
-              ********************************************************************************
+              <div className="hidden sm:block">
+                ********************************************************************************<br />
+                &nbsp;KIRILL LEBEDEV, PhD • APPLIED SYSTEMS WORKSTATION<br />
+                &nbsp;Respected AI Executive Leader • Scaled Distributed Systems &amp; Causal AI<br />
+                ********************************************************************************
+              </div>
+              <div className="sm:hidden font-semibold border-b border-gold-prestige/30 pb-1 text-gold-light">
+                [KIRILL LEBEDEV, PhD • APPLIED WORKSTATION v8.4]
+              </div>
             </div>
-            <div className="text-on-surface-variant text-[11px] select-none">
+            <div className="text-on-surface-variant text-[10px] sm:text-[11px] select-none">
               Active Node: SF Bay Area • Enclave: SMPC-Privacy-Guaranteed (ε ≤ 0.48)
             </div>
 
             {/* Quick Command Chips Toolbar */}
-            <div onClick={(e) => e.stopPropagation()}>
+            <div onClick={(e) => e.stopPropagation()} className="shrink-0">
               <CommandChips onSelectCommand={executeCommandString} />
             </div>
 
             {/* Initial System Summary */}
-            <div className="flex flex-col gap-1 text-xs">
+            <div className="flex flex-col gap-1 text-[11px] sm:text-xs shrink-0">
               <div className="text-gold-light">
                 kirill@silicon-valley:~$ <span className="text-on-surface">dossier.summary</span>
               </div>
-              <div className="text-emerald-accent pl-3 space-y-0.5">
+              <div className="text-emerald-accent pl-2 sm:pl-3 space-y-0.5">
                 <div>• ROLE: Director of Engineering &amp; Head of Ads Measurement @ LinkedIn</div>
                 <div>• SCOPE: $1.0B+ Measurement Line | 70+ Person Scientific Org | 8 Engineering Managers</div>
                 <div>• CORE IP: US Patents 11,968,185 | 11,232,254 | 11,102,534</div>
@@ -211,7 +227,7 @@ export const TerminalView: React.FC<TerminalViewProps> = ({ onSwitchGui }) => {
             </div>
 
             {/* Command Log */}
-            <div id="cli-log" className="flex flex-col gap-4 mt-2">
+            <div id="cli-log" className="flex flex-col gap-3 sm:gap-4 mt-1 sm:mt-2">
               {log.map((item) => (
                 <div key={item.id} className="space-y-1">
                   <div className="text-gold-light">
@@ -231,10 +247,10 @@ export const TerminalView: React.FC<TerminalViewProps> = ({ onSwitchGui }) => {
             {/* Interactive Prompt Input */}
             <form
               onSubmit={handleSubmit}
-              className="flex items-center gap-2 text-gold-light pt-4 mt-auto border-t border-white/5"
+              className="flex items-center gap-2 text-gold-light pt-2 sm:pt-4 mt-auto border-t border-white/10 shrink-0 sticky bottom-0 bg-[#081324]/95 backdrop-blur-sm py-2"
               onClick={(e) => e.stopPropagation()}
             >
-              <span className="shrink-0 text-emerald-accent font-semibold select-none">
+              <span className="shrink-0 text-emerald-accent font-semibold select-none text-[11px] sm:text-xs">
                 kirill@silicon-valley:~$
               </span>
               <input
@@ -253,11 +269,10 @@ export const TerminalView: React.FC<TerminalViewProps> = ({ onSwitchGui }) => {
               />
               <span className="w-2 h-4 bg-emerald-accent animate-pulse inline-block" aria-hidden="true" />
             </form>
-            <div ref={screenEndRef} />
           </div>
 
           {/* Terminal Footer Bar */}
-          <div className="bg-[#050b14] px-4 py-2 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-on-surface-variant select-none">
+          <div className="bg-[#050b14] px-3 py-1.5 sm:px-4 sm:py-2 border-t border-white/10 flex items-center justify-between text-[10px] sm:text-[11px] font-mono text-on-surface-variant select-none shrink-0">
             <div>CRYPTO_ENCLAVE: DIFFERENTIAL_PRIVACY_VERIFIED</div>
             <div>PRESS &apos;ESC&apos; OR TYPE &apos;gui&apos; TO EXIT</div>
           </div>

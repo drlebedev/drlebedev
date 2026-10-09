@@ -6,30 +6,151 @@
 
 @layer base {
   :root {
-    color-scheme: dark light;
+    color-scheme: light dark;
+    --bg-forest-noir: #f8fafc;
+    --bg-forest-deep: #f1f5f9;
+    --bg-forest-emerald: #e2e8f0;
+    --text-on-surface: #0f172a;
+    --text-on-surface-variant: #475569;
+    --border-gold: rgba(180, 83, 9, 0.22);
+    --gold-accent: #b45309;
+    --gold-display: #d97706;
+    --emerald-display: #0284c7;
+  }
+
+  html.dark {
+    color-scheme: dark;
+    --bg-forest-noir: #050b14;
+    --bg-forest-deep: #0a1322;
+    --bg-forest-emerald: #0f1f38;
+    --text-on-surface: #e2e8f0;
+    --text-on-surface-variant: #94a3b8;
+    --border-gold: rgba(245, 158, 11, 0.25);
+    --gold-accent: #fbbf24;
+    --gold-display: #f59e0b;
+    --emerald-display: #60a5fa;
   }
 
   html {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: #050b14;
-    color: #e2e8f0;
+    background-color: var(--bg-forest-noir);
+    color: var(--text-on-surface);
     scroll-behavior: smooth;
+    transition: background-color 0.25s ease, color 0.25s ease;
   }
 
   body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background-color: #050b14;
-    color: #e2e8f0;
+    background-color: var(--bg-forest-noir);
+    color: var(--text-on-surface);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.25s ease, color 0.25s ease;
   }
 
   ::selection {
     background-color: rgba(245, 158, 11, 0.3);
     color: #ffc174;
   }
+}
+
+/* Light Mode Aesthetic Overrides (Selective for Executive View) */
+html:not(.dark) header {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-bottom-color: rgba(180, 83, 9, 0.15) !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05) !important;
+}
+
+html:not(.dark) header .bg-\[\#03070d\]\/80 {
+  background-color: rgba(241, 245, 249, 0.9) !important;
+  border-bottom-color: rgba(180, 83, 9, 0.12) !important;
+}
+
+html:not(.dark) header .bg-\[\#08101d\] {
+  background-color: #ffffff !important;
+  border-top-color: rgba(180, 83, 9, 0.15) !important;
+}
+
+html:not(.dark) .bg-\[\#0d1a30\],
+html:not(.dark) .bg-\[\#0d1a30\]\/60 {
+  background-color: #ffffff !important;
+  border-color: rgba(180, 83, 9, 0.22) !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.03) !important;
+}
+
+html:not(.dark) .bg-\[\#0b162c\] {
+  background-color: #f1f5f9 !important;
+  border-color: rgba(180, 83, 9, 0.2) !important;
+}
+
+html:not(.dark) .bg-\[\#0a182e\],
+html:not(.dark) .bg-\[\#0c1f3d\],
+html:not(.dark) .bg-\[\#142542\] {
+  background-color: #f1f5f9 !important;
+  border-color: rgba(180, 83, 9, 0.2) !important;
+}
+
+html:not(.dark) .bg-black\/40,
+html:not(.dark) .bg-black\/50 {
+  background-color: #f8fafc !important;
+  border-color: rgba(15, 23, 42, 0.1) !important;
+}
+
+html:not(.dark) .border-gold-prestige\/20,
+html:not(.dark) .border-gold-prestige\/30,
+html:not(.dark) .border-gold-prestige\/40 {
+  border-color: rgba(180, 83, 9, 0.2) !important;
+}
+
+html:not(.dark) .text-gold-light {
+  color: #b45309 !important;
+}
+
+html:not(.dark) .text-gold-prestige {
+  color: #b45309 !important;
+}
+
+html:not(.dark) .text-emerald-accent {
+  color: #0284c7 !important;
+}
+
+html:not(.dark) .bg-\[\#050b14\] {
+  background-color: #f8fafc !important;
+}
+
+html:not(.dark) .bg-\[\#03070d\] {
+  background-color: #f1f5f9 !important;
+}
+
+/* Ensure Terminal Overlay Retains CRT Workstation Aesthetics */
+#cli-view-container {
+  background-color: rgba(5, 11, 20, 0.96) !important;
+}
+
+#cli-view-container .bg-\[\#081324\] {
+  background-color: #081324 !important;
+}
+
+#cli-view-container .bg-\[\#0f1f3a\] {
+  background-color: #0f1f3a !important;
+}
+
+#cli-view-container .bg-\[\#050b14\] {
+  background-color: #050b14 !important;
+}
+
+#cli-view-container .text-on-surface {
+  color: #e2e8f0 !important;
+}
+
+#cli-view-container .text-emerald-accent {
+  color: #60a5fa !important;
+}
+
+#cli-view-container .text-gold-light {
+  color: #fbbf24 !important;
 }
 
 @layer utilities {

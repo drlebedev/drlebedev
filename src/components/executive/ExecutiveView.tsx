@@ -10,12 +10,14 @@ import { ExecutiveFooter } from './ExecutiveFooter';
 import defaultContent from '../../data/content.json';
 import { ShieldCheck, Cpu, Network } from 'lucide-react';
 import { getAssetUrl } from '../../utils/assets';
+import { useViewMode } from '../../context/ViewModeContext';
 
 export interface ExecutiveViewProps {
   content?: ContentStore;
 }
 
 export const ExecutiveView: React.FC<ExecutiveViewProps> = ({ content = defaultContent as unknown as ContentStore }) => {
+  const { isDark } = useViewMode();
   const { profile, metricsSummary, doctrine, experience, patents, education, skills } = content;
 
   return (
@@ -57,13 +59,13 @@ export const ExecutiveView: React.FC<ExecutiveViewProps> = ({ content = defaultC
             {/* Embedded Architecture Diagram */}
             <div className="mb-12 rounded-xl overflow-hidden border border-gold-prestige/30 shadow-2xl bg-[#050b14] p-3">
               <img
-                src={getAssetUrl('assets/diagrams/attribution-architecture.svg')}
+                src={isDark ? getAssetUrl('assets/diagrams/attribution-architecture-dark.svg') : getAssetUrl('assets/diagrams/attribution-architecture-light.svg')}
                 alt="Executive Technology Portfolio: Ads Measurement, AI Products & Systems Architecture Blueprint"
                 className="w-full h-auto rounded-lg"
                 onError={(e) => {
                   const target = e.currentTarget;
-                  if (!target.src.includes('attribution-architecture-dark.svg')) {
-                    target.src = getAssetUrl('assets/diagrams/attribution-architecture-dark.svg');
+                  if (!target.src.includes('attribution-architecture.svg')) {
+                    target.src = getAssetUrl('assets/diagrams/attribution-architecture.svg');
                   }
                 }}
               />
