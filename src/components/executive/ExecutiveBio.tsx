@@ -74,7 +74,7 @@ export const ExecutiveBio: React.FC<ExecutiveBioProps> = ({ profile, metrics }) 
             <div className="flex flex-col gap-3">
               <span className="font-mono text-xs text-gold-prestige tracking-[0.2em] uppercase flex items-center gap-2">
                 <span className="h-px w-6 bg-gold-prestige/60"></span>
-                APPLIED MATHEMATICIAN • DISTINGUISHED SYSTEMS LEADER
+                APPLIED MATHEMATICIAN • SYSTEMS ENGINEERING LEADER
               </span>
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-on-surface leading-[1.08] font-normal tracking-tight">
                 Kirill Lebedev, <span className="italic font-serif text-gold-light font-light">PhD</span>
@@ -91,7 +91,7 @@ export const ExecutiveBio: React.FC<ExecutiveBioProps> = ({ profile, metrics }) 
               </p>
               <div className="text-sm text-on-surface-variant/90 border-l-2 border-gold-prestige/40 pl-4 italic space-y-1">
                 <p>
-                  &ldquo;When heuristic attribution dissolved under the collapse of third-party cookies and platform tracking barriers, the solution was not more telemetry—it was rigorous high-dimensional causal mathematics.&rdquo;
+                  &ldquo;As heuristic attribution fractured with the loss of third-party cookies and platform tracking identifiers, the answer was not more telemetry—it was rigorous causal modeling and privacy-preserving mathematics.&rdquo;
                 </p>
               </div>
             </div>
@@ -102,10 +102,10 @@ export const ExecutiveBio: React.FC<ExecutiveBioProps> = ({ profile, metrics }) 
             {/* Direct Action Links */}
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <a
-                href="#trajectory"
+                href="#experience"
                 className="px-5 py-2.5 bg-gradient-to-r from-gold-burnished to-gold-prestige text-[#050b14] font-sans text-xs tracking-wider uppercase font-semibold rounded hover:brightness-110 transition-all shadow-lg flex items-center gap-2 group"
               >
-                <span>Read Leadership Dossier</span>
+                <span>View Career Experience</span>
                 <BookOpen className="w-4 h-4 group-hover:rotate-6 transition-transform" />
               </a>
 
@@ -123,7 +123,7 @@ export const ExecutiveBio: React.FC<ExecutiveBioProps> = ({ profile, metrics }) 
                 className="px-4 py-2.5 bg-[#0b162c] hover:bg-[#152a4e] border border-gold-prestige/30 hover:border-gold-prestige text-gold-light font-mono text-xs rounded transition-all flex items-center gap-2 shadow-sm"
               >
                 <Award className="w-4 h-4" />
-                <span>Executive CV (PDF)</span>
+                <span>Executive Resume (PDF)</span>
               </a>
             </div>
           </div>
@@ -173,7 +173,7 @@ export const ExecutiveBio: React.FC<ExecutiveBioProps> = ({ profile, metrics }) 
               <div className="absolute -bottom-2 z-30 px-5 py-2.5 bg-[#0d1a30]/95 border border-gold-prestige/60 rounded shadow-[0_15px_35px_rgba(0,0,0,0.85)] backdrop-blur-md flex items-center gap-3">
                 <CheckCircle2 className="w-4 h-4 text-emerald-accent" />
                 <span className="font-mono text-xs text-gold-light font-medium tracking-wider uppercase">
-                  PhD Computer Science • 3 Patents
+                  PhD in Computer Science • 3 U.S. Patents
                 </span>
               </div>
             </div>

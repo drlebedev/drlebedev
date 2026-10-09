@@ -62,7 +62,7 @@ describe('Crawler Assets and Static Configuration (US3 / T044)', () => {
       const content = fs.readFileSync(docPath, 'utf-8');
       expect(content).toContain('Kirill Lebedev');
       expect(content).toContain('Director of Engineering');
-      expect(content).toContain('Core Engineering & Leadership Doctrines');
+      expect(content).toContain('Core Engineering Principles & Architecture');
       expect(content).toContain('LinkedIn');
       expect(content).toContain('Patents');
       expect(content).toContain('11,968,185');

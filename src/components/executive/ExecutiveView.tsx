@@ -43,13 +43,13 @@ export const ExecutiveView: React.FC<ExecutiveViewProps> = ({ content = defaultC
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mb-10">
               <span className="font-mono text-xs text-gold-prestige tracking-[0.2em] uppercase">
-                CHAPTER II • TECHNICAL DOCTRINE &amp; SYSTEMS ARCHITECTURE
+                CHAPTER II • ENGINEERING PRINCIPLES &amp; SYSTEMS ARCHITECTURE
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl text-on-surface mt-2 font-normal">
-                Enterprise Ads Measurement, AI Monetization &amp; Architecture
+                Ads Measurement Systems, AI Monetization &amp; Architecture
               </h2>
               <p className="font-sans text-on-surface-variant text-base mt-2">
-                Systems architecture covering outcomes measurement, AI monetization platforms, and causal attribution frameworks.
+                Architecture principles covering causal attribution frameworks, privacy-preserving analytics, and scalable identity graphs.
               </p>
               <div className="h-0.5 w-16 bg-gold-prestige/60 my-4"></div>
             </div>
@@ -69,7 +69,7 @@ export const ExecutiveView: React.FC<ExecutiveViewProps> = ({ content = defaultC
               />
             </div>
 
-            {/* Doctrine Cards (from content store) */}
+            {/* Principles Cards (from content store) */}
             {doctrine && doctrine.length > 0 && (
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {doctrine.map((item) => (
@@ -80,7 +80,7 @@ export const ExecutiveView: React.FC<ExecutiveViewProps> = ({ content = defaultC
                     <div className="space-y-3">
                       <div className="flex items-center justify-between border-b border-gold-prestige/15 pb-3">
                         <span className="font-mono text-xs text-gold-light uppercase tracking-widest">
-                          DOCTRINE {item.number}
+                          PRINCIPLE {item.number}
                         </span>
                         {item.number === '01' ? (
                           <Cpu className="w-4 h-4 text-emerald-accent" />
@@ -105,7 +105,7 @@ export const ExecutiveView: React.FC<ExecutiveViewProps> = ({ content = defaultC
                     </div>
 
                     <div className="mt-5 pt-3 border-t border-gold-prestige/15 font-mono text-[11px] text-emerald-accent">
-                      <span>VERIFIED ENTERPRISE SYSTEMS PILLAR</span>
+                      <span>CORE SYSTEMS ARCHITECTURE PILLAR</span>
                     </div>
                   </div>
                 ))}

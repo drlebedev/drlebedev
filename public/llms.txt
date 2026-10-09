@@ -26,7 +26,7 @@ He leads engineering organizations across artificial intelligence, distributed s
 - Chief Technology Officer — i.Point (2007 – 2013)
 - Professor & Deputy Vice-Rector — Irkutsk National Research Technical University (2002 – 2007)
 
-## Core Technical Doctrines
+## Core Engineering Principles
 1. Bayesian Causal Inference & Account-Based Marketing: Isolate selection bias from true ad intervention using Bayesian incrementality and company-level audience splits.
 2. Differential Privacy & Privacy-Safe Signal Consolidation: Unify Conversions API (CAPI) with cryptographic compute and differential privacy noise reduction.
 3. Scaled Identity Graph & Pairwise Multi-Source Resolution: Ingest and resolve pairwise observations from 1st-party platform signals and 3rd-party data providers at scale.

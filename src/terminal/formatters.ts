@@ -10,13 +10,13 @@ export function formatHelp(): string {
     DIVIDER,
     'Available commands:',
     '  help       - Display this list of available commands',
-    '  bio        - View executive background, personal credo, and story',
-    '  exp        - View leadership chronology and career milestones',
+    '  bio        - View executive background and career summary',
+    '  exp        - View leadership experience and career history',
     '  patents    - List issued United States patents and USPTO links',
-    '  edu        - View academic major, doctoral thesis, and honors',
+    '  edu        - View academic background, degrees, and thesis',
     '  skills     - View competency matrix across leadership, AI, and systems',
-    '  contact    - View verified direct communication channels',
-    '  gui        - Switch display to the Executive Dossier graphical interface',
+    '  contact    - View direct contact and communication channels',
+    '  gui        - Switch to the graphical portfolio interface',
     '  clear      - Clear the console screen buffer',
     DIVIDER,
   ].join('\n');
@@ -26,22 +26,21 @@ export function formatBio(): string {
   const { profile } = contentData;
   return [
     DIVIDER,
-    '  EXECUTIVE DOSSIER: KIRILL LEBEDEV, PhD',
+    '  EXECUTIVE PROFILE: KIRILL LEBEDEV, PhD',
     `  ${profile.title}`,
     DIVIDER,
-    '"I have always believed that real engineering breakthroughs do not',
-    'come from chasing trends. They come from understanding the fundamentals',
-    'so deeply that you can see where reality is heading before anyone else.',
-    'When you build from first principles—whether in mathematics, distributed',
-    'systems, or artificial intelligence—you don\'t just follow industry',
-    'waves. You build the bedrock they ride on."',
+    '"True engineering breakthroughs do not come from chasing trends. They',
+    'come from understanding fundamentals deeply enough to anticipate where',
+    'technology is heading. When you build from first principles—in',
+    'mathematics, distributed systems, and AI—you do not follow industry',
+    'waves. You build the bedrock they depend on."',
     '',
     'Overview:',
-    '• Director of Engineering at LinkedIn; overall Ads Measurement leader.',
-    '• Lead 40-70+ person full-stack organization across 5 core charters.',
-    '• Bootstrapped Brand Advertising from 0 to 1 to $1B+ in annual revenue.',
-    '• Engineering DRI for AI Ads products: 6x growth to $100M ARR in 6 mo.',
-    '• Multi-year member of company-wide hiring committee.',
+    '• Director of Engineering at LinkedIn; Ads Measurement leader.',
+    '• Direct 40-70+ person full-stack organization across 5 core charters.',
+    '• Built Brand Advertising from 0 to 1 to $1B+ in annual revenue.',
+    '• Led engineering for AI Ads products: 6x growth to $100M ARR in 6 mo.',
+    '• Multi-year member of corporate hiring committee.',
     '• PhD in Computer Science | Summa cum laude | 3 Issued US Patents.',
     `• Location: ${profile.location}`,
     DIVIDER,
@@ -63,7 +62,7 @@ export function formatExp(companyFilter?: string): string {
     if (items.length === 0) {
       return [
         DIVIDER,
-        '  PROFESSIONAL LEADERSHIP CHRONOLOGY',
+        '  EXECUTIVE EXPERIENCE & CAREER HISTORY',
         DIVIDER,
         `No career entries found matching query: "${companyFilter}".`,
         "Type 'exp' to view all positions.",
@@ -74,7 +73,7 @@ export function formatExp(companyFilter?: string): string {
 
   const lines: string[] = [
     DIVIDER,
-    '  PROFESSIONAL LEADERSHIP CHRONOLOGY',
+    '  EXECUTIVE EXPERIENCE & CAREER HISTORY',
     DIVIDER,
   ];
 
@@ -125,7 +124,7 @@ export function formatPatents(): string {
 export function formatEdu(): string {
   return [
     DIVIDER,
-    '  ACADEMIC FOUNDATIONS & DEGREES',
+    '  ACADEMIC BACKGROUND & DEGREES',
     DIVIDER,
     'Doctor of Philosophy (PhD) in Computer Science | 2004 – 2008',
     'Irkutsk National Research Technical University (INRTU)',
@@ -173,7 +172,7 @@ export function formatContact(): string {
   const { profile } = contentData;
   return [
     DIVIDER,
-    '  VERIFIED DIRECT COMMUNICATION CHANNELS',
+    '  DIRECT CONTACT CHANNELS',
     DIVIDER,
     `• Direct Email : ${profile.email}`,
     `• Phone        : ${profile.phone}`,

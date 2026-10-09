@@ -29,13 +29,13 @@ export const SkillsSection: React.FC<SkillsSectionProps> = ({ skills }) => {
         {/* Section Header */}
         <div className="max-w-3xl mb-12">
           <span className="font-mono text-xs text-gold-prestige tracking-[0.2em] uppercase">
-            COMPETENCY MATRIX &amp; DOMAIN MASTERY
+            CORE COMPETENCIES &amp; DOMAIN EXPERTISE
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl text-on-surface mt-2 font-normal">
-            Executive Leadership &amp; High-Throughput Engineering
+            Engineering Leadership &amp; Technical Expertise
           </h2>
           <p className="font-sans text-on-surface-variant text-base mt-2">
-            Multi-domain mastery spanning large-scale organizational stewardship, commercial 0-to-1 incubation, causal machine learning, and cloud-native systems.
+            Leadership and technical capabilities spanning organizational scaling, commercial 0-to-1 incubation, causal machine learning, and distributed systems.
           </p>
           <div className="h-0.5 w-16 bg-gold-prestige/60 my-4"></div>
         </div>

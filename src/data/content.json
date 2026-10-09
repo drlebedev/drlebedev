@@ -3,13 +3,13 @@
   "profile": {
     "fullName": "Kirill Lebedev, PhD",
     "title": "Director of Engineering | AI & Ads Measurement Leader",
-    "headline": "Bridging foundational computer science with massive commercial scale.",
+    "headline": "Bridging computer science research with enterprise commercial scale.",
     "location": "SF Bay Area",
     "email": "kirill@drlebedev.com",
     "linkedInUrl": "https://www.linkedin.com/in/drlebedev/",
     "phone": "+1 (415) 799-9995",
     "resumePdfUrl": "/assets/drlebedev-resume.pdf",
-    "summary": "I lead engineering organizations that bridge foundational computer science with massive commercial scale. At LinkedIn, as Director of Engineering and overall Ads Measurement leader, I direct a 40–70+ person full-stack organization across Audience, Identity, Incrementality, Recommendations, and Measurement. I bootstrapped our Brand Advertising business line from zero to over $1B in annual revenue (~20% of total ad revenue) and served as Engineering DRI accelerating our AI Ads solution 6x to $100M ARR in six months. I hold a PhD in Computer Science, graduated Summa cum laude in Systems Engineering and Low-Level System and Software Design, served as university Professor and Deputy Vice-Rector, and hold three issued US patents."
+    "summary": "I lead engineering organizations that bridge foundational computer science with large-scale commercial impact. At LinkedIn, as Director of Engineering leading Ads Measurement, I direct a 40–70+ person full-stack organization across Audience, Identity, Incrementality, Recommendations, and Measurement charters. I built LinkedIn's Brand Advertising business from the ground up to over $1 billion in annual revenue (~20% of total ad revenue) and led engineering for our AI advertising suite, scaling it 6x to $100M ARR in six months. I hold a PhD in Computer Science, graduated summa cum laude with a master's in systems engineering, served as an associate professor and deputy vice-rector, and hold three issued U.S. patents."
   },
   "metricsSummary": [
     {
@@ -38,19 +38,19 @@
       "number": "01",
       "title": "Bayesian Causal Inference & Account-Based Marketing",
       "quote": "Heuristic last-touch models misallocate significant capital toward organic converters. In our systems, we isolate selection bias from true ad intervention using Bayesian incrementality and company-level audience splits.",
-      "narrative": "In advertising, correlation is not causation. If an advertiser was going to buy anyway, claiming attribution for that conversion is an illusion. I architected our incrementality systems to measure true economic causality across 25% of LinkedIn's total advertising revenue. By deploying Bayesian calculation, company-level audience splitting, and frequency-aware sampling, we prove an incremental impact for enterprise adopters with mathematical certainty."
+      "narrative": "In advertising, correlation is not causation. If an advertiser was going to buy anyway, claiming attribution for that conversion is an illusion. I architected our incrementality systems to measure true economic causality across 25% of LinkedIn's total advertising revenue. By deploying Bayesian modeling, company-level audience splitting, and frequency-aware sampling, we measure genuine incremental impact for enterprise advertisers with rigorous statistical confidence."
     },
     {
       "number": "02",
       "title": "Differential Privacy & Privacy-Safe Signal Consolidation",
       "quote": "In advertising, as in physics: if your measurement instruments distort what they observe, your conclusions are worthless. We extract signal from noise while preserving mathematical privacy.",
-      "narrative": "Regulatory barriers require cross-entity analytics without exposing raw personal data. I directed the comprehensive overhaul of LinkedIn's outcomes infrastructure, unifying Conversions API (CAPI) with privacy-safe cryptographic compute and differential privacy noise reduction in a new version of attribution platform. We ensure strict mathematical privacy guarantees without destroying the statistical utility of conversion signals."
+      "narrative": "Regulatory and platform privacy shifts require robust cross-entity analytics without exposing raw personal data. I directed the comprehensive overhaul of LinkedIn's outcomes infrastructure, unifying Conversions API (CAPI) with privacy-preserving cryptographic computation and differential privacy techniques on a next-generation attribution platform. We enforce strict mathematical privacy guarantees while preserving the statistical utility of conversion signals."
     },
     {
       "number": "03",
       "title": "Scaled Identity Graph & Pairwise Multi-Source Resolution",
       "quote": "An advertising platform is only as coherent as its understanding of identity. By resolving fragmented signals into a unified graph, you turn disconnected events into actionable enterprise intelligence.",
-      "narrative": "Modern measurement and targeting collapse when identity is fractured across devices, browsers, and enterprise ecosystems. I directed the architecture of our identity graph infrastructure that ingests and resolves pairwise observations from both 1st-party platform signals and 3rd-party data providers at scale. By reconciling deterministic and probabilistic link graphs while preserving strict privacy enclaves, our platform establishes high-fidelity entity resolution that powers accurate audience targeting, frequency control, and robust causal attribution across the entire monetization ecosystem."
+      "narrative": "Modern measurement and targeting collapse when identity is fractured across devices, browsers, and enterprise ecosystems. I directed the architecture of our identity graph infrastructure that ingests and resolves pairwise observations from both first-party platform signals and third-party data providers at scale. By reconciling deterministic and probabilistic link graphs within privacy-safe enclaves, our platform establishes high-fidelity entity resolution that powers accurate audience targeting, frequency governance, and robust causal attribution across the entire monetization ecosystem."
     }
   ],
   "experience": [
@@ -61,7 +61,7 @@
       "startDate": "2024-03",
       "endDate": "Present",
       "isCurrent": true,
-      "orgScope": "Overall Ads Measurement Leader • 40–70+ Person Full-Stack Organization",
+      "orgScope": "Ads Measurement Leader • 40–70+ Person Full-Stack Organization",
       "metrics": [
         "$100M ARR reached in 6 months for AI Ads products (6x growth)",
         "25% of total ad revenue covered with incremental measurement",
@@ -69,12 +69,12 @@
         "40–70+ person organization across Audience, Identity, Incrementality, Recommendations, and Measurement"
       ],
       "highlights": [
-        "Own the complete business, technological, and talent strategy for a 40–70+ person organization spanning five core charters: Audience, Identity, Incrementality, Recommendations, and Measurement.",
-        "Served as Engineering DRI unifying Product, Design, Data Science, PMM, and Sales teams to build LinkedIn's AI-powered ads solution (LinkedIn Accelerate), accelerating revenue 6x to $100M ARR in six months.",
-        "Strategically revamped outcomes infrastructure, consolidating conversion signals, mitigating differential privacy noise, and ensuring global privacy compliance.",
-        "Championed B2B company-level measurement covering 25% of total ad revenue, validating 2x incremental spend increase for adopters through Bayesian calculation and company-level audience splitting.",
-        "Spearheaded organization-wide developer transformation, targeting a 2X engineering productivity boost through AI tooling.",
-        "Active multi-year member of company-wide hiring committees calibrating senior technical talent; represent engineering in corporate M&A technical evaluations."
+        "Direct technology strategy, organizational design, and engineering execution for a 40–70+ person organization spanning Audience, Identity, Incrementality, Recommendations, and Measurement.",
+        "Led cross-functional engineering for LinkedIn's AI-powered advertising suite (LinkedIn Accelerate), aligning Product, Design, Data Science, and Marketing to scale revenue 6x to $100M ARR in six months.",
+        "Architected LinkedIn's modern outcomes platform, consolidating conversion signals, mitigating differential privacy noise, and ensuring compliance with global privacy regulations.",
+        "Championed B2B account-level measurement across 25% of total advertising revenue, demonstrating a 2x lift in advertiser spend through Bayesian causal inference and controlled audience splits.",
+        "Spearheaded organization-wide developer productivity initiatives, integrating AI-native tooling to accelerate engineering velocity.",
+        "Served on LinkedIn's corporate hiring committee calibrating senior technical talent; conducted technical due diligence for corporate acquisitions."
       ],
       "technologies": [
         "Artificial Intelligence",
@@ -100,11 +100,11 @@
         "Reduced bug introduction rate by 75% and alert volume by 70%"
       ],
       "highlights": [
-        "Championed a grassroots initiative that grew from an idea into an enterprise business generating over $1B annually (~20% of total LinkedIn ad revenue).",
-        "Led creation of end-to-end product suite: Reach & Frequency optimization, Brand Lift measurement (BLT), and modern Media Planning tools unlocking expansion into Connected TV (CTV) and live events.",
-        "Partnered with BizDev to pioneer privacy-first incrementality measurement with Nielsen, Kantar, and Dynata, scaling to $500M.",
-        "Partnered with FP&A to build company-wide revenue forecasting platform used daily for the CEO's executive report.",
-        "Created two-layer management structure, promoted key leads, and instituted engineering excellence initiatives cutting bug introduction by 75% and alert volume by 70%."
+        "Built LinkedIn's Brand Advertising line from an initial concept into an enterprise business generating over $1 billion annually (~20% of total ad revenue).",
+        "Delivered an end-to-end product suite—including Reach & Frequency optimization, Brand Lift testing, and media planning tools—unlocking new revenue streams in Connected TV and live events.",
+        "Partnered with Business Development to establish privacy-compliant measurement integrations with Nielsen, Kantar, and Dynata, supporting $500M in advertiser spend.",
+        "Collaborated with Financial Planning & Analysis to develop an enterprise revenue forecasting platform reviewed daily by executive leadership.",
+        "Established a two-tier management structure, mentored engineering leaders, and drove reliability programs that reduced defect rates by 75% and alert volume by 70%."
       ],
       "technologies": [
         "Brand Lift (BLT)",
@@ -130,9 +130,9 @@
         "Scaled team from 5 to 15 engineers"
       ],
       "highlights": [
-        "Architected and launched LinkedIn's first advertiser-facing experimentation platform, collaborating with Data Science, Product, and Design to deliver a GA product improving advertiser ROI by 40%.",
-        "Re-chartered forecasting team to build an AI-driven advertiser recommendations product, generating ~$20M ARR with sustained 2–3x YoY adoption over 7 years.",
-        "Mentored and promoted multiple engineers to the Staff Software Engineer level."
+        "Architected and launched LinkedIn's first customer-facing experimentation platform, improving advertiser ROI by an average of 40%.",
+        "Re-chartered the forecasting team to develop an AI-powered campaign recommendations engine, generating ~$20M ARR with sustained multi-year adoption.",
+        "Mentored and developed engineers across the team, promoting several to staff-level engineering roles."
       ],
       "technologies": [
         "A/B Testing Platform",
@@ -155,8 +155,8 @@
         "80% reduction in ad-related member escalations"
       ],
       "highlights": [
-        "Architected and delivered LinkedIn's first machine-learning system for automated ad content review.",
-        "Reduced manual review workload by 90% and cut ad-related member escalations by 80% through direct user feedback loops."
+        "Designed and deployed LinkedIn's first machine-learning system for automated advertising content review.",
+        "Reduced manual review workload by 90% and cut member-reported ad complaints by 80% using high-throughput scoring models."
       ],
       "technologies": [
         "Machine Learning",
@@ -179,9 +179,9 @@
         "Reduced bug introduction rate by 80% through automated CI/CD"
       ],
       "highlights": [
-        "Directed end-to-end design and implementation of a real-time political canvassing system, including native Android and iOS mobile applications backed by Google Cloud Platform and BigQuery high-throughput analytics.",
-        "Guaranteed 24/7 reliability for high-profile political campaigns across the US, including the Ed Lee San Francisco mayoral campaign and the 2016 Hillary Clinton presidential campaign.",
-        "Managed engineering craft for 15+ engineers, cutting bug introduction rate by 80% through automated testing and continuous integration."
+        "Led engineering for a real-time field canvassing platform, developing native iOS and Android apps backed by Google Cloud Platform and BigQuery analytics.",
+        "Maintained 24/7 uptime during mission-critical nationwide campaigns, including San Francisco mayoral and 2016 presidential campaigns.",
+        "Managed a distributed team of 15+ engineers, cutting defect rates by 80% through automated testing and continuous integration."
       ],
       "technologies": [
         "Google Cloud Platform (GCP)",
@@ -205,8 +205,8 @@
         "Scaled company engineering organization to 20+ engineers"
       ],
       "highlights": [
-        "Co-founded company, scaled engineering organization to 20+ professionals, established software development lifecycle, and managed technology budgeting and hardware provisioning.",
-        "Served as technical strategy lead and chief architect for the successful delivery of 10+ major enterprise client projects and web portals."
+        "Co-founded the software consultancy, built an engineering organization of 20+ developers, established SDLC standards, and managed technical infrastructure and budgets.",
+        "Served as chief architect delivering more than 10 large-scale enterprise web systems and portals for commercial clients."
       ],
       "technologies": [
         "Enterprise Web Architecture",
@@ -228,8 +228,8 @@
         "Led 3 full redesigns and 2 infrastructure migrations of university web platforms"
       ],
       "highlights": [
-        "Managed University Internet Technology Center, overseeing team operations, deploying an online learning management system with 300+ courses, and leading university web platforms through 3 full redesigns and 2 infrastructure migrations.",
-        "Taught university undergraduate and graduate courses in Software Engineering, Operating Systems, and Statistics & Probability Theory."
+        "Directed the University Internet Technology Center, deployed a campus-wide learning management system supporting 300+ courses, and oversaw three comprehensive platform modernizations.",
+        "Taught undergraduate and graduate courses in Software Engineering, Operating Systems, and Probability & Statistics."
       ],
       "technologies": [
         "Learning Management Systems",
@@ -267,17 +267,17 @@
     {
       "id": "inrtu-phd",
       "institution": "Irkutsk National Research Technical University (INRTU)",
-      "degree": "Doctor of Philosophy (PhD)",
-      "field": "Computer Science (Specialty 05.13.11: Mathematical and Software Support of Computing Machines, Complexes and Computer Networks)",
+      "degree": "Doctor of Philosophy (PhD) in Computer Science",
+      "field": "Computer Science (Specialty: Mathematical & Software Systems for Computing Networks)",
       "period": "2004 – 2008",
-      "thesisTitle": "Development of a method and tools for creating applications for a website content management system",
-      "thesisSummary": "Developed a unified multilevel engineering framework for web content systems (i.Portal) integrating formal Model-Driven Architecture (MDA), automated code generation from UML/Eclipse EMF models, dynamic structured metadata persistence, and a modular multi-tenant kernel architecture deployed across regional university distance learning systems."
+      "thesisTitle": "Methods and Tools for Application Engineering in Web Content Management Systems",
+      "thesisSummary": "Developed a multilevel software engineering framework (i.Portal) integrating Model-Driven Architecture (MDA), automated code generation from UML and Eclipse EMF models, dynamic metadata persistence, and a modular multi-tenant kernel architecture deployed across regional university distance learning platforms."
     },
     {
       "id": "inrtu-meng",
       "institution": "Irkutsk National Research Technical University (INRTU)",
-      "degree": "Master of Engineering / Degree in Computer Science",
-      "field": "Systems Engineering and Low-Level System and Software Design (Minor: Software Engineering)",
+      "degree": "Master of Science in Systems Engineering",
+      "field": "Systems Engineering and Low-Level Software Design (Minor: Software Engineering)",
       "period": "1999 – 2004",
       "honors": "Summa cum laude (GPA 5.0 / 5.0)"
     }
@@ -331,8 +331,8 @@
     }
   ],
   "terminalCommands": {
-    "help": "======================================================================\n  KIRILL LEBEDEV, PhD — INTERACTIVE WEB CONSOLE\n======================================================================\nAvailable commands:\n  help       - Display this list of available commands\n  bio        - View my executive background, personal credo, and story\n  exp        - View my leadership chronology and career milestones\n  patents    - List my issued United States patents and USPTO links\n  edu        - View my academic major, doctoral thesis, and honors\n  skills     - View my competency matrix across leadership, AI, and systems\n  contact    - View my verified direct communication channels\n  gui        - Switch display to the Executive Dossier graphical interface\n  clear      - Clear the console screen buffer\n======================================================================",
-    "bio": "======================================================================\n  EXECUTIVE DOSSIER: KIRILL LEBEDEV, PhD\n  Director of Engineering | AI & Ads Measurement Leader\n======================================================================\n\"I have always believed that real engineering breakthroughs do not\ncome from chasing trends. They come from understanding the fundamentals\nso deeply that you can see where reality is heading before anyone else.\nWhen you build from first principles—whether in mathematics, distributed\nsystems, or artificial intelligence—you don't just follow industry\nwaves. You build the bedrock they ride on.\"\n\nOverview:\n• Director of Engineering at LinkedIn; overall Ads Measurement leader.\n• Lead 40-70+ person full-stack organization across 5 core charters.\n• Bootstrapped Brand Advertising from 0 to 1 to $1B+ in annual revenue.\n• Engineering DRI for AI Ads products: 6x growth to $100M ARR in 6 mo.\n• Multi-year member of company-wide hiring committee.\n• PhD in Computer Science | Summa cum laude | 3 Issued US Patents.\n• Location: SF Bay Area\n======================================================================",
-    "contact": "======================================================================\n  VERIFIED DIRECT COMMUNICATION CHANNELS\n======================================================================\n• Direct Email : kirill@drlebedev.com\n• Phone        : +1 (415) 799-9995\n• LinkedIn     : https://www.linkedin.com/in/drlebedev/\n• Website      : https://www.drlebedev.com\n• Location     : SF Bay Area\n• Resume PDF   : Download available via GUI header and /assets/\n• PhD Thesis   : Download available via /assets/download/thesis.pdf\n======================================================================"
+    "help": "======================================================================\n  KIRILL LEBEDEV, PhD — INTERACTIVE WEB CONSOLE\n======================================================================\nAvailable commands:\n  help       - Display this list of available commands\n  bio        - View executive background and career summary\n  exp        - View leadership experience and career history\n  patents    - List issued United States patents and USPTO links\n  edu        - View academic background, degrees, and thesis\n  skills     - View competency matrix across leadership, AI, and systems\n  contact    - View direct contact and communication channels\n  gui        - Switch to the graphical portfolio interface\n  clear      - Clear the console screen buffer\n======================================================================",
+    "bio": "======================================================================\n  EXECUTIVE PROFILE: KIRILL LEBEDEV, PhD\n  Director of Engineering | AI & Ads Measurement Leader\n======================================================================\n\"True engineering breakthroughs do not come from chasing trends. They\ncome from understanding fundamentals deeply enough to anticipate where\ntechnology is heading. When you build from first principles—in\nmathematics, distributed systems, and AI—you do not follow industry\nwaves. You build the bedrock they depend on.\"\n\nOverview:\n• Director of Engineering at LinkedIn; Ads Measurement leader.\n• Direct 40-70+ person full-stack organization across 5 core charters.\n• Built Brand Advertising from 0 to 1 to $1B+ in annual revenue.\n• Led engineering for AI Ads products: 6x growth to $100M ARR in 6 mo.\n• Multi-year member of corporate hiring committee.\n• PhD in Computer Science | Summa cum laude | 3 Issued US Patents.\n• Location: SF Bay Area\n======================================================================",
+    "contact": "======================================================================\n  DIRECT CONTACT CHANNELS\n======================================================================\n• Direct Email : kirill@drlebedev.com\n• Phone        : +1 (415) 799-9995\n• LinkedIn     : https://www.linkedin.com/in/drlebedev/\n• Website      : https://www.drlebedev.com\n• Location     : SF Bay Area\n• Resume PDF   : Download available via GUI header and /assets/\n• PhD Thesis   : Download available via /assets/download/thesis.pdf\n======================================================================"
   }
 }

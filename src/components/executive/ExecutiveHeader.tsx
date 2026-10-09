@@ -29,12 +29,12 @@ export const ExecutiveHeader: React.FC<ExecutiveHeaderProps> = ({ profile }) => 
 
   const navLinks = [
     { label: 'Vision', href: '#narrative' },
-    { label: 'Technical Doctrine', href: '#doctrine' },
-    { label: 'Leadership Dossier', href: '#trajectory' },
-    { label: 'US Patents', href: '#patents' },
-    { label: 'Academic Foundation', href: '#pedigree' },
-    { label: 'Competencies', href: '#skills' },
-    { label: 'Advisory', href: '#contact' },
+    { label: 'Principles', href: '#doctrine' },
+    { label: 'Experience', href: '#experience' },
+    { label: 'Patents', href: '#patents' },
+    { label: 'Education', href: '#education' },
+    { label: 'Expertise', href: '#skills' },
+    { label: 'Contact', href: '#contact' },
   ];
 
   return (
