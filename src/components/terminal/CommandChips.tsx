@@ -30,7 +30,9 @@ export const CommandChips: React.FC<CommandChipsProps> = ({
 }) => {
   return (
     <div
-      className="flex flex-wrap items-center gap-2 py-2 border-y border-white/10 my-2 select-none"
+      id="command-chips"
+      data-testid="command-chips"
+      className="flex items-center gap-1.5 sm:gap-2 py-1.5 sm:py-2 border-y border-white/10 my-1 sm:my-2 select-none overflow-x-auto overscroll-contain no-scrollbar sm:flex-wrap"
       role="toolbar"
       aria-label="Terminal command shortcuts"
     >

@@ -233,6 +233,17 @@ export const ExecutiveHeader: React.FC<ExecutiveHeaderProps> = ({ profile }) => 
               {link.label}
             </a>
           ))}
+          <div className="pt-2 border-t border-gold-prestige/20 flex items-center justify-between text-xs font-mono">
+            <span className="text-on-surface-variant">Theme:</span>
+            <button
+              onClick={cycleTheme}
+              data-testid="drawer-theme-toggle-btn"
+              className="px-2.5 py-1 rounded bg-[#0b162c] border border-gold-prestige/30 text-gold-light hover:text-white flex items-center gap-1.5 cursor-pointer"
+            >
+              {isDark ? <Moon className="w-3.5 h-3.5 text-gold-light" /> : <Sun className="w-3.5 h-3.5 text-gold-light" />}
+              <span className="uppercase text-[11px] font-sans font-medium">{activeTheme}</span>
+            </button>
+          </div>
           <div className="pt-2 border-t border-gold-prestige/20 flex items-center justify-between text-xs font-mono text-emerald-accent">
             <span>Silicon Valley • SF Bay Area</span>
             <a

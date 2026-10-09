@@ -89,9 +89,9 @@ jobs:
       - name: Verify Live GitHub Pages Deployment with Playwright
         if: steps.deployment.outputs.page_url != ''
         run: |
-          echo "Waiting 5s for GitHub Pages edge propagation..."
-          sleep 5
-          BASE_URL="${{ steps.deployment.outputs.page_url }}" npm run verify:deployment || true
+          echo "Waiting 8s for GitHub Pages edge propagation..."
+          sleep 8
+          BASE_URL="${{ steps.deployment.outputs.page_url }}" npm run verify:deployment
 
   deploy-gae:
     name: Deploy to Google App Engine
@@ -140,6 +140,32 @@ jobs:
         env:
           HAS_GCP: ${{ secrets.GCP_SA_KEY != '' }}
 
+      - name: Prune Older App Engine Versions (Keep Max 10)
+        if: env.HAS_GCP == 'true'
+        run: |
+          echo "Checking App Engine version count to enforce 10-version free-tier limit..."
+          OLD_VERSIONS=$(gcloud app versions list \
+            --service=default \
+            --project="${{ secrets.GCP_PROJECT_ID }}" \
+            --sort-by="~id" \
+            --format="value(id)" | tail -n +11)
+
+          if [ -n "$OLD_VERSIONS" ]; then
+            echo "Pruning older App Engine versions (keeping latest 10):"
+            echo "$OLD_VERSIONS"
+            for ver in $OLD_VERSIONS; do
+              echo "Deleting version $ver..."
+              gcloud app versions delete "$ver" \
+                --service=default \
+                --project="${{ secrets.GCP_PROJECT_ID }}" \
+                --quiet || true
+            done
+          else
+            echo "Version count is within limits (<= 10). No pruning needed."
+          fi
+        env:
+          HAS_GCP: ${{ secrets.GCP_SA_KEY != '' }}
+
       - name: Invalidate Cloudflare Cache (Optional)
         if: env.HAS_CF == 'true'
         run: |
@@ -156,3 +182,19 @@ jobs:
           fi
         env:
           HAS_CF: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
+
+      - name: Install Playwright Browsers
+        if: env.HAS_GCP == 'true'
+        run: npx playwright install chromium --with-deps
+        env:
+          HAS_GCP: ${{ secrets.GCP_SA_KEY != '' }}
+
+      - name: Verify Live Google App Engine Deployment with Playwright
+        if: env.HAS_GCP == 'true'
+        run: |
+          GAE_URL="https://${{ secrets.GCP_PROJECT_ID }}.appspot.com"
+          echo "Verifying live Google App Engine deployment at $GAE_URL..."
+          sleep 6
+          BASE_URL="$GAE_URL" npm run verify:deployment
+        env:
+          HAS_GCP: ${{ secrets.GCP_SA_KEY != '' }}

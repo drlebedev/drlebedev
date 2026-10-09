@@ -81,7 +81,7 @@ test.describe('Deployment & Multi-Target Discovery Verification (Playwright)', (
       // Ensure the src does NOT use a broken absolute path without base URL
       const src = await portraitImg.getAttribute('src');
       expect(src).toBeTruthy();
-      expect(src).toContain('portrait.webp');
+      expect(src).toMatch(/portrait(-light|-dark)?\.webp/);
 
       // Verify the image was successfully loaded by the browser (not broken / 404)
       const isLoaded = await portraitImg.evaluate((img: HTMLImageElement) => {

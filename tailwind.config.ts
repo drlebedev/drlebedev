@@ -21,8 +21,8 @@ const config: Config = {
           variant: '#2e353f',
         },
         'on-surface': {
-          DEFAULT: '#e2e8f0',
-          variant: '#94a3b8',
+          DEFAULT: 'var(--text-on-surface, #e2e8f0)',
+          variant: 'var(--text-on-surface-variant, #94a3b8)',
         },
         'inverse-surface': '#dce3f0',
         'inverse-on-surface': '#2a313b',
@@ -88,9 +88,9 @@ const config: Config = {
           vivid: '#3b82f6',
         },
         forest: {
-          noir: '#050b14',
-          deep: '#0a1322',
-          emerald: '#0f1f38',
+          noir: 'var(--bg-forest-noir, #050b14)',
+          deep: 'var(--bg-forest-deep, #0a1322)',
+          emerald: 'var(--bg-forest-emerald, #0f1f38)',
         },
       },
       fontFamily: {
