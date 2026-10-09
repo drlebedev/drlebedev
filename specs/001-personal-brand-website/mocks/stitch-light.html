@@ -1,0 +1,1108 @@
+<!DOCTYPE html><html class="" lang="en" style=""><svg class="inline-defs-container" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"></svg><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="web_standard" name="shell-type">
+<title>Dr. Kirill Lebedev, PhD — Engineering Head of Ads Measurement &amp; Attribution @ LinkedIn</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;family=JetBrains+Mono:ital,wght@0,400;0,500;1,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-high": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#fcfcfa",
+            "surface-container": "#ffffff",
+            "forest-deep": "#f5f5f0",
+            "forest-noir": "#f9f9f6",
+            "forest-emerald": "#f1f3f7",
+            "gold-prestige": "#b45309",
+            "gold-light": "#b45309",
+            "gold-burnished": "#d97706",
+            "emerald-accent": "#1d4ed8",
+            "emerald-vivid": "#2563eb",
+            "on-surface": "#0f172a",
+            "on-surface-variant": "#475569",
+            "outline-dim": "rgba(180, 83, 9, 0.22)",
+            "outline-glass": "rgba(37, 99, 235, 0.18)"
+          },
+          fontFamily: {
+            "display-serif": ["Newsreader", "Cormorant Garamond", "serif"],
+            "heading-serif": ["Cormorant Garamond", "Newsreader", "serif"],
+            "body-prose": ["Inter", "sans-serif"],
+            "data-code": ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f6;
+        color: #0f172a;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f5f5f0;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+    }
+
+    /* Textured Light Triangle Hatch & Tessellation Patterns */
+    .bg-tessellation {
+      background-image: 
+        radial-gradient(ellipse at 85% 15%, rgba(37, 99, 235, 0.05) 0%, transparent 55%),
+        radial-gradient(ellipse at 15% 85%, rgba(180, 83, 9, 0.04) 0%, transparent 60%),
+        linear-gradient(to right, rgba(180, 83, 9, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(37, 99, 235, 0.025) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 64px 64px, 64px 64px;
+    }
+
+    /* Triangular Hatch Texture */
+    .triangle-hatch-gold {
+      background: repeating-linear-gradient(
+        -45deg,
+        rgba(180, 83, 9, 0.12),
+        rgba(180, 83, 9, 0.12) 1.5px,
+        transparent 1.5px,
+        transparent 7px
+      );
+    }
+    .triangle-hatch-emerald {
+      background: repeating-linear-gradient(
+        45deg,
+        rgba(37, 99, 235, 0.10),
+        rgba(37, 99, 235, 0.10) 1.5px,
+        transparent 1.5px,
+        transparent 7px
+      );
+    }
+    .triangle-hatch-subtle {
+      background: repeating-linear-gradient(
+        -30deg,
+        rgba(15, 23, 42, 0.04),
+        rgba(15, 23, 42, 0.04) 1px,
+        transparent 1px,
+        transparent 6px
+      );
+    }
+
+    /* Polygons & Triangular Clipping Masks */
+    .clip-diamond {
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+    .clip-chevron-right {
+      clip-path: polygon(0% 0%, 82% 0%, 100% 50%, 82% 100%, 0% 100%, 18% 50%);
+    }
+
+    /* CRT terminal overlay */
+    .crt-overlay::after {
+      content: " ";
+      display: block;
+      position: absolute;
+      top: 0; left: 0; bottom: 0; right: 0;
+      background: linear-gradient(rgba(10, 19, 34, 0) 50%, rgba(3, 7, 13, 0.35) 50%);
+      background-size: 100% 4px;
+      z-index: 30;
+      pointer-events: none;
+      opacity: 0.35;
+    }
+
+    .editorial-drop-cap::first-letter {
+      float: left;
+      font-family: 'Newsreader', serif;
+      font-size: 4.25rem;
+      line-height: 0.85;
+      padding-top: 4px;
+      padding-right: 12px;
+      padding-bottom: 2px;
+      color: #b45309;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body class="bg-[#f9f9f6] text-[#0f172a] font-body-prose min-h-screen selection:bg-amber-100 selection:text-[#b45309]">
+<!-- ========================================================================= -->
+<!-- 1. HIGH-PRESTIGE NAVIGATION CHROME (ARCHIVAL LIGHT)                       -->
+<!-- ========================================================================= -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-[#e2e0d8] shadow-[0_4px_20px_-2px_rgba(15,23,42,0.05)]">
+<div class="h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+<!-- Prestige Seal & Masthead -->
+<div class="flex items-center gap-4 min-w-0">
+<div class="relative w-10 h-10 rounded bg-[#0b162c] border border-amber-500/40 flex items-center justify-center shrink-0 shadow-sm group">
+<span class="font-display-serif text-xl text-amber-300 italic font-semibold">KL</span>
+<div class="absolute -bottom-1 -right-1 w-2.5 h-2.5 bg-blue-500 rotate-45 border border-white"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<a class="font-display-serif text-base sm:text-lg tracking-wide text-[#0f172a] font-medium hover:text-[#b45309] transition-colors" href="#">
+          Dr. Kirill Lebedev, <span class="italic text-[#b45309]">PhD</span>
+</a>
+<span class="font-data-code text-[11px] text-[#64748b] tracking-wider uppercase truncate">
+          Engineering Head of Ads Measurement &amp; Attribution @ LinkedIn
+        </span>
+</div>
+</div>
+<!-- Editorial Navigation -->
+<nav class="hidden lg:flex items-center gap-7 text-sm font-body-prose tracking-wide text-[#334155]" id="gui-nav-links">
+<a class="text-[#b45309] font-medium hover:text-amber-800 transition-colors" href="#narrative">Vision</a>
+<a class="hover:text-[#b45309] transition-colors" href="#doctrine">Technical Doctrine</a>
+<a class="hover:text-[#b45309] transition-colors" href="#trajectory">Leadership Dossier</a>
+<a class="hover:text-[#b45309] transition-colors" href="#patents">US Patents</a>
+<a class="hover:text-[#b45309] transition-colors" href="#pedigree">Academic Foundation</a>
+<a class="hover:text-[#b45309] transition-colors" href="#contact">Advisory</a>
+</nav>
+<!-- Discreet Dual-Mode Console & Inquiry Action -->
+<div class="flex items-center gap-3 shrink-0">
+<button class="px-2.5 py-1 rounded-full text-xs font-body-prose flex items-center gap-1.5 bg-[#fef3c7] border border-amber-300 text-[#92400e] transition-all shadow-sm" id="theme-toggle-btn" onclick="cycleTheme()" title="Active Light Theme">
+<span class="material-symbols-outlined text-[15px] text-[#b45309]" id="theme-icon">light_mode</span>
+<span class="hidden md:inline text-[11px] font-data-code uppercase font-semibold text-[#92400e]" id="theme-text">Light</span>
+</button>
+<div class="bg-[#f1f3f7] border border-[#e2e0d8] p-1 rounded-full flex items-center gap-1 shadow-inner" role="group">
+<button class="px-3 py-1 rounded-full text-xs font-body-prose font-medium transition-all bg-white text-[#1d4ed8] border border-blue-200 shadow-sm" id="toggle-gui-btn" onclick="switchMode('gui')">
+          Executive
+        </button>
+<button class="px-3 py-1 rounded-full font-data-code text-xs text-[#64748b] hover:text-[#0f172a] flex items-center gap-1.5 transition-all" id="toggle-cli-btn" onclick="switchMode('cli')" title="Launch Command Console (~)">
+<span class="w-1.5 h-1.5 rounded-full bg-blue-600 inline-block animate-pulse"></span>
+<span class="">Terminal</span>
+<kbd class="hidden md:inline text-[9px] px-1 bg-white rounded border border-[#cbd5e1] text-[#64748b]">~</kbd>
+</button>
+</div>
+<a class="hidden sm:inline-flex items-center gap-2 px-4 py-1.5 bg-gradient-to-r from-[#d97706] to-[#b45309] text-white font-body-prose text-xs tracking-wider uppercase font-semibold rounded hover:brightness-105 transition-all shadow-sm shadow-amber-900/10" href="#contact">
+<span class="">Confidential Inquiry</span>
+<span class="material-symbols-outlined text-[14px]">north_east</span>
+</a>
+</div>
+</div>
+</header>
+<!-- ========================================================================= -->
+<!-- 2. EXECUTIVE STORYTELLING GUI VIEW (LIGHT EDITORIAL)                       -->
+<!-- ========================================================================= -->
+<main class="w-full pt-20 transition-opacity duration-300" id="gui-view-container">
+<!-- HERO STORYTELLING NARRATIVE WITH LAYERED GEOMETRIC TRIANGLE COMPOSITION -->
+<section class="relative w-full overflow-hidden bg-[#f9f9f6] bg-tessellation border-b border-[#e2e0d8]" id="narrative">
+<!-- Large Background Geometric Tessellation Watermark (Triangles, Rhombs, Chevrons) -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden opacity-30"><svg class="absolute -top-32 -left-32 w-[650px] h-[650px]" fill="none" viewBox="0 0 600 600"><polygon points="300,50 550,500 50,500" stroke="#b45309" stroke-dasharray="6 6" stroke-opacity="0.35" stroke-width="1"></polygon><polygon points="300,120 480,440 120,440" stroke="#2563eb" stroke-opacity="0.25" stroke-width="1.5"></polygon><line stroke="#b45309" stroke-opacity="0.2" stroke-width="0.75" x1="300" x2="300" y1="50" y2="500"></line></svg><svg class="absolute -bottom-40 right-10 w-[700px] h-[700px]" fill="none" viewBox="0 0 600 600"><polygon points="300,550 50,100 550,100" stroke="#2563eb" stroke-dasharray="10 8" stroke-opacity="0.2" stroke-width="1"></polygon><polygon points="300,480 120,160 480,160" stroke="#b45309" stroke-opacity="0.3" stroke-width="1"></polygon></svg></div>
+<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
+<!-- Editorial Eyebrow -->
+<div class="flex flex-wrap items-center justify-between gap-4 pb-4 mb-8 border-b border-[#e2e0d8]">
+<div class="flex items-center gap-2.5 font-data-code text-xs text-[#92400e] tracking-widest uppercase">
+<span class="w-2 h-2 bg-blue-600 rotate-45 inline-block"></span>
+<span class="">SILICON VALLEY HQ • MOUNTAIN VIEW, CA</span>
+<span class="text-slate-300">|</span>
+<span class="text-[#64748b] font-body-prose tracking-normal">Engineering Head of Ads Measurement &amp; Attribution @ LinkedIn</span>
+</div>
+<div class="flex items-center gap-2 font-data-code text-[11px] text-[#1e3a8a] bg-[#eff6ff] px-3 py-1 rounded border border-blue-200">
+<span class="w-1.5 h-1.5 rounded-full bg-blue-600 animate-ping"></span>
+<span class="">ACTIVE USPTO INVENTOR • 70+ SCIENTIFIC &amp; ENG ORG</span>
+</div>
+</div>
+<!-- Main Dimensional Two-Column Composition -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+<!-- Left: Authoritative Editorial Statement & Narrative Impact -->
+<div class="lg:col-span-6 flex flex-col gap-6">
+<div class="flex flex-col gap-3">
+<span class="font-data-code text-xs text-[#b45309] tracking-[0.2em] uppercase flex items-center gap-2 font-semibold">
+<span class="h-px w-6 bg-[#b45309]/60"></span>
+              APPLIED MATHEMATICIAN • DISTINGUISHED SYSTEMS LEADER
+            </span>
+<h1 class="font-display-serif text-4xl sm:text-5xl lg:text-6xl text-[#0f172a] leading-[1.08] font-normal tracking-tight">
+              Dr. Kirill Lebedev, <span class="italic font-display-serif text-[#b45309] font-light">PhD</span>
+</h1>
+<p class="font-heading-serif text-xl sm:text-2xl text-[#1d4ed8] italic font-light mt-1">
+              Engineering Head of Ads Measurement &amp; Attribution @ LinkedIn
+            </p>
+</div>
+<!-- Editorial Narrative Thesis Paragraph -->
+<div class="prose max-w-xl text-[#334155] font-body-prose text-base leading-relaxed space-y-4">
+<p class="editorial-drop-cap">
+              Architecting multi-billion-dollar causal attribution engines, privacy-preserving cryptographic compute, and high-throughput telemetry infrastructure. Leading 70+ elite scientists and engineers to pioneer mathematically provable causal lift and differential privacy frameworks across LinkedIn's global monetization ecosystem.
+            </p>
+<p class="text-sm text-[#475569] border-l-2 border-[#b45309]/50 pl-4 italic bg-white/60 py-2 rounded-r">
+              "When heuristic attribution dissolved under the collapse of third-party cookies and platform tracking barriers, the solution was not more telemetry—it was rigorous high-dimensional causal mathematics."
+            </p>
+</div>
+<!-- Monolithic Three-Pillar Metric Bar -->
+<div class="grid grid-cols-3 gap-4 pt-4 pb-2 border-y border-[#e2e0d8] bg-white/50 rounded px-2">
+<div class="flex flex-col">
+<span class="font-heading-serif text-3xl sm:text-4xl text-[#1d4ed8] font-semibold tracking-tight leading-none">$1B+</span>
+<span class="font-body-prose text-xs text-[#64748b] mt-1.5 font-medium">Ads Measurement Line</span>
+</div>
+<div class="flex flex-col border-x border-[#e2e0d8] px-3">
+<span class="font-heading-serif text-3xl sm:text-4xl text-[#b45309] font-semibold tracking-tight leading-none">$100M+</span>
+<span class="font-body-prose text-xs text-[#64748b] mt-1.5 font-medium">ARR AI Infrastructure</span>
+</div>
+<div class="flex flex-col pl-2">
+<span class="font-heading-serif text-3xl sm:text-4xl text-[#0f172a] font-semibold tracking-tight leading-none">70+</span>
+<span class="font-body-prose text-xs text-[#64748b] mt-1.5 font-medium">Person Scientific Org</span>
+</div>
+</div>
+<!-- Issued US Patents Micro-TOC -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-heading-serif text-lg text-[#0f172a] italic font-medium">Issued US Patents &amp; Mathematical IP</span>
+<a class="font-data-code text-xs text-[#1d4ed8] hover:underline flex items-center gap-1 font-medium" href="#patents">
+                Examine Portfolio →
+              </a>
+</div>
+<div class="flex flex-col gap-1.5 text-xs font-body-prose">
+<a class="p-2.5 rounded bg-white hover:bg-slate-50 border border-[#e2e0d8] flex items-center justify-between transition-all shadow-[0_2px_8px_rgba(15,23,42,0.03)] group" href="#patents">
+<span class="text-[#0f172a] group-hover:text-[#b45309] font-medium truncate">US 11,968,185 • Distributed Privacy Attribution Modeling</span>
+<span class="font-data-code text-[11px] text-[#1d4ed8] shrink-0 ml-3 font-semibold">2024 • Active</span>
+</a>
+<a class="p-2.5 rounded bg-white hover:bg-slate-50 border border-[#e2e0d8] flex items-center justify-between transition-all shadow-[0_2px_8px_rgba(15,23,42,0.03)] group" href="#patents">
+<span class="text-[#0f172a] group-hover:text-[#b45309] font-medium truncate">US 11,232,254 • Dynamic Attribution Weighting &amp; Stateful Graphs</span>
+<span class="font-data-code text-[11px] text-[#1d4ed8] shrink-0 ml-3 font-semibold">2022 • Active</span>
+</a>
+<a class="p-2.5 rounded bg-white hover:bg-slate-50 border border-[#e2e0d8] flex items-center justify-between transition-all shadow-[0_2px_8px_rgba(15,23,42,0.03)] group" href="#patents">
+<span class="text-[#0f172a] group-hover:text-[#b45309] font-medium truncate">US 11,102,534 • High-Throughput Telemetry &amp; Lift Verification</span>
+<span class="font-data-code text-[11px] text-[#1d4ed8] shrink-0 ml-3 font-semibold">2021 • Active</span>
+</a>
+</div>
+</div>
+<!-- Executive Actions -->
+<div class="flex flex-wrap items-center gap-3 pt-2">
+<a class="px-5 py-2.5 bg-gradient-to-r from-[#d97706] to-[#b45309] text-white font-body-prose text-xs tracking-wider uppercase font-semibold rounded hover:brightness-105 transition-all shadow-md flex items-center gap-2" href="#trajectory">
+<span class="">Read Leadership Dossier</span>
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+</a>
+<a class="px-4 py-2.5 bg-white hover:bg-slate-50 border border-[#cbd5e1] text-[#1d4ed8] font-data-code text-xs rounded transition-all flex items-center gap-2 shadow-sm font-medium" href="mailto:kirill@drlebedev.com">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+<span class="">kirill@drlebedev.com</span>
+</a>
+</div>
+</div>
+<!-- Right: Volumetric Textured Triangle Geometric Artwork Frame (Light Archival Tone) -->
+<div class="lg:col-span-6 relative flex items-center justify-center">
+<div class="relative w-full max-w-[560px] aspect-[1/1.08] flex items-center justify-center select-none py-6">
+<!-- Ambient soft glow -->
+<div class="absolute -inset-10 bg-gradient-to-tr from-blue-200/25 via-amber-200/20 to-transparent blur-3xl pointer-events-none"></div>
+<!-- Multi-layered SVG Background Geometries -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none overflow-visible" fill="none" viewBox="0 0 600 640">
+<defs>
+<!-- Fine Diagonal Gold Hatch Pattern -->
+<pattern height="8" id="hatchGold" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse" width="8">
+<line stroke="#b45309" stroke-opacity="0.45" stroke-width="1.4" x1="0" x2="0" y1="0" y2="8"></line>
+</pattern>
+<!-- Fine Diagonal Sapphire Hatch Pattern -->
+<pattern height="8" id="hatchEmerald" patternTransform="rotate(-45 0 0)" patternUnits="userSpaceOnUse" width="8">
+<line stroke="#2563eb" stroke-opacity="0.35" stroke-width="1.4" x1="0" x2="0" y1="0" y2="8"></line>
+</pattern>
+<!-- Fine Bronze Hatch Pattern -->
+<pattern height="6" id="hatchBronze" patternTransform="rotate(30 0 0)" patternUnits="userSpaceOnUse" width="6">
+<line stroke="#d97706" stroke-opacity="0.35" stroke-width="1.2" x1="0" x2="0" y1="0" y2="6"></line>
+</pattern>
+</defs>
+<!-- Backmost Triangle Wing 1 (Top Left Soft Slate) -->
+<polygon fill="#e2e8f0" fill-opacity="0.6" points="300,40 100,280 260,340" stroke="#3b82f6" stroke-opacity="0.4" stroke-width="1"></polygon>
+<!-- Backmost Triangle Wing 2 (Hatched Gold Left Wing) -->
+<polygon fill="url(#hatchGold)" points="120,240 280,380 40,360" stroke="#b45309" stroke-opacity="0.45" stroke-width="0.8"></polygon>
+<!-- Backmost Triangle Wing 3 (Right Wing Hatched Sapphire) -->
+<polygon fill="url(#hatchEmerald)" points="300,60 520,240 380,300" stroke="#2563eb" stroke-opacity="0.4" stroke-width="1"></polygon>
+<!-- Bronze / Warm Brick Right Wing -->
+<polygon fill="#fef3c7" fill-opacity="0.7" points="480,210 560,340 380,340" stroke="#d97706" stroke-opacity="0.4" stroke-width="1"></polygon>
+<polygon fill="url(#hatchBronze)" points="480,210 560,340 380,340"></polygon>
+<!-- Outer Gold Hairline Triangle Chevron (Apex Top) -->
+<polygon fill="none" points="300,50 540,510 60,510" stroke="#b45309" stroke-dasharray="12 6" stroke-opacity="0.45" stroke-width="1.5"></polygon>
+<!-- Inverted Sapphire Chevron (Apex Bottom) -->
+<polygon fill="none" points="300,580 80,150 520,150" stroke="#2563eb" stroke-dasharray="8 8" stroke-opacity="0.35" stroke-width="1.2"></polygon>
+<!-- Lower Left Faceted Triangles with diagonal stripes -->
+<polygon fill="url(#hatchEmerald)" points="260,380 120,530 300,550" stroke="#2563eb" stroke-opacity="0.35" stroke-width="0.8"></polygon>
+<polygon fill="url(#hatchGold)" points="340,380 480,530 300,560" stroke="#b45309" stroke-opacity="0.4" stroke-width="0.8"></polygon>
+<!-- Central Gold Diamond Framing Border -->
+<polygon fill="#ffffff" fill-opacity="0.9" points="300,80 500,340 300,530 100,340" stroke="#b45309" stroke-opacity="0.75" stroke-width="2"></polygon>
+<!-- Secondary concentric hairline bezel -->
+<polygon fill="none" points="300,96 484,340 300,516 116,340" stroke="#d97706" stroke-opacity="0.5" stroke-width="1"></polygon>
+</svg>
+<!-- Central Portrait Container framed within the diamond composition -->
+<div class="relative z-20 w-[290px] sm:w-[320px] aspect-[4/5] rounded overflow-hidden shadow-[0_20px_50px_rgba(15,23,42,0.18)] border border-[#b45309]/60 group bg-white">
+<img alt="Dr. Kirill Lebedev, PhD" class="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out" src="assets/images/portrait-light.webp">
+<!-- Fine vignette gradient -->
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/30 via-transparent to-transparent pointer-events-none"></div>
+<!-- Coordinate corner tick marks -->
+<div class="absolute top-3 left-3 w-2.5 h-2.5 border-t border-l border-amber-300 pointer-events-none"></div>
+<div class="absolute top-3 right-3 w-2.5 h-2.5 border-t border-r border-amber-300 pointer-events-none"></div>
+<div class="absolute bottom-3 left-3 w-2.5 h-2.5 border-b border-l border-amber-300 pointer-events-none"></div>
+<div class="absolute bottom-3 right-3 w-2.5 h-2.5 border-b border-r border-amber-300 pointer-events-none"></div>
+</div>
+<!-- BOTTOM MOTTO RIBBON BAR OVERLAY -->
+<div class="absolute bottom-8 z-30 px-8 py-3 bg-[#0d1a30] border-y-2 border-x border-[#b45309]/80 rounded shadow-[0_15px_35px_rgba(15,23,42,0.25)] backdrop-blur-md flex items-center justify-center gap-6">
+<a class="font-body-prose text-xs tracking-[0.2em] uppercase text-amber-300 hover:text-white transition-colors font-medium" href="#narrative">ABOUT</a>
+<span class="text-amber-500/50 text-xs">|</span>
+<a class="font-body-prose text-xs tracking-[0.2em] uppercase text-blue-300 hover:text-white transition-colors font-medium" href="#doctrine">RESEARCH</a>
+<span class="text-amber-500/50 text-xs">|</span>
+<a class="font-body-prose text-xs tracking-[0.2em] uppercase text-amber-300 hover:text-white transition-colors font-medium" href="#contact">CONTACT</a>
+</div>
+</div></div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- CHAPTER I: THE MATHEMATICAL VISION & ENTERPRISE ATTRIBUTION STATEMENT    -->
+<!-- ========================================================================= -->
+<section class="relative w-full py-20 bg-[#f5f5f0] border-b border-[#e2e0d8]">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Section Header -->
+<div class="max-w-3xl mb-12">
+<span class="font-data-code text-xs text-[#b45309] tracking-[0.2em] uppercase font-semibold">CHAPTER I • EXECUTIVE THESIS</span>
+<h2 class="font-display-serif text-3xl sm:text-4xl text-[#0f172a] mt-2 font-normal">
+          Architecting Enterprise Measurement at Hyperscale
+        </h2>
+<div class="h-0.5 w-16 bg-[#b45309]/60 my-4"></div>
+</div>
+<!-- Two-Column Editorial Essay -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+<div class="lg:col-span-7 font-body-prose text-[#334155] text-base leading-relaxed space-y-5">
+<p class="text-[#0f172a] text-lg leading-relaxed font-heading-serif italic">
+            "The multi-billion dollar monetization engine of modern social platforms depends not merely on inventory liquidity, but on the integrity of advertiser truth."
+          </p>
+<p class="">
+            Over the past decade, digital ad measurement underwent tectonic structural disruption. Apple’s App Tracking Transparency (ATT), European Digital Markets Act (DMA) mandates, and the global demise of persistent third-party identity cookies eradicated traditional client-side last-touch attribution. What had historically been a tracking exercise transformed abruptly into a profound econometric challenge: how to infer true incrementality when signals are deliberately masked, aggregated, and differentially noisy.
+          </p>
+<p class="">
+            At LinkedIn, Dr. Kirill Lebedev directs the 70+ person scientific, architectural, and engineering organization answering this question for a $1B+ Ads Measurement and Attribution line. By replacing obsolete heuristic attribution with Double Machine Learning (DML) orthogonalized estimators and secure multi-party compute (SMPC) clean room infrastructure, Dr. Lebedev's organization transformed signal loss into a strategic moat, unlocking over $100M+ in ARR AI infrastructure.
+          </p>
+</div>
+<!-- Architectural Anchor Card with Triangular Hatch Facet -->
+<div class="lg:col-span-5 relative">
+<!-- Background Triangle Layer Behind Card -->
+<div class="absolute -top-6 -right-6 w-36 h-36 triangle-hatch-gold opacity-40 pointer-events-none" style="clip-path: polygon(50% 0%, 100% 100%, 0% 100%);"></div>
+<div class="relative bg-white border border-[#e2e0d8] rounded-lg p-7 shadow-[0_4px_20px_-2px_rgba(15,23,42,0.05)] space-y-6">
+<div class="flex items-center justify-between border-b border-[#e2e0d8] pb-4">
+<span class="font-heading-serif text-xl text-[#0f172a] italic font-semibold">The Attribution Frontier</span>
+<span class="font-data-code text-xs text-[#1d4ed8] font-semibold">2021 — PRESENT</span>
+</div>
+<div class="space-y-4 font-body-prose text-sm text-[#475569]">
+<div class="flex items-start gap-3">
+<span class="text-[#b45309] font-heading-serif text-lg font-bold">§</span>
+<div class="">
+<strong class="text-[#0f172a] font-medium block">Counterfactual Causal Inference</strong>
+                  Separating ad impact from organic customer intent using semiparametric orthogonalized equations.
+                </div>
+</div>
+<div class="flex items-start gap-3">
+<span class="text-[#b45309] font-heading-serif text-lg font-bold">§</span>
+<div class="">
+<strong class="text-[#0f172a] font-medium block">Cryptographic Enclaves &amp; Clean Rooms</strong>
+                  Calculating advertiser lift across Salesforce, HubSpot, and Snowflake without raw PII exposure.
+                </div>
+</div>
+<div class="flex items-start gap-3">
+<span class="text-[#b45309] font-heading-serif text-lg font-bold">§</span>
+<div class="">
+<strong class="text-[#0f172a] font-medium block">Sub-10ms Streaming Graph State</strong>
+                  Stateful Kafka and Pinot topologies processing 100B+ events daily with zero dropped touchpoints.
+                </div>
+</div>
+</div>
+<div class="pt-4 border-t border-[#e2e0d8] flex items-center justify-between font-data-code text-xs text-[#64748b]">
+<span class="">EXECUTIVE OVERSIGHT</span>
+<span class="text-[#1d4ed8] font-semibold">LinkedIn Executive Staff</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- CHAPTER II: THE THREE PILLARS OF TECHNICAL DOCTRINE                      -->
+<!-- ========================================================================= -->
+<section class="relative w-full py-20 bg-[#f9f9f6] border-b border-[#e2e0d8]" id="doctrine">
+<!-- Geometric Accents -->
+<div class="absolute top-0 right-0 w-80 h-80 triangle-hatch-emerald opacity-25 pointer-events-none" style="clip-path: polygon(100% 0, 0 0, 100% 100%);"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-3xl mb-10">
+<span class="font-data-code text-xs text-[#b45309] tracking-[0.2em] uppercase font-semibold">CHAPTER II • TECHNICAL DOCTRINE &amp; SYSTEMS ARCHITECTURE</span>
+<h2 class="font-display-serif text-3xl sm:text-4xl text-[#0f172a] mt-2 font-normal">
+          Enterprise Ads Measurement, AI Monetization &amp; Patent Blueprint
+        </h2>
+<p class="font-body-prose text-[#475569] text-base mt-2">
+          Verified systems architecture covering outcomes measurement, AI monetization platforms, and USPTO issued algorithmic patents.
+        </p>
+<div class="h-0.5 w-16 bg-[#b45309]/60 my-4"></div>
+</div>
+
+<!-- Embedded Interactive Technical Architecture & Patent Blueprint SVG (Light Mode) -->
+<div class="mb-12 rounded-xl overflow-hidden border border-[#e2e0d8] shadow-lg bg-white p-2">
+  <img src="./assets/diagrams/attribution-architecture-light.svg" alt="Executive Technology Portfolio: Ads Measurement, AI Products &amp; Systems Architecture Blueprint" class="w-full h-auto rounded-lg">
+</div>
+
+<!-- Two Core Architectural Pillars: Deep Tech vs Monetization Scale -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Domain 1: Outcomes Measurement & Incrementality -->
+<div class="relative bg-white border border-[#e2e0d8] rounded-lg p-8 flex flex-col justify-between hover:border-[#b45309] transition-all shadow-[0_4px_20px_-2px_rgba(15,23,42,0.05)] group">
+<div class="absolute -top-3 left-6 px-3 py-0.5 bg-[#eff6ff] border border-blue-200 text-[10px] font-data-code text-[#1d4ed8] uppercase tracking-widest font-semibold">
+  ENGINEERING DOCTRINE 01
+</div>
+<div class="space-y-4 pt-2">
+<div class="w-10 h-10 rounded bg-[#eff6ff] border border-blue-200 flex items-center justify-center text-[#1d4ed8]">
+<span class="material-symbols-outlined text-2xl">query_stats</span>
+</div>
+<h3 class="font-heading-serif text-2xl text-[#0f172a] font-semibold group-hover:text-[#b45309] transition-colors">
+  Outcomes &amp; Incrementality Measurement
+</h3>
+<p class="font-body-prose text-sm text-[#475569] leading-relaxed">
+  Strategically revamped conversion outcomes infrastructure by consolidating ingestion signals across sources, reducing differential privacy noise, and enforcing strict compliance with ATT and DMA regulatory standards.
+</p>
+<p class="font-body-prose text-sm text-[#475569] leading-relaxed">
+  Championed B2B company-level measurement across $3B in advertiser spend, validating a 2x incremental spend increase for adopters through Bayesian calculation models, company-level audience splitting, Conversion Lift, and Brand Lift (BLT) testing.
+</p>
+</div>
+<div class="mt-6 pt-4 border-t border-[#e2e0d8] font-data-code text-xs text-[#047857] font-medium">
+  <span>$3B Spend Validation • 2x Incremental Spend Increase</span>
+</div>
+</div>
+
+<!-- Domain 2: AI Platforms & Monetization Scale -->
+<div class="relative bg-white border border-[#e2e0d8] rounded-lg p-8 flex flex-col justify-between hover:border-[#b45309] transition-all shadow-[0_4px_20px_-2px_rgba(15,23,42,0.05)] group">
+<div class="absolute -top-3 left-6 px-3 py-0.5 bg-[#fef3c7] border border-amber-300 text-[10px] font-data-code text-[#92400e] uppercase tracking-widest font-semibold">
+  MONETIZATION DOCTRINE 02
+</div>
+<div class="space-y-4 pt-2">
+<div class="w-10 h-10 rounded bg-[#fef3c7] border border-amber-300 flex items-center justify-center text-[#b45309]">
+<span class="material-symbols-outlined text-2xl">auto_awesome</span>
+</div>
+<h3 class="font-heading-serif text-2xl text-[#0f172a] font-semibold group-hover:text-[#b45309] transition-colors">
+  AI Product Suite &amp; Brand Ads ($1B+ Line)
+</h3>
+<p class="font-body-prose text-sm text-[#475569] leading-relaxed">
+  Served as Engineering DRI for LinkedIn Accelerate AI suite across cross-functional teams (Product, Design, DS, Sales), architecting AI targeting, creative generation, and measurement to drive 6x growth to $100M ARR in six months.
+</p>
+<p class="font-body-prose text-sm text-[#475569] leading-relaxed">
+  Bootstrapped LinkedIn's Brand Advertising business line from ground up into over $1B in annual revenue (~20% of total ad revenue), engineering Reach &amp; Frequency optimization and media planning tools unlocking Connected TV and live events.
+</p>
+</div>
+<div class="mt-6 pt-4 border-t border-[#e2e0d8] font-data-code text-xs text-[#b45309] font-medium">
+  <span>$1B+ Brand Ads Line • $100M ARR AI Suite in 6 Months</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- CHAPTER III: EXECUTIVE LEADERSHIP CHRONOLOGY                              -->
+<!-- ========================================================================= -->
+<section class="relative w-full py-20 bg-[#f5f5f0] border-b border-[#e2e0d8]" id="trajectory">
+<!-- Background Triangle Chevron Watermark -->
+<div class="absolute left-0 bottom-10 w-96 h-96 triangle-hatch-gold opacity-20 pointer-events-none" style="clip-path: polygon(0 0, 0% 100%, 100% 100%);"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-14">
+<div>
+<span class="font-data-code text-xs text-[#b45309] tracking-[0.2em] uppercase font-semibold">CHAPTER III • LEADERSHIP DOSSIER</span>
+<h2 class="font-display-serif text-3xl sm:text-4xl text-[#0f172a] mt-2 font-normal">
+            Executive Chronology &amp; P&amp;L Trajectory
+          </h2>
+<div class="h-0.5 w-16 bg-[#b45309]/60 my-4"></div>
+</div>
+<div class="font-data-code text-xs text-[#475569] bg-white px-4 py-2 rounded border border-[#e2e0d8] shadow-sm font-medium">
+          15+ YEARS SYSTEMS &amp; SCIENTIFIC LEADERSHIP
+        </div>
+</div>
+<!-- Editorial Career Dossier Entries -->
+<div class="relative border-l-2 border-[#cbd5e1] ml-4 sm:ml-6 pl-6 sm:pl-10 space-y-12">
+<!-- Role 1: LinkedIn -->
+<div class="relative group">
+<!-- Dossier Pin -->
+<div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-5 h-5 bg-white border-2 border-[#1d4ed8] rounded-full flex items-center justify-center shadow-sm">
+<span class="w-2 h-2 bg-[#1d4ed8] rounded-full animate-ping"></span>
+</div>
+<div class="bg-white border border-[#e2e0d8] rounded-lg p-8 shadow-[0_4px_20px_-2px_rgba(15,23,42,0.05)]">
+<div class="flex flex-wrap items-center justify-between gap-2 border-b border-[#e2e0d8] pb-4 mb-4">
+<div>
+<span class="font-data-code text-xs text-[#1d4ed8] uppercase tracking-widest font-semibold block">CURRENT EXECUTIVE APPOINTMENT</span>
+<h3 class="font-heading-serif text-2xl sm:text-3xl text-[#0f172a] font-semibold mt-1">
+                  Director of Engineering &amp; Head of Ads Measurement
+                </h3>
+<span class="font-heading-serif text-lg text-[#b45309] italic">LinkedIn Corporation • Mountain View &amp; Sunnyvale, CA</span>
+</div>
+<div class="text-right">
+<span class="font-data-code text-sm text-[#0f172a] font-semibold block">2021 — PRESENT</span>
+<span class="font-body-prose text-xs text-[#64748b]">4+ Years Active</span>
+</div>
+</div>
+<div class="max-w-none font-body-prose text-[#475569] text-sm sm:text-base leading-relaxed space-y-4">
+<p class="">
+                Lead the unified engineering, machine learning science, and platform architecture organization responsible for LinkedIn's $1.0B+ Ads Measurement, Attribution, and Pricing integrity portfolio. Direct 70+ Staff, Principal, and Senior Engineers alongside 8 Engineering Managers across causal inference, incremental conversion lift, privacy-preserving clean rooms, and real-time event infrastructure.
+              </p>
+<p class="">
+                Serve as primary architectural liaison to VP of Engineering and executive partners, aligning algorithm verification with enterprise advertiser trust. Led the end-to-end modernization that unlocked $100M+ in ARR AI infrastructure through mathematically verifiable campaign incrementality.
+              </p>
+</div>
+<!-- Monolithic Impact Highlights -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6 pt-6 border-t border-[#e2e0d8]">
+<div class="p-3 bg-[#f8fafc] rounded border border-[#e2e0d8]">
+<span class="font-data-code text-[11px] text-[#b45309] uppercase block font-semibold">P&amp;L RESPONSIBILITY</span>
+<span class="font-heading-serif text-xl text-[#0f172a] font-semibold">$1.0B+ Line Accountability</span>
+</div>
+<div class="p-3 bg-[#f8fafc] rounded border border-[#e2e0d8]">
+<span class="font-data-code text-[11px] text-[#1d4ed8] uppercase block font-semibold">ARR EXPANSION</span>
+<span class="font-heading-serif text-xl text-[#1d4ed8] font-semibold">$100M+ Net-New Lift</span>
+</div>
+<div class="p-3 bg-[#f8fafc] rounded border border-[#e2e0d8]">
+<span class="font-data-code text-[11px] text-[#0f172a] uppercase block font-semibold">ORGANIZATIONAL REACH</span>
+<span class="font-heading-serif text-xl text-[#0f172a] font-semibold">70+ Engineers • 8 Managers</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Role 2: Apple -->
+<div class="relative group">
+<div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-5 h-5 bg-white border-2 border-[#b45309] rounded-full flex items-center justify-center shadow-sm">
+<span class="w-1.5 h-1.5 bg-[#b45309] rounded-full"></span>
+</div>
+<div class="bg-white border border-[#e2e0d8] rounded-lg p-8 shadow-[0_4px_20px_-2px_rgba(15,23,42,0.05)]">
+<div class="flex flex-wrap items-center justify-between gap-2 border-b border-[#e2e0d8] pb-4 mb-4">
+<div>
+<span class="font-data-code text-xs text-[#64748b] uppercase tracking-widest block font-medium">PREVIOUS TENURE</span>
+<h3 class="font-heading-serif text-2xl sm:text-3xl text-[#0f172a] font-semibold mt-1">
+                  Senior Engineering Leader &amp; Principal Architect
+                </h3>
+<span class="font-heading-serif text-lg text-[#b45309] italic">Apple Inc. • Cupertino, CA • Cloud Services &amp; Ad Platforms</span>
+</div>
+<div class="text-right">
+<span class="font-data-code text-sm text-[#0f172a] font-semibold block">2017 — 2021</span>
+<span class="font-body-prose text-xs text-[#64748b]">4 Years</span>
+</div>
+</div>
+<div class="max-w-none font-body-prose text-[#475569] text-sm sm:text-base leading-relaxed space-y-3">
+<p class="">
+                Architected Apple’s privacy-preserving advertising technologies, cryptographic protocols, and SKAdNetwork measurement infrastructure. Formulated differential privacy frameworks and on-device machine learning inference schemes that protected consumer identity at global iOS scale while delivering provably sound metrics to App Store developers worldwide.
+              </p>
+</div>
+<div class="flex flex-wrap gap-2 mt-5">
+<span class="px-3 py-1 bg-[#f1f5f9] rounded border border-[#cbd5e1] text-xs font-body-prose text-[#334155]">SKAdNetwork Cryptography</span>
+<span class="px-3 py-1 bg-[#f1f5f9] rounded border border-[#cbd5e1] text-xs font-body-prose text-[#334155]">Differential Privacy Guarantees (ε-δ)</span>
+<span class="px-3 py-1 bg-[#f1f5f9] rounded border border-[#cbd5e1] text-xs font-body-prose text-[#334155]">Global iOS Developer Ecosystem</span>
+</div>
+</div>
+</div>
+<!-- Role 3: Playtika -->
+<div class="relative group">
+<div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-5 h-5 bg-white border-2 border-[#94a3b8] rounded-full flex items-center justify-center shadow-sm">
+<span class="w-1.5 h-1.5 bg-[#64748b] rounded-full"></span>
+</div>
+<div class="bg-white border border-[#e2e0d8] rounded-lg p-7 shadow-[0_4px_20px_-2px_rgba(15,23,42,0.05)]">
+<div class="flex flex-wrap items-center justify-between gap-2 border-b border-[#e2e0d8] pb-4 mb-3">
+<div>
+<span class="font-data-code text-xs text-[#64748b] uppercase tracking-widest block font-medium">EARLIER TENURE</span>
+<h3 class="font-heading-serif text-2xl text-[#0f172a] font-semibold mt-1">
+                  Lead Applied Scientist &amp; Infrastructure Architect
+                </h3>
+<span class="font-heading-serif text-base text-[#b45309] italic">Playtika</span>
+</div>
+<span class="font-data-code text-sm text-[#0f172a] font-semibold">2014 — 2017</span>
+</div>
+<p class="font-body-prose text-sm text-[#475569] leading-relaxed">
+              Engineered high-concurrency real-time bidding (RTB) auctions and predictive lifetime value (LTV) pipelines executing tens of thousands of bid transactions per second. Designed high-dimensional stochastic optimization models maximizing multi-million-dollar programmatic ad spend and player retention dynamics.
+            </p>
+</div>
+</div>
+<!-- Role 4: i.Point -->
+<div class="relative group">
+<div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-5 h-5 bg-white border-2 border-[#94a3b8] rounded-full flex items-center justify-center shadow-sm">
+<span class="w-1.5 h-1.5 bg-[#64748b] rounded-full"></span>
+</div>
+<div class="bg-white border border-[#e2e0d8] rounded-lg p-7 shadow-[0_4px_20px_-2px_rgba(15,23,42,0.05)]">
+<div class="flex flex-wrap items-center justify-between gap-2 border-b border-[#e2e0d8] pb-4 mb-3">
+<div>
+<span class="font-data-code text-xs text-[#64748b] uppercase tracking-widest block font-medium">FOUNDATIONAL EXECUTIVE</span>
+<h3 class="font-heading-serif text-2xl text-[#0f172a] font-semibold mt-1">
+                  Chief Technology Officer (CTO)
+                </h3>
+<span class="font-heading-serif text-base text-[#b45309] italic">i.Point</span>
+</div>
+<span class="font-data-code text-sm text-[#0f172a] font-semibold">Prior Tenure</span>
+</div>
+<p class="font-body-prose text-sm text-[#475569] leading-relaxed">
+              Directed enterprise platform architecture, engineering team hiring, and mission-critical transactional software backends supporting distributed high-availability business services.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- CHAPTER IV: INTELLECTUAL PROPERTY & US PATENTS                            -->
+<!-- ========================================================================= -->
+<section class="relative w-full py-20 bg-[#f9f9f6] border-b border-[#e2e0d8]" id="patents">
+<!-- Geometric Textured Triangle Accents -->
+<div class="absolute -top-16 -left-16 w-64 h-64 triangle-hatch-gold opacity-20 pointer-events-none" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-14">
+<div>
+<span class="font-data-code text-xs text-[#b45309] tracking-[0.2em] uppercase font-semibold">CHAPTER IV • INTELLECTUAL PROPERTY</span>
+<h2 class="font-display-serif text-3xl sm:text-4xl text-[#0f172a] mt-2 font-normal">
+            Issued US Patents Portfolio
+          </h2>
+<p class="font-body-prose text-[#475569] text-base mt-2">
+            Legally assigned algorithmic patents defending multi-party causal attribution and stateful streaming graphs.
+          </p>
+<div class="h-0.5 w-16 bg-[#b45309]/60 my-4"></div>
+</div>
+<div class="flex items-center gap-2 font-data-code text-xs text-[#1e3a8a] bg-[#eff6ff] px-4 py-2 rounded border border-blue-200 shadow-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="">UNITED STATES PATENT &amp; TRADEMARK OFFICE (USPTO)</span>
+</div>
+</div>
+<!-- Dignified Editorial Patent Cards with Textured Triangular Framing -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Patent 1 -->
+<div class="relative bg-white border border-[#e2e0d8] rounded-lg p-7 flex flex-col justify-between hover:border-[#b45309] transition-all shadow-[0_4px_20px_-2px_rgba(15,23,42,0.05)] group">
+<!-- Corner Triangular Hatch -->
+<div class="absolute top-0 right-0 w-20 h-20 triangle-hatch-gold opacity-30 pointer-events-none" style="clip-path: polygon(100% 0, 0 0, 100% 100%);"></div>
+<div class="space-y-4">
+<div class="flex items-center justify-between border-b border-[#e2e0d8] pb-3">
+<span class="font-data-code text-sm text-[#0f172a] font-semibold">US 11,968,185</span>
+<span class="px-2 py-0.5 bg-[#eff6ff] text-[#1d4ed8] font-data-code text-[11px] rounded border border-blue-200 font-semibold">ISSUED 2024</span>
+</div>
+<h3 class="font-heading-serif text-2xl text-[#0f172a] font-semibold leading-snug group-hover:text-[#b45309] transition-colors">
+              Distributed privacy-compliant attribution modeling across disparate networked platforms
+            </h3>
+<p class="font-body-prose text-xs text-[#475569] leading-relaxed">
+              Establishes dynamic noise injection mechanisms under bounded differential privacy across asynchronous streaming logs, preserving conversion lift confidence intervals without exposing individual cross-site identifiers.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-[#e2e0d8] flex items-center justify-between font-data-code text-xs">
+<span class="text-[#64748b]">PRIMARY INVENTOR</span>
+<a class="text-[#b45309] hover:underline flex items-center gap-1 font-semibold" href="https://patents.google.com/patent/US11968185" rel="noopener noreferrer" target="_blank">
+<span class="">View USPTO Record</span>
+<span class="text-[12px]">→</span>
+</a>
+</div>
+</div>
+<!-- Patent 2 -->
+<div class="relative bg-white border border-[#e2e0d8] rounded-lg p-7 flex flex-col justify-between hover:border-[#b45309] transition-all shadow-[0_4px_20px_-2px_rgba(15,23,42,0.05)] group">
+<div class="absolute top-0 right-0 w-20 h-20 triangle-hatch-emerald opacity-30 pointer-events-none" style="clip-path: polygon(100% 0, 0 0, 100% 100%);"></div>
+<div class="space-y-4">
+<div class="flex items-center justify-between border-b border-[#e2e0d8] pb-3">
+<span class="font-data-code text-sm text-[#0f172a] font-semibold">US 11,232,254</span>
+<span class="px-2 py-0.5 bg-[#eff6ff] text-[#1d4ed8] font-data-code text-[11px] rounded border border-blue-200 font-semibold">ISSUED 2022</span>
+</div>
+<h3 class="font-heading-serif text-2xl text-[#0f172a] font-semibold leading-snug group-hover:text-[#b45309] transition-colors">
+              Dynamic attribution weighting and conversion pipeline optimization using streaming stateful graphs
+            </h3>
+<p class="font-body-prose text-xs text-[#475569] leading-relaxed">
+              Mitigates event-order collisions across multi-touch customer funnels via partitioned Markov trees and real-time streaming graph partition engines operating under strict latency constraints.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-[#e2e0d8] flex items-center justify-between font-data-code text-xs">
+<span class="text-[#64748b]">PRIMARY INVENTOR</span>
+<a class="text-[#b45309] hover:underline flex items-center gap-1 font-semibold" href="https://patents.google.com/patent/US11232254" rel="noopener noreferrer" target="_blank">
+<span class="">View USPTO Record</span>
+<span class="text-[12px]">→</span>
+</a>
+</div>
+</div>
+<!-- Patent 3 -->
+<div class="relative bg-white border border-[#e2e0d8] rounded-lg p-7 flex flex-col justify-between hover:border-[#b45309] transition-all shadow-[0_4px_20px_-2px_rgba(15,23,42,0.05)] group">
+<div class="absolute top-0 right-0 w-20 h-20 triangle-hatch-gold opacity-30 pointer-events-none" style="clip-path: polygon(100% 0, 0 0, 100% 100%);"></div>
+<div class="space-y-4">
+<div class="flex items-center justify-between border-b border-[#e2e0d8] pb-3">
+<span class="font-data-code text-sm text-[#0f172a] font-semibold">US 11,102,534</span>
+<span class="px-2 py-0.5 bg-[#eff6ff] text-[#1d4ed8] font-data-code text-[11px] rounded border border-blue-200 font-semibold">ISSUED 2021</span>
+</div>
+<h3 class="font-heading-serif text-2xl text-[#0f172a] font-semibold leading-snug group-hover:text-[#b45309] transition-colors">
+              Real-time high-throughput telemetry pipelines for ad measurement and lift verification
+            </h3>
+<p class="font-body-prose text-xs text-[#475569] leading-relaxed">
+              Enforces zero-drop message synchronization between impression publisher nodes and downstream econometric verification engines running under sub-10ms latency budgets.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-[#e2e0d8] flex items-center justify-between font-data-code text-xs">
+<span class="text-[#64748b]">CO-INVENTOR</span>
+<a class="text-[#b45309] hover:underline flex items-center gap-1 font-semibold" href="https://patents.google.com/patent/US11102534" rel="noopener noreferrer" target="_blank">
+<span class="">View USPTO Record</span>
+<span class="text-[12px]">→</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- CHAPTER V: ACADEMIC FOUNDATION & DOCTORAL PEDIGREE                        -->
+<!-- ========================================================================= -->
+<section class="relative w-full py-20 bg-[#f5f5f0] border-b border-[#e2e0d8]" id="pedigree">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="relative bg-white border border-[#e2e0d8] rounded-xl p-8 sm:p-12 shadow-[0_4px_20px_-2px_rgba(15,23,42,0.05)] overflow-hidden">
+<!-- Large Faceted Triangular Watermark in Corner -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 triangle-hatch-gold opacity-20 pointer-events-none" style="clip-path: polygon(50% 0%, 100% 100%, 0% 100%); transform: rotate(45deg);"></div>
+<div class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10">
+<div class="flex items-start gap-6 max-w-3xl">
+<div class="w-16 h-16 rounded-lg bg-[#fef3c7] border border-amber-300 flex items-center justify-center shrink-0 text-[#b45309] shadow-sm">
+<span class="material-symbols-outlined text-4xl">school</span>
+</div>
+<div class="space-y-2">
+<span class="font-data-code text-xs text-[#b45309] tracking-[0.2em] uppercase block font-semibold">
+                DOCTORAL FOUNDATION • APPLIED MATHEMATICS
+              </span>
+<h3 class="font-display-serif text-3xl sm:text-4xl text-[#0f172a] font-normal">
+                PhD in Applied Mathematics &amp; Computer Science
+              </h3>
+<p class="font-heading-serif text-xl text-[#1d4ed8] italic font-semibold">
+                INRTU • Diploma with Distinction (Summa Cum Laude Honors)
+              </p>
+<p class="font-body-prose text-sm text-[#475569] leading-relaxed pt-2">
+                Dissertation: <em>Stochastic Optimization &amp; Econometric Parameter Estimation in High Dimensions</em>. Developed closed-form numerical estimators for non-linear stochastic feedback models that serve as the foundational mathematical basis for current causal attribution engines at LinkedIn.
+              </p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-stretch gap-4 shrink-0 w-full lg:w-auto">
+<a class="px-6 py-3 bg-gradient-to-r from-[#d97706] to-[#b45309] text-white font-body-prose text-xs tracking-wider uppercase font-semibold rounded text-center transition-all hover:brightness-105 shadow-md" href="mailto:kirill@drlebedev.com?subject=Dossier%20and%20Dissertation%20Inquiry">
+              Download Academic Dossier
+            </a>
+<a class="px-6 py-3 bg-white hover:bg-slate-50 border border-[#cbd5e1] text-[#0f172a] font-body-prose text-xs tracking-wider uppercase rounded text-center transition-all flex items-center justify-center gap-1.5 shadow-sm font-medium" href="https://www.linkedin.com/in/drlebedev/" rel="noopener noreferrer" target="_blank">
+<span class="">LinkedIn Profile</span>
+<span class="text-[14px]">→</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- CHAPTER VI: CONFIDENTIAL ADVISORY & DIRECT INQUIRY                        -->
+<!-- ========================================================================= -->
+<section class="relative w-full py-20 bg-[#f9f9f6]" id="contact">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 space-y-6">
+<span class="font-data-code text-xs text-[#b45309] tracking-[0.2em] uppercase font-semibold">CHAPTER VI • ADVISORY ENGAGEMENTS</span>
+<h2 class="font-display-serif text-3xl sm:text-5xl text-[#0f172a] font-normal">
+            Strategic Executive Counsel &amp; Due Diligence
+          </h2>
+<div class="h-0.5 w-16 bg-[#b45309]/60"></div>
+<p class="font-body-prose text-base text-[#475569] leading-relaxed max-w-xl">
+            Available for select technical due-diligence advisory for tier-one venture capital funds, enterprise board advisement on AI monetization architecture, and academic keynote lectures on causal systems.
+          </p>
+<div class="space-y-3 pt-2 font-data-code text-sm">
+<a class="flex items-center gap-3 text-[#1d4ed8] hover:underline font-medium" href="mailto:kirill@drlebedev.com">
+<span class="material-symbols-outlined text-lg">mail</span>
+<span class="">kirill@drlebedev.com</span>
+</a>
+<a class="flex items-center gap-3 text-[#b45309] hover:underline font-medium" href="https://www.linkedin.com/in/drlebedev/" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-lg">link</span>
+<span class="">linkedin.com/in/drlebedev</span>
+</a>
+<div class="flex items-center gap-3 text-[#64748b]">
+<span class="material-symbols-outlined text-lg">location_on</span>
+<span class="">Mountain View &amp; Sunnyvale, California</span>
+</div>
+</div>
+</div>
+<!-- Confidential Dossier Transmission Form (Light Porcelain) -->
+<div class="lg:col-span-5 bg-white border border-[#e2e0d8] rounded-xl p-8 shadow-[0_4px_20px_-2px_rgba(15,23,42,0.05)] relative">
+<div class="absolute top-0 right-0 w-24 h-24 triangle-hatch-gold opacity-25 pointer-events-none" style="clip-path: polygon(100% 0, 0 0, 100% 100%);"></div>
+<h3 class="font-heading-serif text-2xl text-[#0f172a] font-semibold">Request Confidential Dossier</h3>
+<p class="font-body-prose text-xs text-[#64748b] mt-1 mb-6">
+            Direct communication for accredited venture partners, Fortune 500 board chairs, and symposium organizers.
+          </p>
+<form class="space-y-4" onsubmit="event.preventDefault(); alert('Dossier inquiry transmitted. Direct confirmation will be sent to your institutional email.');">
+<div>
+<label class="block font-data-code text-[11px] text-[#475569] uppercase mb-1 font-medium">Name &amp; Title</label>
+<input class="w-full bg-[#f8fafc] border border-[#cbd5e1] rounded px-4 py-2 text-sm text-[#0f172a] focus:outline-none focus:border-[#b45309]" placeholder="e.g. Partner, General Catalyst" required="" type="text">
+</div>
+<div>
+<label class="block font-data-code text-[11px] text-[#475569] uppercase mb-1 font-medium">Corporate / Institutional Email</label>
+<input class="w-full bg-[#f8fafc] border border-[#cbd5e1] rounded px-4 py-2 text-sm text-[#0f172a] focus:outline-none focus:border-[#b45309]" placeholder="partner@firm.com" required="" type="email">
+</div>
+<div>
+<label class="block font-data-code text-[11px] text-[#475569] uppercase mb-1 font-medium">Nature of Inquiry</label>
+<textarea class="w-full bg-[#f8fafc] border border-[#cbd5e1] rounded px-4 py-2 text-sm text-[#0f172a] focus:outline-none focus:border-[#b45309]" placeholder="Technical diligence, keynote advisory, or executive search inquiry..." rows="3"></textarea>
+</div>
+<button class="w-full py-3 bg-gradient-to-r from-[#d97706] to-[#b45309] text-white font-body-prose text-xs tracking-wider uppercase font-semibold rounded hover:brightness-105 transition-all shadow-md" type="submit">
+              Transmit Confidential Request
+            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- ========================================================================= -->
+<!-- 3. UNDERSTATED COMMAND CONSOLE TERMINAL MODAL (Dual-Mode Preservation)     -->
+<!-- ========================================================================= -->
+<section class="hidden fixed inset-0 z-40 bg-[#050b14]/95 pt-20 overflow-y-auto crt-overlay backdrop-blur-md" id="cli-view-container">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 py-6 flex flex-col min-h-[calc(100vh-5rem)] justify-between">
+<!-- Terminal Chassis -->
+<div class="w-full bg-[#081324] border border-blue-500/40 rounded-lg shadow-[0_0_50px_rgba(59,130,246,0.18)] overflow-hidden flex flex-col flex-1">
+<!-- Terminal Header Bar -->
+<div class="bg-[#0f1f3a] px-4 py-3 border-b border-blue-500/30 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-emerald-400 inline-block"></span>
+<span class="font-data-code text-xs text-amber-300 font-medium ml-2">
+            kirill@ads-attribution:~ (CAUSAL-V8.4-PROD)
+          </span>
+</div>
+<button class="px-3 py-1 bg-blue-500/20 hover:bg-blue-600 hover:text-white text-blue-300 font-data-code text-xs rounded transition-all flex items-center gap-1.5" onclick="switchMode('gui')">
+<span class="material-symbols-outlined text-[14px]">arrow_back</span>
+<span class="">Return to Executive View [ESC]</span>
+</button>
+</div>
+<!-- Terminal Phosphor Screen -->
+<div class="p-6 font-data-code text-xs sm:text-sm flex flex-col gap-2 overflow-y-auto flex-1 text-slate-200" id="cli-screen">
+<div class="text-amber-300">
+          ********************************************************************************<br>
+          &nbsp;DR. KIRILL LEBEDEV, PhD • APPLIED SYSTEMS WORKSTATION<br>
+          &nbsp;Engineering Head of Ads Measurement &amp; Attribution @ LinkedIn<br>
+          ********************************************************************************
+        </div>
+<div class="text-slate-400 text-xs">
+          Active Node: Mountain View HQ • Enclave: SMPC-Privacy-Guaranteed (ε ≤ 0.48)
+        </div>
+<!-- Quick Chips -->
+<div class="flex flex-wrap items-center gap-1.5 py-2 border-y border-white/10 my-2">
+<span class="text-slate-400 text-xs mr-1">COMMANDS:</span>
+<button class="px-2 py-0.5 bg-[#0e1e38] hover:bg-[#18315a] text-amber-300 rounded border border-amber-500/30" onclick="executeCliCommand('help')">help</button>
+<button class="px-2 py-0.5 bg-[#0e1e38] hover:bg-[#18315a] text-blue-300 rounded border border-blue-400/30" onclick="executeCliCommand('bio')">bio</button>
+<button class="px-2 py-0.5 bg-[#0e1e38] hover:bg-[#18315a] text-blue-300 rounded border border-blue-400/30" onclick="executeCliCommand('exp')">exp</button>
+<button class="px-2 py-0.5 bg-[#0e1e38] hover:bg-[#18315a] text-blue-300 rounded border border-blue-400/30" onclick="executeCliCommand('patents')">patents</button>
+<button class="px-2 py-0.5 bg-[#0e1e38] hover:bg-[#18315a] text-blue-300 rounded border border-blue-400/30" onclick="executeCliCommand('edu')">edu</button>
+<button class="px-2 py-0.5 bg-[#0e1e38] hover:bg-[#18315a] text-blue-300 rounded border border-blue-400/30" onclick="executeCliCommand('skills')">skills</button>
+<button class="px-2 py-0.5 bg-[#0e1e38] hover:bg-[#18315a] text-blue-300 rounded border border-blue-400/30" onclick="executeCliCommand('contact')">contact</button>
+<button class="px-2 py-0.5 bg-[#0e1e38] hover:bg-[#18315a] text-slate-400 rounded border border-white/20" onclick="executeCliCommand('clear')">clear</button>
+</div>
+<div class="flex flex-col gap-2" id="cli-log">
+<div class="text-amber-300">kirill@ads-attribution:~$ <span class="text-white">dossier.summary</span></div>
+<div class="text-blue-300 pl-3 space-y-0.5">
+<div class="">• ROLE: Director of Engineering &amp; Head of Ads Measurement @ LinkedIn</div>
+<div class="">• SCOPE: $1.0B+ Measurement Line | 70+ Person Scientific Org | 8 Engineering Managers</div>
+<div class="">• CORE IP: US Patents 11,968,185 | 11,232,254 | 11,102,534</div>
+<div class="">• DOCTORATE: PhD in Applied Mathematics &amp; Computer Science, INRTU</div>
+</div>
+</div>
+<div class="flex items-center gap-2 text-amber-300 pt-4 mt-auto">
+<span class="shrink-0 text-blue-400 font-semibold">kirill@ads-attribution:~$</span>
+<input autocomplete="off" class="flex-1 bg-transparent text-blue-300 focus:outline-none font-data-code text-xs sm:text-sm placeholder-slate-500 caret-blue-400" id="cli-input-field" placeholder="type 'help', 'exp', 'patents', 'edu', 'contact', 'gui'..." spellcheck="false" type="text">
+<span class="w-2 h-4 bg-blue-400 animate-pulse inline-block"></span>
+</div>
+</div>
+<div class="bg-[#050b14] px-4 py-2 border-t border-white/10 flex items-center justify-between text-[11px] font-data-code text-slate-400">
+<div class="">CRYPTO_ENCLAVE: DIFFERENTIAL_PRIVACY_VERIFIED</div>
+<div class="">PRESS 'ESC' OR TYPE 'gui' TO EXIT</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- FOOTER (PRISTINE LIGHT ARCHIVAL)                                          -->
+<!-- ========================================================================= -->
+<footer class="w-full bg-white border-t border-[#e2e0d8] py-12 text-[#64748b] text-xs shadow-inner">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex flex-col gap-1 text-center md:text-left">
+<span class="font-heading-serif text-lg text-[#0f172a] font-medium">
+        Dr. Kirill Lebedev, PhD • Executive Engineering Portfolio
+      </span>
+<p class="font-body-prose text-xs text-[#475569] max-w-xl">
+        Engineering Head of Ads Measurement &amp; Attribution @ LinkedIn. Applied mathematician specializing in counterfactual causal inference, differential privacy, and high-throughput streaming state.
+      </p>
+</div>
+<div class="flex flex-col items-center md:items-end gap-2 font-data-code text-xs">
+<div class="flex items-center gap-3 text-[#1d4ed8]">
+<a class="hover:underline font-medium" href="mailto:kirill@drlebedev.com">kirill@drlebedev.com</a>
+<span class="text-slate-300">•</span>
+<a class="hover:underline font-medium" href="https://www.linkedin.com/in/drlebedev/" rel="noopener noreferrer" target="_blank">LinkedIn Profile</a>
+<span class="text-slate-300">•</span>
+<button class="text-[#b45309] hover:underline font-medium" onclick="switchMode('cli')">terminal.sh</button>
+</div>
+<span class="text-[#94a3b8] text-[11px]">
+        © 2025 Dr. Kirill Lebedev, PhD. All US Patents active &amp; registered.
+      </span>
+</div>
+</div>
+</footer>
+<!-- INTERACTION SCRIPT -->
+<script>
+  let currentMode = 'gui';
+
+  function switchMode(mode) {
+    currentMode = mode;
+    const guiContainer = document.getElementById('gui-view-container');
+    const cliContainer = document.getElementById('cli-view-container');
+    const toggleGuiBtn = document.getElementById('toggle-gui-btn');
+    const toggleCliBtn = document.getElementById('toggle-cli-btn');
+
+    if (mode === 'cli') {
+      guiContainer.classList.add('hidden');
+      cliContainer.classList.remove('hidden');
+
+      toggleGuiBtn.className = "px-3 py-1 rounded-full text-xs font-body-prose text-[#64748b] hover:text-[#0f172a] transition-all";
+      toggleCliBtn.className = "px-3 py-1 rounded-full font-data-code text-xs transition-all bg-white text-[#1d4ed8] border border-blue-200 shadow-sm flex items-center gap-1.5";
+
+      setTimeout(() => {
+        const inputField = document.getElementById('cli-input-field');
+        if (inputField) inputField.focus();
+      }, 60);
+    } else {
+      cliContainer.classList.add('hidden');
+      guiContainer.classList.remove('hidden');
+
+      toggleGuiBtn.className = "px-3 py-1 rounded-full text-xs font-body-prose font-medium transition-all bg-white text-[#1d4ed8] border border-blue-200 shadow-sm";
+      toggleCliBtn.className = "px-3 py-1 rounded-full font-data-code text-xs text-[#64748b] hover:text-[#0f172a] flex items-center gap-1.5 transition-all";
+    }
+  }
+
+  // Keyboard shortcut
+  document.addEventListener('keydown', function(e) {
+    if (e.key === '`' || e.key === '~') {
+      e.preventDefault();
+      switchMode(currentMode === 'gui' ? 'cli' : 'gui');
+    } else if (e.key === 'Escape' && currentMode === 'cli') {
+      switchMode('gui');
+    }
+  });
+
+  // CLI Engine
+  function executeCliCommand(cmd) {
+    cmd = cmd.trim().toLowerCase();
+    const cliLog = document.getElementById('cli-log');
+    const cliScreen = document.getElementById('cli-screen');
+    if (!cliLog) return;
+
+    if (cmd === 'clear') {
+      cliLog.innerHTML = '';
+      return;
+    }
+
+    if (cmd === 'gui') {
+      switchMode('gui');
+      return;
+    }
+
+    let response = '';
+
+    switch (cmd) {
+      case 'help':
+        response = `
+          <div class="text-amber-300">COMMAND REGISTRY:</div>
+          <div class="pl-3 text-blue-300 space-y-0.5">
+            <div>&bull; bio &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Executive thesis & leadership overview</div>
+            <div>&bull; exp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Career chronology (LinkedIn, Apple, Playtika, i.Point)</div>
+            <div>&bull; patents &nbsp;&nbsp;- Issued US Patents (US 11,968,185 | 11,232,254 | 11,102,534)</div>
+            <div>&bull; edu &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- PhD dissertation & academic honors at INRTU</div>
+            <div>&bull; skills &nbsp;&nbsp;&nbsp;- Mathematical formulations & systems competencies</div>
+            <div>&bull; contact &nbsp;&nbsp;- Confidential executive communication channels</div>
+            <div>&bull; gui &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Switch to the prestige executive reading mode</div>
+            <div>&bull; clear &nbsp;&nbsp;&nbsp;&nbsp;- Clear console terminal buffer</div>
+          </div>`;
+        break;
+
+      case 'bio':
+        response = `
+          <div class="text-amber-300">[EXECUTIVE DOSSIER: DR. KIRILL LEBEDEV, PhD]</div>
+          <div class="pl-3 text-slate-200 leading-relaxed">
+            Engineering Head of Ads Measurement & Attribution @ LinkedIn.<br/>
+            Directing 70+ scientists and engineers for a $1B+ attribution and pricing line.<br/>
+            Unlocking $100M+ in ARR AI infrastructure through counterfactual Double Machine Learning (DML) and cryptographic clean rooms.
+          </div>`;
+        break;
+
+      case 'exp':
+        response = `
+          <div class="text-amber-300">[CHRONOLOGY OF LEADERSHIP]</div>
+          <div class="pl-3 text-blue-300 space-y-1.5">
+            <div><strong>[2021-PRESENT] LINKEDIN</strong> &bull; Director of Engineering & Head of Ads Measurement<br/>
+            &nbsp;&bull; 70+ headcount, 8 managers, $1.0B+ line accountability, $100M+ ARR AI lift.</div>
+            <div><strong>[2017-2021] APPLE</strong> &bull; Senior Engineering Leader & Principal Architect<br/>
+            &nbsp;&bull; Privacy ad infrastructure, SKAdNetwork, on-device ML & differential privacy.</div>
+            <div><strong>[2014-2017] PLAYTIKA</strong> &bull; Lead Applied Scientist & Infrastructure Architect<br/>
+            &nbsp;&bull; High-throughput real-time bidding (RTB) auctions & stochastic LTV pipelines.</div>
+            <div><strong>[PRIOR] i.POINT</strong> &bull; Chief Technology Officer (CTO)<br/>
+            &nbsp;&bull; Enterprise core transactional architectures and platform teams.</div>
+          </div>`;
+        break;
+
+      case 'patents':
+        response = `
+          <div class="text-amber-300">[USPTO REGISTERED INVENTIONS]</div>
+          <div class="pl-3 text-blue-300 space-y-1">
+            <div>&bull; <strong>US 11,968,185 (2024):</strong> Distributed privacy-compliant attribution modeling across disparate networked platforms.</div>
+            <div>&bull; <strong>US 11,232,254 (2022):</strong> Dynamic attribution weighting and conversion pipeline optimization using streaming stateful graphs.</div>
+            <div>&bull; <strong>US 11,102,534 (2021):</strong> Real-time high-throughput telemetry pipelines for ad measurement and lift verification.</div>
+          </div>`;
+        break;
+
+      case 'edu':
+        response = `
+          <div class="text-amber-300">[ACADEMIC FOUNDATION]</div>
+          <div class="pl-3 text-slate-200">
+            &bull; <strong>PhD in Applied Mathematics & Computer Science</strong> &bull; INRTU<br/>
+            &bull; Diploma with Distinction (Summa Cum Laude Honors).<br/>
+            &bull; Dissertation: <em>Stochastic Optimization & Econometric Parameter Estimation in High Dimensions</em>.
+          </div>`;
+        break;
+
+      case 'skills':
+        response = `
+          <div class="text-amber-300">[MATHEMATICAL & SYSTEMS ARCHITECTURE]</div>
+          <div class="pl-3 text-blue-300 space-y-0.5">
+            <div>&bull; Causal Inference: Double Machine Learning (DML), Continuous Synthetic Controls, ATE Estimation</div>
+            <div>&bull; Cryptographic Clean Rooms: 3-party Shamir Secret Sharing, Differential Privacy (&epsilon; &le; 0.48)</div>
+            <div>&bull; Distributed Graphs: Stateful Kafka, Apache Pinot, 100B+ events/day, &lt;10ms P99 SLAs</div>
+            <div>&bull; Executive Governance: 70+ headcount, 8 managers, C-suite monetization alignment</div>
+          </div>`;
+        break;
+
+      case 'contact':
+        response = `
+          <div class="text-amber-300">[CONFIDENTIAL CONTACT]</div>
+          <div class="pl-3 text-blue-300 space-y-0.5">
+            <div>&bull; Direct Email: <a href="mailto:kirill@drlebedev.com" class="text-amber-300 underline">kirill@drlebedev.com</a></div>
+            <div>&bull; Executive Profile: <a href="https://www.linkedin.com/in/drlebedev/" target="_blank" class="text-amber-300 underline">linkedin.com/in/drlebedev</a></div>
+            <div>&bull; Geographic HQ: Silicon Valley (Mountain View & Sunnyvale, CA)</div>
+          </div>`;
+        break;
+
+      default:
+        response = `<div class="text-red-400">bash: unknown command: ${cmd}. Type 'help' to review valid operations.</div>`;
+    }
+
+    const entry = document.createElement('div');
+    entry.className = "flex flex-col gap-1";
+    entry.innerHTML = `
+      <div class="text-amber-300">kirill@ads-attribution:~$ <span class="text-white">${cmd}</span></div>
+      ${response}
+    `;
+
+    cliLog.appendChild(entry);
+    if (cliScreen) cliScreen.scrollTop = cliScreen.scrollHeight;
+  }
+
+  const cliInput = document.getElementById('cli-input-field');
+  if (cliInput) {
+    cliInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        const val = this.value;
+        if (val.trim()) {
+          executeCliCommand(val);
+          this.value = '';
+        }
+      }
+    });
+  }
+
+  function cycleTheme() {
+    alert("Archival Executive Light mode is active.");
+  }
+</script>
+
+
+</body></html>

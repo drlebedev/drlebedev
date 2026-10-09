@@ -1,0 +1,149 @@
+name: Deploy to Google App Engine & GitHub Pages
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, closed]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: 'pages-and-gae'
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  test:
+    name: Test & Playwright Verification
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Unit Tests
+        run: npm test
+
+      - name: Build Production Bundle
+        run: npm run build
+
+      - name: Install Playwright Browsers
+        run: npx playwright install chromium --with-deps
+
+      - name: Run Playwright E2E & Pre-Deployment Verification
+        run: npm run verify:deployment
+
+  deploy:
+    name: Build & Dual Deploy
+    needs: test
+    if: |
+      github.event_name == 'workflow_dispatch' ||
+      github.event_name == 'push' ||
+      (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Production Bundle
+        run: npm run build
+
+      # =====================================================================
+      # Google App Engine Deployment (drlebedev.com)
+      # =====================================================================
+      - name: Authenticate with Google Cloud
+        if: env.HAS_GCP == 'true'
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+        env:
+          HAS_GCP: ${{ secrets.GCP_SA_KEY != '' }}
+
+      - name: Setup Google Cloud SDK
+        if: env.HAS_GCP == 'true'
+        uses: google-github-actions/setup-gcloud@v2
+        env:
+          HAS_GCP: ${{ secrets.GCP_SA_KEY != '' }}
+
+      - name: Deploy to Google App Engine
+        if: env.HAS_GCP == 'true'
+        run: |
+          gcloud app deploy app.yaml \
+            --project="${{ secrets.GCP_PROJECT_ID }}" \
+            --promote \
+            --quiet
+        env:
+          HAS_GCP: ${{ secrets.GCP_SA_KEY != '' }}
+
+      # =====================================================================
+      # GitHub Pages Deployment (drlebedev.github.io backup)
+      # =====================================================================
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload GitHub Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      # =====================================================================
+      # Optional Cloudflare Edge Cache Invalidation
+      # =====================================================================
+      - name: Invalidate Cloudflare Cache (Optional)
+        if: env.HAS_CF == 'true'
+        run: |
+          echo "Purging Cloudflare cache for drlebedev.com..."
+          ZONE_ID=$(curl -s -X GET "https://api.cloudflare.com/client/v4/zones?name=drlebedev.com" \
+            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+            -H "Content-Type: application/json" | grep -o '"id":"[^"]*' | head -1 | cut -d'"' -f4)
+          if [ -n "$ZONE_ID" ]; then
+            curl -s -X POST "https://api.cloudflare.com/client/v4/zones/${ZONE_ID}/purge_cache" \
+              -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+              -H "Content-Type: application/json" \
+              --data '{"purge_everything":true}'
+            echo "Cloudflare cache purged successfully."
+          fi
+        env:
+          HAS_CF: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
+
+      # =====================================================================
+      # Post-Deployment Live Verification via Playwright
+      # =====================================================================
+      - name: Install Playwright Browsers for Live Verification
+        run: npx playwright install chromium --with-deps
+
+      - name: Verify Live GitHub Pages Deployment with Playwright
+        if: steps.deployment.outputs.page_url != ''
+        run: |
+          echo "Waiting 5s for edge propagation..."
+          sleep 5
+          BASE_URL="${{ steps.deployment.outputs.page_url }}" npm run verify:deployment || true

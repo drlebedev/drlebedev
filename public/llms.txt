@@ -1,0 +1,39 @@
+# Kirill Lebedev, PhD
+> Director of Engineering | AI & Ads Measurement Leader
+
+Kirill Lebedev, PhD is a technology executive based in SF Bay Area.
+He leads engineering organizations across artificial intelligence, distributed systems, and advertising technology.
+
+## Core Executive Highlights
+- Current Role: Director of Engineering at LinkedIn (Overall Ads Measurement Leader).
+- Leadership Scope: 40-70+ person full-stack engineering organization across Audience, Identity, Incrementality, Recommendations, and Measurement.
+- Commercial Scale: Bootstrapped LinkedIn's Brand Advertising business line to over $1B+ in annual revenue (~20% of total ad revenue).
+- AI Growth: Served as Engineering DRI for AI Ads Audience products, accelerating revenue 6x to $100M+ ARR in six months.
+- Institutional Governance: Multi-year company-wide hiring committee member; technical representative in corporate M&A.
+- Incrementality Coverage: 25% of total advertising revenue covered by incremental measurement with 2x incremental spend lift.
+- Issued US Patents: 
+  - US 11,968,185: Dynamically altering the display of elements on client devices
+  - US 11,232,254: Dynamic distribution of content on client devices
+  - US 11,102,534: Dynamic asset delivery and local runtime evaluation
+- Academic Credentials: PhD in Computer Science (Model-Driven Architecture & dynamic metadata persistence); Summa cum laude in Systems Engineering & Low-Level System/Software Design; former university Professor and Deputy Vice-Rector.
+- Location: SF Bay Area
+- Phone: +1 (415) 799-9995
+
+## Career Roles
+- Director of Engineering & Overall Ads Measurement Leader — LinkedIn (2018 – Present)
+- Senior Engineering Manager / Architect — Apple Cloud Services (2016 – 2018)
+- Head of Core Platform Engineering — Playtika (2013 – 2016)
+- Chief Technology Officer — i.Point (2007 – 2013)
+- Professor & Deputy Vice-Rector — Irkutsk National Research Technical University (2002 – 2007)
+
+## Core Technical Doctrines
+1. Bayesian Causal Inference & Account-Based Marketing: Isolate selection bias from true ad intervention using Bayesian incrementality and company-level audience splits.
+2. Differential Privacy & Privacy-Safe Signal Consolidation: Unify Conversions API (CAPI) with cryptographic compute and differential privacy noise reduction.
+3. Scaled Identity Graph & Pairwise Multi-Source Resolution: Ingest and resolve pairwise observations from 1st-party platform signals and 3rd-party data providers at scale.
+
+## Verified Links
+- Website: https://drlebedev.com
+- LinkedIn: https://www.linkedin.com/in/drlebedev/
+- Email: kirill@drlebedev.com
+- Resume: https://drlebedev.com/assets/drlebedev-resume.pdf
+- Thesis: https://drlebedev.com/assets/download/thesis.pdf

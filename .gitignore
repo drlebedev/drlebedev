@@ -54,3 +54,13 @@ htmlcov/
 # Operating system files
 .DS_Store
 Thumbs.db
+
+# Node.js and build output
+node_modules/
+dist/
+build/
+*.log
+test-results/
+playwright-report/
+
+specs/001-personal-brand-website/photo/
