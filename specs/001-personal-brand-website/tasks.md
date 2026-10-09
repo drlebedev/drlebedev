@@ -171,12 +171,12 @@ Text explanation: The workflow executes vocabulary, message alignment, full text
 
 **Purpose**: Application shell composition, end-to-end verification, accessibility, performance tuning, and documentation.
 
-- [ ] T052 Assemble main dual-mode application shell with view switcher in src/App.tsx and entry point in src/main.tsx
-- [ ] T053 Configure static HTML template with viewport, preconnect font links, and title in index.html
-- [ ] T054 [P] Create Playwright end-to-end integration test validating mode toggling and mobile rendering in tests/e2e/dualMode.spec.ts
-- [ ] T055 [P] Verify accessibility compliance with semantic headings and ARIA tags across both modes
-- [ ] T056 Run production build and audit bundle sizes against performance goals per quickstart.md
-- [ ] T057 Update repository documentation with architecture details and local run steps in README.md
+- [X] T052 Assemble main dual-mode application shell with view switcher in src/App.tsx and entry point in src/main.tsx
+- [X] T053 Configure static HTML template with viewport, preconnect font links, and title in index.html
+- [X] T054 [P] Create Playwright end-to-end integration test validating mode toggling and mobile rendering in tests/e2e/dualMode.spec.ts
+- [X] T055 [P] Verify accessibility compliance with semantic headings and ARIA tags across both modes
+- [X] T056 Run production build and audit bundle sizes against performance goals per quickstart.md
+- [X] T057 Update repository documentation with architecture details and local run steps in README.md
 
 ---
 
