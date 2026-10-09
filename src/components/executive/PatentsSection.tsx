@@ -24,13 +24,13 @@ export const PatentsSection: React.FC<PatentsSectionProps> = ({ patents }) => {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-14">
           <div>
             <span className="font-mono text-xs text-gold-prestige tracking-[0.2em] uppercase">
-              CHAPTER IV • INTELLECTUAL PROPERTY
+              CHAPTER IV • INTELLECTUAL PROPERTY &amp; PATENTS
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl text-on-surface mt-2 font-normal">
-              Issued US Patents Portfolio
+              Issued U.S. Patents
             </h2>
             <p className="font-sans text-on-surface-variant text-base mt-2 max-w-2xl">
-              Legally assigned algorithmic patents defending multi-party causal attribution, on-device experimentation, and stateful streaming graphs.
+              Proprietary systems and algorithms covering on-device experimentation, dynamic content composition, and high-dimensional similarity retrieval.
             </p>
             <div className="h-0.5 w-16 bg-gold-prestige/60 my-4"></div>
           </div>

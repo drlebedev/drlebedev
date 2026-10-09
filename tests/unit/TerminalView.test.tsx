@@ -137,7 +137,7 @@ describe('TerminalView Component (T038)', () => {
     const eduChip = screen.getByRole('button', { name: /run command edu/i });
     fireEvent.click(eduChip);
 
-    expect(screen.getByText(/ACADEMIC FOUNDATIONS & DEGREES/i)).toBeInTheDocument();
+    expect(screen.getByText(/ACADEMIC BACKGROUND & DEGREES/i)).toBeInTheDocument();
     expect(screen.getByText(/Doctor of Philosophy \(PhD\)/i)).toBeInTheDocument();
   });
 });

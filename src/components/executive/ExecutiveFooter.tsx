@@ -12,19 +12,19 @@ export const ExecutiveFooter: React.FC<ExecutiveFooterProps> = ({ profile }) => 
 
   return (
     <>
-      {/* Chapter VI: Confidential Advisory & Direct Contact Section */}
+      {/* Chapter VI: Contact & Advisory Section */}
       <section id="contact" className="relative w-full py-20 bg-forest-noir border-b border-gold-prestige/20 scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-12">
             <span className="font-mono text-xs text-gold-prestige tracking-[0.2em] uppercase">
-              CHAPTER VI • ADVISORY ENGAGEMENTS &amp; DIRECT CONTACT
+              CHAPTER VI • CONTACT &amp; ADVISORY
             </span>
             <h2 className="font-serif text-3xl sm:text-5xl text-on-surface font-normal mt-2">
-              Strategic Executive Counsel &amp; Due Diligence
+              Contact &amp; Advisory Inquiries
             </h2>
             <div className="h-0.5 w-16 bg-gold-prestige/60 my-4"></div>
             <p className="font-sans text-base text-on-surface-variant leading-relaxed">
-              Available for select technical due-diligence advisory for venture capital funds, enterprise board advisement on AI monetization architecture, and academic keynote lectures on causal systems.
+              Available for engineering leadership discussions, technical advisory, venture diligence, and keynote speaking engagements.
             </p>
           </div>
 
@@ -61,10 +61,10 @@ export const ExecutiveFooter: React.FC<ExecutiveFooterProps> = ({ profile }) => 
                   <Linkedin className="w-5 h-5" />
                 </div>
                 <h3 className="font-serif text-lg text-on-surface font-semibold group-hover:text-gold-light transition-colors">
-                  Executive Network
+                  LinkedIn Profile
                 </h3>
                 <p className="font-sans text-xs text-on-surface-variant">
-                  Verified executive chronology, recommendations, and industry connections.
+                  Career history, recommendations, and professional connections.
                 </p>
               </div>
               <div className="pt-4 mt-4 border-t border-gold-prestige/15">
@@ -113,10 +113,10 @@ export const ExecutiveFooter: React.FC<ExecutiveFooterProps> = ({ profile }) => 
                     <Phone className="w-5 h-5" />
                   </div>
                   <h3 className="font-serif text-lg text-on-surface font-semibold group-hover:text-gold-light transition-colors">
-                    Direct Telephone
+                    Direct Phone
                   </h3>
                   <p className="font-sans text-xs text-on-surface-variant">
-                    Direct voice contact for urgent board and technical diligence inquiries.
+                    Direct phone line for executive discussions and inquiries.
                   </p>
                 </div>
                 <div className="pt-4 mt-4 border-t border-gold-prestige/15">

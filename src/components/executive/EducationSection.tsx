@@ -9,17 +9,20 @@ export interface EducationSectionProps {
 export const EducationSection: React.FC<EducationSectionProps> = ({ education }) => {
   return (
     <section
-      id="pedigree"
+      id="education"
       className="reveal-on-scroll relative w-full py-20 bg-forest-deep border-b border-gold-prestige/20"
     >
+      {/* Anchor alias for backwards compatibility */}
+      <span id="pedigree" className="sr-only" aria-hidden="true" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-12">
           <span className="font-mono text-xs text-gold-prestige tracking-[0.2em] uppercase">
-            CHAPTER V • ACADEMIC FOUNDATION &amp; DOCTORAL PEDIGREE
+            CHAPTER V • EDUCATION &amp; ACADEMIC BACKGROUND
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl text-on-surface mt-2 font-normal">
-            Doctoral Rigor &amp; Systems Foundations
+            Academic Background &amp; Research Foundation
           </h2>
           <div className="h-0.5 w-16 bg-gold-prestige/60 my-4"></div>
         </div>
@@ -97,10 +100,10 @@ export const EducationSection: React.FC<EducationSectionProps> = ({ education })
                 {/* Right Action */}
                 <div className="shrink-0 w-full sm:w-auto">
                   <a
-                    href="mailto:kirill@drlebedev.com?subject=Academic%20Dossier%20Inquiry"
+                    href="mailto:kirill@drlebedev.com?subject=Academic%20Research%20Inquiry"
                     className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-[#0a182e] hover:bg-[#142a4e] border border-gold-prestige/40 hover:border-gold-prestige text-gold-light font-sans text-xs tracking-wider uppercase rounded transition-all w-full sm:w-auto shadow-md"
                   >
-                    <span>Request Doctoral Records</span>
+                    <span>Inquire About Research &amp; Thesis</span>
                     <ExternalLink className="w-3.5 h-3.5" />
                   </a>
                 </div>

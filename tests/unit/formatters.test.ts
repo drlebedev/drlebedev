@@ -27,7 +27,7 @@ describe('Terminal Monospace Formatters (T037)', () => {
 
   it('formats bio output with executive narrative, scale metrics, and doctoral credentials', () => {
     const text = formatBio();
-    expect(text).toContain('EXECUTIVE DOSSIER: KIRILL LEBEDEV, PhD');
+    expect(text).toContain('EXECUTIVE PROFILE: KIRILL LEBEDEV, PhD');
     expect(text).toContain('Director of Engineering | AI & Ads Measurement Leader');
     expect(text).toContain('Director of Engineering at LinkedIn');
     expect(text).toContain('$1B+ in annual revenue');
@@ -38,7 +38,7 @@ describe('Terminal Monospace Formatters (T037)', () => {
 
   it('formats full exp output with career chronology', () => {
     const text = formatExp();
-    expect(text).toContain('PROFESSIONAL LEADERSHIP CHRONOLOGY');
+    expect(text).toContain('EXECUTIVE EXPERIENCE & CAREER HISTORY');
     expect(text).toContain('LINKEDIN');
     expect(text).toContain('Director of Engineering');
     expect(text).toContain('Senior Engineering Manager');
@@ -73,7 +73,7 @@ describe('Terminal Monospace Formatters (T037)', () => {
 
   it('formats edu output with PhD dissertation details and academic honors', () => {
     const text = formatEdu();
-    expect(text).toContain('ACADEMIC FOUNDATIONS & DEGREES');
+    expect(text).toContain('ACADEMIC BACKGROUND & DEGREES');
     expect(text).toContain('Doctor of Philosophy (PhD) in Computer Science');
     expect(text).toContain('Irkutsk National Research Technical University (INRTU)');
     expect(text).toContain('Summa cum laude');
@@ -92,7 +92,7 @@ describe('Terminal Monospace Formatters (T037)', () => {
 
   it('formats contact output with verified channels', () => {
     const text = formatContact();
-    expect(text).toContain('VERIFIED DIRECT COMMUNICATION CHANNELS');
+    expect(text).toContain('DIRECT CONTACT CHANNELS');
     expect(text).toContain('kirill@drlebedev.com');
     expect(text).toContain('+1 (415) 799-9995');
     expect(text).toContain('https://www.linkedin.com/in/drlebedev/');

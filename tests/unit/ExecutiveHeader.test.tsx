@@ -59,9 +59,13 @@ describe('ExecutiveHeader Component (T024)', () => {
     );
 
     expect(screen.getByRole('link', { name: /vision/i })).toHaveAttribute('href', '#narrative');
-    expect(screen.getByRole('link', { name: /leadership dossier/i })).toHaveAttribute('href', '#trajectory');
-    expect(screen.getByRole('link', { name: /us patents/i })).toHaveAttribute('href', '#patents');
-    expect(screen.getByRole('link', { name: /academic foundation/i })).toHaveAttribute('href', '#pedigree');
-    expect(screen.getByRole('link', { name: /competencies/i })).toHaveAttribute('href', '#skills');
+    expect(screen.getByRole('link', { name: /principles/i })).toHaveAttribute('href', '#doctrine');
+    expect(screen.getByRole('link', { name: /experience/i })).toHaveAttribute('href', '#experience');
+    expect(screen.getByRole('link', { name: /patents/i })).toHaveAttribute('href', '#patents');
+    expect(screen.getByRole('link', { name: /education/i })).toHaveAttribute('href', '#education');
+    expect(screen.getByRole('link', { name: /expertise/i })).toHaveAttribute('href', '#skills');
+    const contactLinks = screen.getAllByRole('link', { name: /contact/i });
+    expect(contactLinks.length).toBeGreaterThan(0);
+    contactLinks.forEach((link) => expect(link).toHaveAttribute('href', '#contact'));
   });
 });

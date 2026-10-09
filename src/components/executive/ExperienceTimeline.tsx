@@ -20,7 +20,10 @@ export const ExperienceTimeline: React.FC<ExperienceTimelineProps> = ({ experien
   };
 
   return (
-    <section id="trajectory" className="relative w-full py-20 bg-forest-deep border-b border-gold-prestige/20">
+    <section id="experience" className="relative w-full py-20 bg-forest-deep border-b border-gold-prestige/20">
+      {/* Anchor alias for backwards compatibility */}
+      <span id="trajectory" className="sr-only" aria-hidden="true" />
+
       {/* Background Watermark Pattern */}
       <div
         className="absolute left-0 bottom-10 w-96 h-96 triangle-hatch-gold opacity-10 pointer-events-none"
@@ -33,15 +36,15 @@ export const ExperienceTimeline: React.FC<ExperienceTimelineProps> = ({ experien
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-14">
           <div>
             <span className="font-mono text-xs text-gold-prestige tracking-[0.2em] uppercase">
-              CHAPTER III • LEADERSHIP DOSSIER
+              CHAPTER III • LEADERSHIP &amp; CAREER EXPERIENCE
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl text-on-surface mt-2 font-normal">
-              Executive Chronology &amp; P&amp;L Trajectory
+              Leadership Experience &amp; Track Record
             </h2>
             <div className="h-0.5 w-16 bg-gold-prestige/60 my-4"></div>
           </div>
           <div className="font-mono text-xs text-on-surface-variant bg-[#0b162c] px-4 py-2 rounded border border-gold-prestige/20">
-            15+ YEARS SYSTEMS &amp; SCIENTIFIC LEADERSHIP
+            15+ YEARS OF ENGINEERING &amp; SCIENTIFIC LEADERSHIP
           </div>
         </div>
 

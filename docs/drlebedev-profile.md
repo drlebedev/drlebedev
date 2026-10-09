@@ -25,7 +25,7 @@ I bootstrapped our Brand Advertising business line from zero to over $1B in annu
 
 ---
 
-## Core Engineering & Leadership Doctrines
+## Core Engineering Principles & Architecture
 
 ### 01. Bayesian Causal Inference & Account-Based Marketing
 > *"Heuristic last-touch models misallocate significant capital toward organic converters. In our systems, we isolate selection bias from true ad intervention using Bayesian incrementality and company-level audience splits."*
@@ -44,7 +44,7 @@ Modern measurement and targeting collapse when identity is fractured across devi
 
 ---
 
-## Career Trajectory & Executive Leadership
+## Executive Leadership & Career History
 
 ### Director of Engineering & Overall Ads Measurement Leader — LinkedIn
 *2018 – Present • Mountain View & Sunnyvale, CA*

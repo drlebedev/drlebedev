@@ -8,8 +8,8 @@ describe('ExperienceTimeline Component (T025)', () => {
     render(<ExperienceTimeline experience={contentData.experience} />);
 
     // Check header and chapter title
-    expect(screen.getByText(/LEADERSHIP DOSSIER/i)).toBeInTheDocument();
-    expect(screen.getByText(/Executive Chronology/i)).toBeInTheDocument();
+    expect(screen.getByText(/LEADERSHIP & CAREER EXPERIENCE/i)).toBeInTheDocument();
+    expect(screen.getByText(/Leadership Experience & Track Record/i)).toBeInTheDocument();
 
     // Check key companies
     expect(screen.getAllByText(/LinkedIn/i).length).toBeGreaterThan(0);
