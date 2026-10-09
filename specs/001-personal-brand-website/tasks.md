@@ -127,16 +127,16 @@ Text explanation: The workflow executes vocabulary, message alignment, full text
 
 ### Tests for User Story 2
 
-- [ ] T036 [P] [US2] Create unit tests for terminal command parser and dispatch router in tests/unit/commandParser.test.ts
-- [ ] T037 [P] [US2] Create unit tests for command text output formatters in tests/unit/formatters.test.ts
-- [ ] T038 [P] [US2] Create component test for TerminalView input submission and history in tests/unit/TerminalView.test.tsx
+- [X] T036 [P] [US2] Create unit tests for terminal command parser and dispatch router in tests/unit/commandParser.test.ts
+- [X] T037 [P] [US2] Create unit tests for command text output formatters in tests/unit/formatters.test.ts
+- [X] T038 [P] [US2] Create component test for TerminalView input submission and history in tests/unit/TerminalView.test.tsx
 
 ### Implementation for User Story 2
 
-- [ ] T039 [P] [US2] Implement commandParser handling input parsing and error hints per terminal-commands.md in src/terminal/commandParser.ts
-- [ ] T040 [P] [US2] Implement formatters producing formatted monospace output for each command in src/terminal/formatters.ts
-- [ ] T041 [US2] Implement CommandChips rendering touch-friendly shortcut buttons for mobile viewports in src/components/terminal/CommandChips.tsx
-- [ ] T042 [US2] Implement TerminalView with CRT styling, interactive prompt, command history, and GUI toggle in src/components/terminal/TerminalView.tsx
+- [X] T039 [P] [US2] Implement commandParser handling input parsing and error hints per terminal-commands.md in src/terminal/commandParser.ts
+- [X] T040 [P] [US2] Implement formatters producing formatted monospace output for each command in src/terminal/formatters.ts
+- [X] T041 [US2] Implement CommandChips rendering touch-friendly shortcut buttons for mobile viewports in src/components/terminal/CommandChips.tsx
+- [X] T042 [US2] Implement TerminalView with CRT styling, interactive prompt, command history, and GUI toggle in src/components/terminal/TerminalView.tsx
 
 **Checkpoint**: User Story 2 is functional. Users can switch between graphical and terminal modes seamlessly.
 
