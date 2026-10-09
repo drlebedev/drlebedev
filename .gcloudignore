@@ -1,0 +1,34 @@
+# This file specifies files that should not be uploaded to Google App Engine.
+.gcloudignore
+.git/
+.gitignore
+.github/
+
+# Ignore frontend source and development dependencies
+node_modules/
+src/
+public/
+tests/
+test-results/
+playwright-report/
+
+# Specifications and documentation
+specs/
+docs/
+*.md
+
+# Build tool configurations
+tsconfig*.json
+vite.config.ts
+tailwind.config.ts
+postcss.config.js
+playwright.config.ts
+package.json
+package-lock.json
+
+# Spec-kit and agent local artifacts
+.agents/
+.specify/
+scratch/
+tmp/
+*.log
