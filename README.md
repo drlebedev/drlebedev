@@ -3,115 +3,92 @@
 > **Director of Engineering | AI & Ads Measurement Leader**  
 > Scaled Distributed Systems • Causal AI • Privacy-Preserving Measurement • Multi-Touch Attribution
 
-[![CI/CD Deployment](https://github.com/drlebedev/drlebedev/actions/workflows/deploy.yml/badge.svg)](https://github.com/drlebedev/drlebedev/actions/workflows/deploy.yml)
-[![Live Site](https://img.shields.io/badge/Live-drlebedev.com-00B37E.svg)](https://drlebedev.com)
-[![GitHub Pages](https://img.shields.io/badge/Preview-GitHub%20Pages-10B981.svg)](https://drlebedev.github.io/drlebedev/)
+[![Live Site](https://img.shields.io/badge/Official%20Site-drlebedev.com-00B37E?style=flat&logo=google-chrome&logoColor=white)](https://drlebedev.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-drlebedev-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/drlebedev/)
+[![Patents](https://img.shields.io/badge/USPTO%20Patents-3%20Issued-D97706?style=flat)](https://patents.google.com/?inventor=Kirill+Lebedev)
+[![CI/CD Status](https://github.com/drlebedev/drlebedev/actions/workflows/deploy.yml/badge.svg)](https://github.com/drlebedev/drlebedev/actions/workflows/deploy.yml)
 
 ---
 
 ## Executive Overview
 
-Official personal brand and dual-mode web platform for **Kirill Lebedev, PhD**.
+I lead engineering organizations that bridge foundational computer science with large-scale commercial impact.
 
-- **LinkedIn Engineering Leadership**: Directed engineering and cross-functional technical strategy for LinkedIn's overall Ads Measurement pillar. Bootstrapped the $1B+ Ads Measurement line of business and scaled foundational data systems.
-- **Enterprise AI & Growth**: Scaled AI/ML and causal modeling infrastructure supporting $100M+ ARR expansion and 70+ engineering organization scale.
-- **US Patents**: 3 issued United States patents in secure multi-party computation, privacy-preserving conversion attribution, and scalable identity resolution (US 11,968,185; US 11,232,254; US 11,102,534).
-- **Academic Rigor**: PhD in Computer Science from Irkutsk National Research Technical University (INRTU).
-
----
-
-## Architecture & Dual-Mode Interface
-
-The application is built as a unified, dual-mode web experience powered by a single typed content store (`src/data/content.json`):
-
-1. **Executive Graphical Profile (`editorial` mode)**
-   - High-density prestige layout styled in dark emerald and burnished gold (`forest-noir` palette).
-   - Core chapters: Executive Biography, Engineering Principles & Systems Architecture diagram, Career Timeline, Issued US Patents, Education & Academic Background, Competencies, and Advisory Inquiries.
-   - Dynamic theme support (`dark`, `light`, `system`).
-
-2. **Web Console Terminal (`terminal` mode)**
-   - Interactive retro-modern CLI workstation with CRT phosphor scanline styling.
-   - Command dispatch engine supporting: `help`, `bio`, `exp`, `patents`, `edu`, `skills`, `contact`, `gui`, and `clear`.
-   - Command history navigation (`ArrowUp` / `ArrowDown`), keyboard shortcut toggle (`` ` `` or `~` / `Escape`), and touch-friendly mobile command chips.
-
-3. **Multi-Target Discovery & AI Crawler Support**
-   - Injected Schema.org `Person` JSON-LD structured data.
-   - Full Open Graph and Twitter Card social preview cards.
-   - Static `/llms.txt` executive summary for AI agents and LLM scrapers.
-   - Search engine `sitemap.xml` and `robots.txt`.
+- **LinkedIn Engineering Leadership**: Directed engineering and cross-functional technical strategy for LinkedIn's overall Ads Measurement pillar. Directed a 40–70+ person full-stack organization across Audience, Identity, Incrementality, Recommendations, and Measurement charters.
+- **$1B+ Line of Business Bootstrap**: Built LinkedIn's Brand Advertising business from the ground up to over $1 billion in annual revenue (~20% of total LinkedIn ad revenue).
+- **Enterprise AI Acceleration**: Led engineering for LinkedIn's AI-powered advertising suite (LinkedIn Accelerate), aligning Product, Design, Data Science, and Marketing to scale revenue 6x to **$100M ARR** in six months.
+- **US Patents**: 3 issued United States patents in secure multi-party computation, privacy-preserving conversion attribution, and scalable identity resolution.
+- **Academic Rigor**: PhD in Computer Science from Irkutsk National Research Technical University (INRTU); graduated summa cum laude with a master's in systems engineering; former associate professor and deputy vice-rector.
 
 ---
 
-## Tech Stack
+## Core Competencies & Skills
 
-- **Framework & Runtime**: React 18, TypeScript 5, Vite 5
-- **Styling**: Tailwind CSS, custom design system tokens, textured triangle hatch utilities
-- **Icons**: Lucide React
-- **Testing**: Vitest (Unit & Schema tests), Playwright (E2E & Post-Deployment verification)
-- **Deployment**: Dual deployment pipeline targeting **Google App Engine** and **GitHub Pages**
+### Executive Leadership, Strategy & Governance
+- **Engineering Organization Design & Scaling**: Directed 40–70+ person full-stack engineering and data science teams with multi-tier management structures.
+- **Talent Calibration & Hiring Governance**: Corporate hiring committee member and bar-raiser calibrating senior technical talent across the company.
+- **Technical Due Diligence & M&A**: Performed technical architecture due diligence for corporate acquisitions and strategic partner evaluations.
+- **AI-Native Engineering Velocity**: Spearheaded organization-wide developer transformation adopting AI-native workflows to double delivery velocity.
+- **Capital & Infrastructure Planning**: Managed multi-million dollar annual compute, cloud, and organizational budgets.
 
----
+### AdTech Product Incubation & Monetization (0 to 1)
+- **$1B+ Brand Advertising Incubation**: Architected and bootstrapped LinkedIn's Brand Advertising line of business from inception to $1B+ ARR.
+- **AI Ads Scaling ($100M ARR)**: Led technical execution for generative AI ad campaign optimization (LinkedIn Accelerate).
+- **Bayesian Incrementality Systems**: Architected causal incrementality infrastructure covering 25% of total ad revenue, proving 2x incremental spend lift for enterprise adopters.
+- **Privacy-Preserving Attribution**: Directed Conversions API (CAPI) consolidation and differential privacy implementations under strict regulatory standards.
+- **Measurement Ecosystem Partnerships**: Scaled $500M 3rd-party incrementality measurement partnerships (Nielsen, Kantar, Dynata).
+- **Connected TV (CTV) & Real-Time Recommendations**: Expanded monetization across CTV, live streaming events, and AI-driven campaign recommendations.
 
-## Getting Started
+### Artificial Intelligence & Machine Learning
+- **Causal Inference & Econometric Modeling**: Bayesian incrementality, counterfactual estimation, and frequency-aware sampling for ad impact attribution.
+- **Platform Integrity & Automated Content Review**: Scaled similarity detection and ML automated review reducing manual audit queues by 90%.
+- **Vector Retrieval & Locality-Sensitive Hashing**: High-dimensional embedding spaces for sub-millisecond similarity matching and creative governance.
+- **Real-Time Recommendation Systems**: Low-latency candidate retrieval and scoring algorithms powering enterprise ad optimization.
 
-### Prerequisites
-
-- **Node.js**: v20 or higher
-- **npm**: v9 or higher
-
-### Local Development
-
-```bash
-# Clone repository
-git clone https://github.com/drlebedev/drlebedev.git
-cd drlebedev
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-```
-
-Visit `http://localhost:5173` in your browser.
-
-### Running Tests
-
-```bash
-# Run unit tests with Vitest (98 tests)
-npm test
-
-# Run end-to-end integration tests with Playwright (17 tests)
-npx playwright test
-
-# Run deployment verification against live URL
-BASE_URL=https://drlebedev.github.io/drlebedev/ npx playwright test tests/e2e/deploymentVerification.spec.ts
-```
-
-### Production Build
-
-```bash
-# Build production bundle and copy static assets to dist/
-npm run build
-
-# Preview production build locally
-npm run preview
-```
+### Distributed Systems & Cloud Architecture
+- **Large-Scale Data Systems**: Cloud-native architectures across Microsoft Azure, Google Cloud Platform (GCP), and distributed data infrastructure (BigQuery, Spark).
+- **High-Throughput Event Processing**: Sub-10ms P99 real-time telemetry and event processing platforms ingesting billions of daily signals.
+- **Identity Graph Infrastructure**: Pairwise multi-source identity resolution reconciling deterministic and probabilistic link graphs within privacy-safe enclaves.
+- **Backend & Systems Design**: High-performance backend engineering across Java, Scala, Python, and C++.
 
 ---
 
-## Continuous Integration & Deployment (CI/CD)
+## Issued US Patents
 
-The GitHub Actions workflow (`.github/workflows/deploy.yml`) implements strict environment validation:
+1. **[US 11,968,185](https://patents.google.com/patent/US11968185)** — *On-Device Experimentation* (Granted April 2024)  
+   Cryptographic buffers and local randomized treatment assignments enabling client devices to perform privacy-preserving statistical inference without round-trip data exposure.
 
-- **Pull Requests**: Runs TypeScript compilation, Vitest unit tests, production build, and Playwright verification in isolated check mode. Pull requests **never** trigger deployment pipelines.
-- **Main Branch Merges**: Upon merging into `main`, the workflow executes:
-  1. `test-and-verify`: Full verification gate (Vitest + Playwright).
-  2. `deploy-pages`: Production deployment to GitHub Pages.
-  3. `deploy-gae`: Production deployment to Google App Engine standard environment (`app.yaml`).
+2. **[US 11,232,254](https://patents.google.com/patent/US11232254)** — *Editing Mechanism for Electronic Content Items* (Granted January 2022)  
+   Algorithmic framework for dynamic multi-variant content composition and runtime structural validation with cryptographic content integrity across distributed surfaces.
+
+3. **[US 11,102,534](https://patents.google.com/patent/US11102534)** — *Content Item Similarity Detection* (Granted August 2021)  
+   Scalable similarity detection utilizing locality-sensitive hashing and high-dimensional vector embeddings for sub-millisecond automated review and duplicate creative suppression.
 
 ---
 
-## License & Copyright
+## Academic Background
+
+- **PhD in Computer Science** — Irkutsk National Research Technical University (INRTU)  
+  *Specialty*: Mathematical & Software Systems for Computing Networks  
+  *Thesis*: *Methods and Tools for Application Engineering in Web Content Management Systems*
+- **Master of Science in Systems Engineering** — Irkutsk National Research Technical University (INRTU)  
+  *Honors*: Summa cum laude (GPA 5.0 / 5.0)  
+  *Specialty*: Systems Engineering and Low-Level Software Design
+
+---
+
+## Connect & Online Presence
+
+- **Official Website**: [drlebedev.com](https://drlebedev.com)
+- **LinkedIn**: [linkedin.com/in/drlebedev](https://www.linkedin.com/in/drlebedev/)
+- **Direct Email**: [kirill@drlebedev.com](mailto:kirill@drlebedev.com)
+- **Location**: San Francisco Bay Area, CA
+
+---
+
+> [!NOTE]
+> For web application source code, architecture specifications, local development setup, and CI/CD pipelines, see the [Platform Architecture & Engineering Guide](DEVELOPMENT.md).
+
+---
 
 © Kirill Lebedev, PhD. All rights reserved.
