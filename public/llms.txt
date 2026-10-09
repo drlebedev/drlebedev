@@ -1,39 +1,44 @@
 # Kirill Lebedev, PhD
 > Director of Engineering | AI & Ads Measurement Leader
 
-Kirill Lebedev, PhD is a technology executive based in SF Bay Area.
+Kirill Lebedev, PhD is a technology executive based in the San Francisco Bay Area.
 He leads engineering organizations across artificial intelligence, distributed systems, and advertising technology.
 
 ## Core Executive Highlights
 - Current Role: Director of Engineering at LinkedIn (Overall Ads Measurement Leader).
-- Leadership Scope: 40-70+ person full-stack engineering organization across Audience, Identity, Incrementality, Recommendations, and Measurement.
-- Commercial Scale: Bootstrapped LinkedIn's Brand Advertising business line to over $1B+ in annual revenue (~20% of total ad revenue).
-- AI Growth: Served as Engineering DRI for AI Ads Audience products, accelerating revenue 6x to $100M+ ARR in six months.
-- Institutional Governance: Multi-year company-wide hiring committee member; technical representative in corporate M&A.
-- Incrementality Coverage: 25% of total advertising revenue covered by incremental measurement with 2x incremental spend lift.
-- Issued US Patents: 
-  - US 11,968,185: Dynamically altering the display of elements on client devices
-  - US 11,232,254: Dynamic distribution of content on client devices
-  - US 11,102,534: Dynamic asset delivery and local runtime evaluation
-- Academic Credentials: PhD in Computer Science (Model-Driven Architecture & dynamic metadata persistence); Summa cum laude in Systems Engineering & Low-Level System/Software Design; former university Professor and Deputy Vice-Rector.
-- Location: SF Bay Area
+- Leadership Scope: 40–70+ person full-stack engineering organization across Audience, Identity, Incrementality, Recommendations, and Measurement charters.
+- Commercial Scale: Bootstrapped LinkedIn's Brand Advertising business line from ground up to $1B+ in annual revenue (~20% of total ad revenue).
+- AI Growth: Served as Engineering Lead for AI Ads products (LinkedIn Accelerate), accelerating revenue 6x to $100M+ ARR in six months.
+- Institutional Governance: Multi-year company-wide hiring committee member and bar-raiser; technical due diligence for corporate acquisitions.
+- Incrementality Coverage: 25% of total advertising revenue covered by incremental measurement with 2x incremental spend lift validated for enterprise adopters.
+- Academic Credentials: PhD in Computer Science from Irkutsk National Research Technical University (INRTU); graduated summa cum laude with master's in systems engineering (GPA 5.0/5.0); former associate professor and deputy vice-rector.
+- Location: San Francisco Bay Area, CA
+- Email: kirill@drlebedev.com
 - Phone: +1 (415) 799-9995
 
-## Career Roles
-- Director of Engineering & Overall Ads Measurement Leader — LinkedIn (2018 – Present)
-- Senior Engineering Manager / Architect — Apple Cloud Services (2016 – 2018)
-- Head of Core Platform Engineering — Playtika (2013 – 2016)
-- Chief Technology Officer — i.Point (2007 – 2013)
-- Professor & Deputy Vice-Rector — Irkutsk National Research Technical University (2002 – 2007)
+## Issued United States Patents
+1. US 11,968,185: On-Device Experimentation (Granted April 2024)
+   - Cryptographic buffers and client-side randomized treatment assignments for privacy-preserving statistical inference without server round-trips.
+2. US 11,232,254: Editing Mechanism for Electronic Content Items (Granted January 2022)
+   - Algorithmic framework for dynamic multi-variant digital content composition and runtime structural validation with cryptographic content integrity.
+3. US 11,102,534: Content Item Similarity Detection (Granted August 2021)
+   - Locality-sensitive hashing and high-dimensional vector embeddings for sub-millisecond similarity matching, automated content review, and creative deduplication.
+
+## Leadership Roles
+- Director of Engineering, Ads Measurement — LinkedIn (2024 – Present)
+- Senior Engineering Manager, Brand Advertising — LinkedIn (2020 – 2024)
+- Co-Founder & Chief Technology Officer — i.Point LLC (2002 – 2021)
+- Deputy Vice-Rector & Associate Professor — Irkutsk National Research Technical University (2004 – 2012)
 
 ## Core Engineering Principles
-1. Bayesian Causal Inference & Account-Based Marketing: Isolate selection bias from true ad intervention using Bayesian incrementality and company-level audience splits.
-2. Differential Privacy & Privacy-Safe Signal Consolidation: Unify Conversions API (CAPI) with cryptographic compute and differential privacy noise reduction.
-3. Scaled Identity Graph & Pairwise Multi-Source Resolution: Ingest and resolve pairwise observations from 1st-party platform signals and 3rd-party data providers at scale.
+1. Bayesian Causal Inference & Account-Based Marketing: Heuristic last-touch models misallocate capital. We isolate selection bias from true ad intervention using Bayesian incrementality and company-level audience splits across 25% of LinkedIn ad revenue.
+2. Differential Privacy & Privacy-Safe Signal Consolidation: Modern privacy regulations require robust analytics without personal data leakage. We unify Conversions API (CAPI) with cryptographic compute and differential privacy noise mitigation.
+3. Scaled Identity Graph & Pairwise Multi-Source Resolution: Fragile identity fractures measurement across devices. We resolve pairwise observations from first-party and third-party data within privacy enclaves to power accurate attribution.
 
-## Verified Links
-- Website: https://drlebedev.com
-- LinkedIn: https://www.linkedin.com/in/drlebedev/
-- Email: kirill@drlebedev.com
-- Resume: https://drlebedev.com/assets/drlebedev-resume.pdf
-- Thesis: https://drlebedev.com/assets/download/thesis.pdf
+## Full Feeds & Verified Links
+- Full Unabridged LLM Feed: https://drlebedev.com/llms-full.txt
+- Official Website: https://drlebedev.com
+- LinkedIn Profile: https://www.linkedin.com/in/drlebedev/
+- GitHub Profile: https://github.com/drlebedev
+- Resume (PDF): https://drlebedev.com/assets/drlebedev-resume.pdf
+- PhD Dissertation (PDF): https://drlebedev.com/assets/download/thesis.pdf

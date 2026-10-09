@@ -1,0 +1,146 @@
+# Kirill Lebedev, PhD — Complete Executive & Technical Dossier
+> Director of Engineering | AI & Ads Measurement Leader
+
+This document provides the complete, unabridged profile and technical portfolio for Dr. Kirill Lebedev, PhD, optimized for direct ingestion by Large Language Models, AI search agents, and automated research systems.
+
+---
+
+## 1. Executive Summary
+
+Kirill Lebedev, PhD leads engineering organizations that bridge foundational computer science with large-scale commercial impact. At LinkedIn, as Director of Engineering leading Ads Measurement, he directs a 40–70+ person full-stack organization across Audience, Identity, Incrementality, Recommendations, and Measurement charters. 
+
+He built LinkedIn's Brand Advertising business from the ground up to over $1 billion in annual revenue (~20% of total ad revenue) and led engineering for LinkedIn's AI advertising suite (LinkedIn Accelerate), scaling it 6x to $100M ARR in six months. 
+
+He holds a PhD in Computer Science, graduated summa cum laude with a master's in systems engineering (GPA 5.0 / 5.0), served as an associate professor and deputy vice-rector, and holds three issued U.S. patents.
+
+- Location: San Francisco Bay Area, CA
+- Email: kirill@drlebedev.com
+- Phone: +1 (415) 799-9995
+- Official Website: https://drlebedev.com
+- LinkedIn: https://www.linkedin.com/in/drlebedev/
+- GitHub: https://github.com/drlebedev
+
+---
+
+## 2. Core Quantitative Metrics
+
+- $1B+ in Annual Revenue: Bootstrapped LinkedIn's Brand Advertising business line from 0 to 1 (~20% of total LinkedIn ad revenue).
+- $100M+ ARR in 6 Months: Scaled LinkedIn's AI Ads solution (LinkedIn Accelerate) 6x in revenue in half a year.
+- 40–70+ Engineers & Scientists: Full-stack organizational scope across Audience, Identity, Incrementality, Recommendations & Measurement.
+- 25% Total Ad Revenue Coverage: Accounted for by causal Bayesian incrementality measurement, validating a 2x incremental spend lift for enterprise advertisers.
+- 3 Issued US Patents: Multi-party cryptographic computing, on-device experimentation, and vector similarity retrieval.
+- 90% Manual Audit Reduction: Achieved via automated ML content review and creative deduplication algorithms.
+
+---
+
+## 3. Engineering Doctrine & Technical Principles
+
+### Principle 01: Bayesian Causal Inference & Account-Based Marketing
+> "Heuristic last-touch models misallocate significant capital toward organic converters. In our systems, we isolate selection bias from true ad intervention using Bayesian incrementality and company-level audience splits."
+
+In advertising, correlation is not causation. If an advertiser was going to buy anyway, claiming attribution for that conversion is an illusion. Dr. Lebedev architected LinkedIn's incrementality systems to measure true economic causality across 25% of total advertising revenue. By deploying Bayesian modeling, company-level audience splitting, and frequency-aware sampling, the platform measures genuine incremental impact for enterprise advertisers with rigorous statistical confidence.
+
+### Principle 02: Differential Privacy & Privacy-Safe Signal Consolidation
+> "In advertising, as in physics: if your measurement instruments distort what they observe, your conclusions are worthless. We extract signal from noise while preserving mathematical privacy."
+
+Regulatory and platform privacy shifts require robust cross-entity analytics without exposing raw personal data. Dr. Lebedev directed the comprehensive overhaul of LinkedIn's outcomes infrastructure, unifying Conversions API (CAPI) with privacy-preserving cryptographic computation and differential privacy techniques on a next-generation attribution platform. The systems enforce strict mathematical privacy guarantees while preserving the statistical utility of conversion signals.
+
+### Principle 03: Scaled Identity Graph & Pairwise Multi-Source Resolution
+> "An advertising platform is only as coherent as its understanding of identity. By resolving fragmented signals into a unified graph, you turn disconnected events into actionable enterprise intelligence."
+
+Modern measurement and targeting collapse when identity is fractured across devices, browsers, and enterprise ecosystems. Dr. Lebedev directed the architecture of LinkedIn's identity graph infrastructure that ingests and resolves pairwise observations from both first-party platform signals and third-party data providers at scale. By reconciling deterministic and probabilistic link graphs within privacy-safe enclaves, the platform establishes high-fidelity entity resolution that powers accurate audience targeting, frequency governance, and robust causal attribution across the entire monetization ecosystem.
+
+---
+
+## 4. Professional Experience & Leadership History
+
+### LinkedIn — Director of Engineering (2024-03 – Present)
+- Role: Ads Measurement Leader • 40–70+ Person Full-Stack Organization
+- Scope: Audience, Identity, Incrementality, Recommendations, and Measurement.
+- Key Achievements:
+  - Direct technology strategy, organizational design, and engineering execution across 5 core charters.
+  - Led cross-functional engineering for LinkedIn's AI-powered advertising suite (LinkedIn Accelerate), aligning Product, Design, Data Science, and Marketing to scale revenue 6x to $100M ARR in six months.
+  - Architected LinkedIn's modern outcomes platform, consolidating conversion signals, mitigating differential privacy noise, and ensuring compliance with global privacy regulations.
+  - Championed B2B account-level measurement across 25% of total advertising revenue, demonstrating a 2x lift in advertiser spend through Bayesian causal inference and controlled audience splits.
+  - Spearheaded organization-wide developer productivity initiatives, integrating AI-native tooling to accelerate engineering velocity.
+  - Served on corporate hiring committee calibrating senior technical talent; conducted technical due diligence for corporate acquisitions.
+
+### LinkedIn — Senior Engineering Manager (2020-09 – 2024-03)
+- Role: Head of Engineering for Brand Advertising • Scaled Org from 18 to 40
+- Scope: Brand Advertising product line, 3rd-party measurement partnerships, ad review platform.
+- Key Achievements:
+  - Bootstrapped Brand Advertising from ground up to $1B+ in annual revenue (~20% of total LinkedIn ad revenue).
+  - Pioneered $500M 3rd-party incrementality measurement partnerships (Nielsen, Kantar, Dynata).
+  - Scaled team from 18 to 40 engineers.
+  - Reduced bug introduction rate by 75% and alert volume by 70%.
+
+### i.Point LLC — Co-Founder & Chief Technology Officer (2002-01 – 2021-11)
+- Role: Executive CTO & Lead Systems Architect • Scaled to 20+ Engineers
+- Scope: Enterprise Web and Mobile Software Consultancy.
+- Key Achievements:
+  - Co-founded the consultancy, built an engineering organization of 20+ developers, established SDLC standards, managed technical infrastructure and commercial budgets.
+  - Served as chief architect delivering 10+ major enterprise client systems and portals.
+
+### Irkutsk National Research Technical University — Deputy Vice-Rector & Associate Professor (2004-09 – 2012-01)
+- Role: University Internet Technology Center Director • Academic Faculty
+- Scope: Campus-wide distance learning platforms, software engineering faculty.
+- Key Achievements:
+  - Deployed campus-wide online LMS supporting 300+ courses.
+  - Led 3 full redesigns and 2 infrastructure migrations of university web platforms.
+  - Taught undergraduate and graduate courses in Software Engineering, Operating Systems, and Probability Theory & Statistics.
+
+---
+
+## 5. Issued United States Patents
+
+### US 11,968,185: On-Device Experimentation
+- Grant Date: April 23, 2024
+- Inventors: Kirill Lebedev et al.
+- Official Link: https://patents.google.com/patent/US11968185
+- Abstract: A system and method for on-device experimentation allowing mobile and client devices to locally execute randomized treatment assignments, collect telemetry in cryptographic buffers, and perform privacy-preserving statistical inference directly on-device without server round-trips.
+
+### US 11,232,254: Editing Mechanism for Electronic Content Items
+- Grant Date: January 25, 2022
+- Inventors: Kirill Lebedev et al.
+- Official Link: https://patents.google.com/patent/US11232254
+- Abstract: An algorithmic framework for dynamic multi-variant digital content composition and runtime structural validation, enabling dynamic layout adaptation and cryptographic content integrity across distributed surfaces.
+
+### US 11,102,534: Content Item Similarity Detection
+- Grant Date: August 24, 2021
+- Inventors: Kirill Lebedev et al.
+- Official Link: https://patents.google.com/patent/US11102534
+- Abstract: A scalable similarity detection system using locality-sensitive hashing and high-dimensional vector embeddings capable of sub-millisecond similarity matching for automated content review and duplicate creative suppression at enterprise scale.
+
+---
+
+## 6. Academic Background & Degrees
+
+### Doctor of Philosophy (PhD) in Computer Science (2004 – 2008)
+- Institution: Irkutsk National Research Technical University (INRTU)
+- Specialty: Mathematical & Software Systems for Computing Networks
+- Dissertation Title: "Methods and Tools for Application Engineering in Web Content Management Systems"
+- Dissertation Abstract: Developed a multilevel software engineering framework (i.Portal) integrating Model-Driven Architecture (MDA), automated code generation from UML and Eclipse EMF models, dynamic metadata persistence, and a modular multi-tenant kernel architecture deployed across regional university distance learning platforms.
+
+### Master of Science in Systems Engineering (1999 – 2004)
+- Institution: Irkutsk National Research Technical University (INRTU)
+- Specialty: Systems Engineering and Low-Level Software Design (Minor: Software Engineering)
+- Honors: Summa cum laude (GPA 5.0 / 5.0)
+
+---
+
+## 7. Core Competency Matrix
+
+- Executive Leadership: Engineering Organization Design (40–70+ engineers), Two-Layer Hierarchies, Hiring Bar-Raiser, M&A Due Diligence, AI-Native Developer Transformation (2x velocity).
+- AdTech & Monetization: 0-to-1 Incubation ($1B+ Brand Ads), AI Ads Acceleration ($100M ARR), Bayesian Incrementality, Conversions API (CAPI), Differential Privacy, Connected TV (CTV).
+- Artificial Intelligence: Causal Inference, Counterfactual Estimation, Locality-Sensitive Hashing, High-Dimensional Vector Embeddings, Real-Time Recommendation Engines.
+- Distributed Systems: Microsoft Azure, Google Cloud Platform (GCP), BigQuery, Sub-10ms Event Processing, Identity Resolution Graphs, Enterprise Backend (Java, Scala, Python, C++).
+
+---
+
+## 8. Verified External Links
+
+- Official Website: https://drlebedev.com
+- LinkedIn Profile: https://www.linkedin.com/in/drlebedev/
+- GitHub: https://github.com/drlebedev
+- Resume (PDF): https://drlebedev.com/assets/drlebedev-resume.pdf
+- PhD Thesis (PDF): https://drlebedev.com/assets/download/thesis.pdf

@@ -15,6 +15,16 @@ test.describe('Deployment & Multi-Target Discovery Verification (Playwright)', (
       expect(text).toContain('11,968,185');
     });
 
+    test('serves public/llms-full.txt for deep AI scraping', async ({ request }) => {
+      const response = await request.get('llms-full.txt');
+      expect(response.status()).toBe(200);
+
+      const text = await response.text();
+      expect(text).toContain('Kirill Lebedev');
+      expect(text).toContain('Bayesian Causal Inference');
+      expect(text).toContain('11,968,185');
+    });
+
     test('serves public/sitemap.xml with canonical site URL', async ({ request }) => {
       const response = await request.get('sitemap.xml');
       expect(response.status()).toBe(200);

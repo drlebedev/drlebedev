@@ -10,9 +10,9 @@ handlers:
       X-Content-Type-Options: nosniff
 
   # Static root discovery, icons, and agent crawler files
-  - url: /(robots\.txt|sitemap\.xml|llms\.txt|favicon\.(ico|svg|png)|apple-touch-icon\.png|favicon-[0-9]+x[0-9]+\.png)
+  - url: /(robots\.txt|sitemap\.xml|llms\.txt|llms-full\.txt|favicon\.(ico|svg|png)|apple-touch-icon\.png|favicon-[0-9]+x[0-9]+\.png)
     static_files: dist/\1
-    upload: dist/(robots\.txt|sitemap\.xml|llms\.txt|favicon\.(ico|svg|png)|apple-touch-icon\.png|favicon-[0-9]+x[0-9]+\.png)
+    upload: dist/(robots\.txt|sitemap\.xml|llms\.txt|llms-full\.txt|favicon\.(ico|svg|png)|apple-touch-icon\.png|favicon-[0-9]+x[0-9]+\.png)
     http_headers:
       Cache-Control: "public, max-age=86400"
 
