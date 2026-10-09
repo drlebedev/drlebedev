@@ -3,7 +3,6 @@ name: Deploy to Google App Engine & GitHub Pages
 on:
   pull_request:
     branches: [main]
-    types: [opened, synchronize, reopened, closed]
   push:
     branches: [main]
   workflow_dispatch:
@@ -46,8 +45,8 @@ jobs:
       - name: Run Playwright E2E & Pre-Deployment Verification
         run: npm run verify:deployment
 
-  deploy:
-    name: Build & Dual Deploy
+  deploy-pages:
+    name: Deploy to GitHub Pages
     needs: test
     if: |
       github.event_name == 'workflow_dispatch' ||
@@ -72,9 +71,51 @@ jobs:
       - name: Build Production Bundle
         run: npm run build
 
-      # =====================================================================
-      # Google App Engine Deployment (drlebedev.com)
-      # =====================================================================
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload GitHub Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Install Playwright Browsers
+        run: npx playwright install chromium --with-deps
+
+      - name: Verify Live GitHub Pages Deployment with Playwright
+        if: steps.deployment.outputs.page_url != ''
+        run: |
+          echo "Waiting 5s for GitHub Pages edge propagation..."
+          sleep 5
+          BASE_URL="${{ steps.deployment.outputs.page_url }}" npm run verify:deployment || true
+
+  deploy-gae:
+    name: Deploy to Google App Engine
+    needs: test
+    if: |
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'push' && github.ref == 'refs/heads/main')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Production Bundle
+        run: npm run build
+
       - name: Authenticate with Google Cloud
         if: env.HAS_GCP == 'true'
         uses: google-github-actions/auth@v2
@@ -99,24 +140,6 @@ jobs:
         env:
           HAS_GCP: ${{ secrets.GCP_SA_KEY != '' }}
 
-      # =====================================================================
-      # GitHub Pages Deployment (drlebedev.github.io backup)
-      # =====================================================================
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload GitHub Pages Artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './dist'
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-
-      # =====================================================================
-      # Optional Cloudflare Edge Cache Invalidation
-      # =====================================================================
       - name: Invalidate Cloudflare Cache (Optional)
         if: env.HAS_CF == 'true'
         run: |
@@ -133,16 +156,3 @@ jobs:
           fi
         env:
           HAS_CF: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
-
-      # =====================================================================
-      # Post-Deployment Live Verification via Playwright
-      # =====================================================================
-      - name: Install Playwright Browsers for Live Verification
-        run: npx playwright install chromium --with-deps
-
-      - name: Verify Live GitHub Pages Deployment with Playwright
-        if: steps.deployment.outputs.page_url != ''
-        run: |
-          echo "Waiting 5s for edge propagation..."
-          sleep 5
-          BASE_URL="${{ steps.deployment.outputs.page_url }}" npm run verify:deployment || true
