@@ -9,10 +9,10 @@ handlers:
       Cache-Control: "public, max-age=31536000, immutable"
       X-Content-Type-Options: nosniff
 
-  # Static root discovery and agent crawler files
-  - url: /(robots\.txt|sitemap\.xml|llms\.txt|favicon\.ico)
+  # Static root discovery, icons, and agent crawler files
+  - url: /(robots\.txt|sitemap\.xml|llms\.txt|favicon\.(ico|svg|png)|apple-touch-icon\.png|favicon-[0-9]+x[0-9]+\.png)
     static_files: dist/\1
-    upload: dist/(robots\.txt|sitemap\.xml|llms.txt|favicon\.ico)
+    upload: dist/(robots\.txt|sitemap\.xml|llms\.txt|favicon\.(ico|svg|png)|apple-touch-icon\.png|favicon-[0-9]+x[0-9]+\.png)
     http_headers:
       Cache-Control: "public, max-age=86400"
 
@@ -25,3 +25,5 @@ handlers:
       X-Frame-Options: DENY
       X-Content-Type-Options: nosniff
       Referrer-Policy: strict-origin-when-cross-origin
+      Strict-Transport-Security: "max-age=31536000; includeSubDomains"
+      Permissions-Policy: "camera=(), microphone=(), geolocation=()"

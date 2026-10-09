@@ -24,7 +24,7 @@ Official personal brand and dual-mode web platform for **Kirill Lebedev, PhD**.
 
 The application is built as a unified, dual-mode web experience powered by a single typed content store (`src/data/content.json`):
 
-1. **Executive Graphical Dossier (`editorial` mode)**
+1. **Executive Graphical Profile (`editorial` mode)**
    - High-density prestige layout styled in dark emerald and burnished gold (`forest-noir` palette).
    - Core chapters: Executive Biography, Engineering Principles & Systems Architecture diagram, Career Timeline, Issued US Patents, Education & Academic Background, Competencies, and Advisory Inquiries.
    - Dynamic theme support (`dark`, `light`, `system`).
@@ -37,7 +37,7 @@ The application is built as a unified, dual-mode web experience powered by a sin
 3. **Multi-Target Discovery & AI Crawler Support**
    - Injected Schema.org `Person` JSON-LD structured data.
    - Full Open Graph and Twitter Card social preview cards.
-   - Static `/llms.txt` dossier for AI agents and LLM scrapers.
+   - Static `/llms.txt` executive summary for AI agents and LLM scrapers.
    - Search engine `sitemap.xml` and `robots.txt`.
 
 ---
