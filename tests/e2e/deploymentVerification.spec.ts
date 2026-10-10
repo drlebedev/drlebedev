@@ -150,7 +150,7 @@ test.describe('Deployment & Multi-Target Discovery Verification (Playwright)', (
   });
 
   test.describe('3. Dual-Mode Interface Interaction', () => {
-    test('switches seamlessly between Graphical Dossier and Terminal modes', async ({ page }) => {
+    test('switches seamlessly between Executive GUI and Terminal modes', async ({ page }) => {
       await page.goto('./');
 
       // Verify Hero metrics are visible in Executive view

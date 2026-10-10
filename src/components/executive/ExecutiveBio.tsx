@@ -151,6 +151,11 @@ export const ExecutiveBio: React.FC<ExecutiveBioProps> = ({ profile, metrics }) 
                 <img
                   src={isDark ? getAssetUrl('assets/images/portrait-dark.webp') : getAssetUrl('assets/images/portrait-light.webp')}
                   alt={`Portrait of ${profile.fullName}`}
+                  width={320}
+                  height={400}
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                   className="w-full h-full object-cover object-center group-hover:scale-[1.03] transition-transform duration-700 ease-out"
                   onError={(e) => {
                     const target = e.currentTarget;
