@@ -61,6 +61,10 @@ export const ExecutiveView: React.FC<ExecutiveViewProps> = ({ content = defaultC
               <img
                 src={isDark ? getAssetUrl('assets/diagrams/attribution-architecture-dark.svg') : getAssetUrl('assets/diagrams/attribution-architecture-light.svg')}
                 alt="Executive Technology Portfolio: Ads Measurement, AI Products & Systems Architecture Blueprint"
+                width={1200}
+                height={675}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-auto rounded-lg"
                 onError={(e) => {
                   const target = e.currentTarget;
@@ -116,7 +120,7 @@ export const ExecutiveView: React.FC<ExecutiveViewProps> = ({ content = defaultC
           </div>
         </section>
 
-        {/* 4. Chapter III: Leadership Dossier / Career Timeline */}
+        {/* 4. Chapter III: Leadership Journey & Career Timeline */}
         <ExperienceTimeline experience={experience} />
 
         {/* 5. Chapter IV: Intellectual Property & US Patents */}

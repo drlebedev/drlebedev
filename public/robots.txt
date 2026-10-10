@@ -41,4 +41,4 @@ Sitemap: https://drlebedev.com/sitemap.xml
 
 # LLM Standard Discovery Feeds
 # LLM Summary: https://drlebedev.com/llms.txt
-# LLM Full Dossier: https://drlebedev.com/llms-full.txt
+# LLM Comprehensive Overview: https://drlebedev.com/llms-full.txt

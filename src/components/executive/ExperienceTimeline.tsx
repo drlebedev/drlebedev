@@ -55,7 +55,7 @@ export const ExperienceTimeline: React.FC<ExperienceTimelineProps> = ({ experien
 
             return (
               <div key={item.id} className="relative group">
-                {/* Dossier Pin */}
+                {/* Timeline Pin */}
                 <div
                   className={`absolute -left-[31px] sm:-left-[47px] top-1.5 w-5 h-5 bg-[#050b14] border-2 rounded-full flex items-center justify-center group-hover:scale-125 transition-transform ${
                     item.isCurrent
