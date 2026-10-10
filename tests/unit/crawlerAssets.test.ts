@@ -29,6 +29,21 @@ describe('Crawler Assets and Static Configuration (US3 / T044)', () => {
     });
   });
 
+  describe('public/llms-full.txt', () => {
+    const llmsFullPath = path.join(publicDir, 'llms-full.txt');
+
+    it('exists and contains complete unabridged executive and doctrine data', () => {
+      expect(fs.existsSync(llmsFullPath)).toBe(true);
+      const content = fs.readFileSync(llmsFullPath, 'utf-8');
+      expect(content.length).toBeGreaterThan(1000);
+      expect(content).toContain('Kirill Lebedev');
+      expect(content).toContain('Bayesian Causal Inference');
+      expect(content).toContain('Differential Privacy');
+      expect(content).toContain('Scaled Identity Graph');
+      expect(content).toContain('11,968,185');
+    });
+  });
+
   describe('public/sitemap.xml', () => {
     const sitemapPath = path.join(publicDir, 'sitemap.xml');
 

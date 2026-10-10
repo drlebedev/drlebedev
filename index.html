@@ -9,6 +9,7 @@
       content="Official executive profile of Kirill Lebedev, PhD. Director of Engineering and overall Ads Measurement leader at LinkedIn. $1B+ Ads bootstrap, $100M+ ARR AI scaling, 3 issued US patents."
     />
     <link rel="canonical" href="https://drlebedev.com" />
+    <link rel="alternate" type="text/markdown" href="https://drlebedev.com/llms.txt" title="LLM Briefing" />
 
     <!-- Open Graph / LinkedIn / Facebook -->
     <meta property="og:type" content="profile" />
@@ -32,6 +33,47 @@
     />
     <meta name="twitter:image" content="https://drlebedev.com/assets/images/og-card.png" />
 
+    <!-- Static Schema.org Person & Profile Entity -->
+    <script id="static-ld-json" type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://drlebedev.com/#person",
+      "name": "Kirill Lebedev",
+      "honorificSuffix": "PhD",
+      "jobTitle": "Director of Engineering | AI & Ads Measurement Leader",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com"
+      },
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Irkutsk National Research Technical University"
+        }
+      ],
+      "url": "https://drlebedev.com",
+      "image": "https://drlebedev.com/assets/images/portrait.webp",
+      "sameAs": [
+        "https://www.linkedin.com/in/drlebedev/",
+        "https://github.com/drlebedev",
+        "https://patents.google.com/patent/US11968185",
+        "https://patents.google.com/patent/US11232254",
+        "https://patents.google.com/patent/US11102534"
+      ],
+      "knowsAbout": [
+        "Ads Measurement",
+        "Multi-Touch Attribution",
+        "Bayesian Causal Inference",
+        "Differential Privacy",
+        "Identity Resolution Graphs",
+        "Distributed Systems Architecture",
+        "Generative AI Monetization"
+      ]
+    }
+    </script>
+
     <!-- Favicon & Touch Icons -->
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="alternate icon" href="./favicon.ico" />
@@ -46,7 +88,26 @@
     />
   </head>
   <body class="bg-forest-noir text-on-surface antialiased selection:bg-gold-burnished/30 selection:text-gold-light">
-    <div id="root"></div>
+    <div id="root">
+      <noscript>
+        <header>
+          <h1>Kirill Lebedev, PhD</h1>
+          <p>Director of Engineering | AI &amp; Ads Measurement Leader at LinkedIn</p>
+        </header>
+        <main>
+          <p>I lead engineering organizations that bridge foundational computer science with large-scale commercial impact. Directing a 40–70+ person organization at LinkedIn across Audience, Identity, Incrementality, Recommendations, and Measurement.</p>
+          <ul>
+            <li>$1B+ Brand Advertising line of business bootstrap (~20% of total ad revenue)</li>
+            <li>$100M+ ARR AI scaling in 6 months (LinkedIn Accelerate)</li>
+            <li>25% of total ad revenue covered by causal Bayesian incrementality measurement</li>
+            <li>3 Issued US Patents: US 11,968,185 | US 11,232,254 | US 11,102,534</li>
+            <li>PhD in Computer Science, INRTU; Summa cum laude in Systems Engineering</li>
+          </ul>
+          <p>Contact: <a href="mailto:kirill@drlebedev.com">kirill@drlebedev.com</a> | <a href="https://www.linkedin.com/in/drlebedev/">LinkedIn</a></p>
+          <p>LLM Machine-Readable Feeds: <a href="/llms.txt">llms.txt</a> | <a href="/llms-full.txt">llms-full.txt</a></p>
+        </main>
+      </noscript>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
