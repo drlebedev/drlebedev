@@ -27,6 +27,25 @@ describe('Crawler Assets and Static Configuration (US3 / T044)', () => {
       expect(content).toContain('11,102,534');
       expect(content).toContain('PhD');
     });
+
+    it('contains standard Markdown hyperlinks adhering to llmstxt.org specification', () => {
+      const content = fs.readFileSync(llmsPath, 'utf-8');
+      expect(content).toMatch(/\[.+\]\(https?:\/\/.+\)/);
+      expect(content).toContain('[LLM Comprehensive Overview](https://drlebedev.com/llms-full.txt)');
+    });
+  });
+
+  describe('public/.well-known/ai-catalog.json', () => {
+    const catalogPath = path.join(publicDir, '.well-known', 'ai-catalog.json');
+
+    it('exists and is valid ARD manifest JSON', () => {
+      expect(fs.existsSync(catalogPath)).toBe(true);
+      const parsed = JSON.parse(fs.readFileSync(catalogPath, 'utf-8'));
+      expect(parsed.specVersion).toBe('1.0');
+      expect(parsed.host.displayName).toContain('Kirill Lebedev');
+      expect(Array.isArray(parsed.entries)).toBe(true);
+      expect(parsed.entries.length).toBeGreaterThanOrEqual(1);
+    });
   });
 
   describe('public/llms-full.txt', () => {

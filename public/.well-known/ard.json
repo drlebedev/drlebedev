@@ -1,0 +1,21 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Kirill Lebedev, PhD",
+    "identifier": "https://drlebedev.com"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:drlebedev.com:documentation:llms-brief",
+      "displayName": "Executive Briefing for LLMs",
+      "type": "text/markdown",
+      "url": "https://drlebedev.com/llms.txt"
+    },
+    {
+      "identifier": "urn:air:drlebedev.com:documentation:llms-full",
+      "displayName": "Comprehensive Executive Profile for LLMs",
+      "type": "text/markdown",
+      "url": "https://drlebedev.com/llms-full.txt"
+    }
+  ]
+}

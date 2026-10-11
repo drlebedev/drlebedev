@@ -1,15 +1,19 @@
 {
-  "name": "Kirill Lebedev, PhD — Executive Profile",
-  "description": "Official executive profile, technical doctrine, and AI measurement systems architecture of Kirill Lebedev, PhD.",
-  "url": "https://drlebedev.com",
-  "resources": [
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Kirill Lebedev, PhD",
+    "identifier": "https://drlebedev.com"
+  },
+  "entries": [
     {
-      "name": "LLM Briefing",
+      "identifier": "urn:air:drlebedev.com:documentation:llms-brief",
+      "displayName": "Executive Briefing for LLMs",
       "type": "text/markdown",
       "url": "https://drlebedev.com/llms.txt"
     },
     {
-      "name": "LLM Comprehensive Career Overview",
+      "identifier": "urn:air:drlebedev.com:documentation:llms-full",
+      "displayName": "Comprehensive Executive Profile for LLMs",
       "type": "text/markdown",
       "url": "https://drlebedev.com/llms-full.txt"
     }

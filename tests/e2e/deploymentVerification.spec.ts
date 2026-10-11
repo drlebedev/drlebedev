@@ -42,6 +42,18 @@ test.describe('Deployment & Multi-Target Discovery Verification (Playwright)', (
       expect(text).toContain('User-agent: *');
       expect(text).toContain('Allow: /');
       expect(text).toContain('Sitemap: https://drlebedev.com/sitemap.xml');
+      expect(text).toContain('Agentmap: https://drlebedev.com/.well-known/ai-catalog.json');
+    });
+
+    test('serves public/.well-known/ai-catalog.json with valid ARD manifest', async ({ request }) => {
+      const response = await request.get('.well-known/ai-catalog.json');
+      expect(response.status()).toBe(200);
+
+      const json = await response.json();
+      expect(json.specVersion).toBe('1.0');
+      expect(json.host.displayName).toContain('Kirill Lebedev');
+      expect(Array.isArray(json.entries)).toBe(true);
+      expect(json.entries.length).toBeGreaterThanOrEqual(1);
     });
 
     test('serves key brand visual assets with valid content and headers', async ({ request }) => {
