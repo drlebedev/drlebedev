@@ -19,6 +19,15 @@ handlers:
     http_headers:
       Cache-Control: "public, max-age=86400"
 
+  # Well-known discovery manifests for AI agent discovery
+  - url: /.well-known/(ai-catalog\.json|ard\.json)
+    static_files: dist/.well-known/\1
+    upload: dist/.well-known/(ai-catalog\.json|ard\.json)
+    expiration: "1d"
+    http_headers:
+      Cache-Control: "public, max-age=86400"
+      X-Content-Type-Options: nosniff
+
   # Single Page Application fallback for HTML
   - url: /.*
     static_files: dist/index.html

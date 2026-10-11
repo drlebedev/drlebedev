@@ -38,6 +38,7 @@ Allow: /
 
 # Discovery Endpoints
 Sitemap: https://drlebedev.com/sitemap.xml
+Agentmap: https://drlebedev.com/.well-known/ai-catalog.json
 
 # LLM Standard Discovery Feeds
 # LLM Summary: https://drlebedev.com/llms.txt
