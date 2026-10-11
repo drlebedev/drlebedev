@@ -33,7 +33,7 @@ export const ExecutiveView: React.FC<ExecutiveViewProps> = ({ content = defaultC
         {/* 3. Chapter I & II: Technical Doctrine & Systems Architecture */}
         <section
           id="doctrine"
-          className="relative w-full py-20 bg-forest-noir border-b border-gold-prestige/20"
+          className="section-deferred relative w-full py-20 bg-forest-noir border-b border-gold-prestige/20"
         >
           {/* Subtle Geometric Background */}
           <div
@@ -121,19 +121,29 @@ export const ExecutiveView: React.FC<ExecutiveViewProps> = ({ content = defaultC
         </section>
 
         {/* 4. Chapter III: Leadership Journey & Career Timeline */}
-        <ExperienceTimeline experience={experience} />
+        <div className="section-deferred">
+          <ExperienceTimeline experience={experience} />
+        </div>
 
         {/* 5. Chapter IV: Intellectual Property & US Patents */}
-        <PatentsSection patents={patents} />
+        <div className="section-deferred">
+          <PatentsSection patents={patents} />
+        </div>
 
         {/* 6. Chapter V: Academic Foundation & Doctoral Pedigree */}
-        <EducationSection education={education} />
+        <div className="section-deferred">
+          <EducationSection education={education} />
+        </div>
 
         {/* 7. Competency Matrix & Domain Mastery */}
-        <SkillsSection skills={skills} />
+        <div className="section-deferred">
+          <SkillsSection skills={skills} />
+        </div>
 
         {/* 8. Chapter VI & Footer: Advisory & Verified Channels */}
-        <ExecutiveFooter profile={profile} />
+        <div className="section-deferred">
+          <ExecutiveFooter profile={profile} />
+        </div>
       </main>
     </div>
   );
