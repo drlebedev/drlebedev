@@ -1,6 +1,6 @@
 import React from 'react';
 import { EducationItem } from '../../types/content';
-import { GraduationCap, Award, BookOpen, ExternalLink } from 'lucide-react';
+import { GraduationCap, Award, BookOpen, ExternalLink, Download } from 'lucide-react';
 
 export interface EducationSectionProps {
   education: EducationItem[];
@@ -98,12 +98,22 @@ export const EducationSection: React.FC<EducationSectionProps> = ({ education })
                 </div>
 
                 {/* Right Action */}
-                <div className="shrink-0 w-full sm:w-auto">
+                <div className="shrink-0 w-full sm:w-auto flex flex-col sm:flex-row lg:flex-col gap-2.5">
+                  {item.thesisTitle && (
+                    <a
+                      href="/assets/download/thesis.pdf"
+                      download="kirill-lebedev-phd-thesis.pdf"
+                      className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-gold-burnished/20 hover:bg-gold-burnished/40 border border-gold-prestige/60 hover:border-gold-prestige text-gold-light font-sans text-xs tracking-wider uppercase rounded transition-all w-full sm:w-auto shadow-md"
+                    >
+                      <Download className="w-3.5 h-3.5" />
+                      <span>Download Thesis (PDF)</span>
+                    </a>
+                  )}
                   <a
                     href="mailto:kirill@drlebedev.com?subject=Academic%20Research%20Inquiry"
                     className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-[#0a182e] hover:bg-[#142a4e] border border-gold-prestige/40 hover:border-gold-prestige text-gold-light font-sans text-xs tracking-wider uppercase rounded transition-all w-full sm:w-auto shadow-md"
                   >
-                    <span>Inquire About Research &amp; Thesis</span>
+                    <span>Inquire About Research</span>
                     <ExternalLink className="w-3.5 h-3.5" />
                   </a>
                 </div>

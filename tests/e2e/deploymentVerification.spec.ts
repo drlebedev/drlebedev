@@ -80,6 +80,18 @@ test.describe('Deployment & Multi-Target Discovery Verification (Playwright)', (
       expect(diagramRes.status()).toBe(200);
       const diagramBody = await diagramRes.body();
       expect(diagramBody.length).toBeGreaterThan(5000);
+
+      // Executive Resume PDF
+      const resumeRes = await request.get('assets/drlebedev-resume.pdf');
+      expect(resumeRes.status()).toBe(200);
+      const resumeBody = await resumeRes.body();
+      expect(resumeBody.length).toBeGreaterThan(50000);
+
+      // PhD Dissertation PDF
+      const thesisRes = await request.get('assets/download/thesis.pdf');
+      expect(thesisRes.status()).toBe(200);
+      const thesisBody = await thesisRes.body();
+      expect(thesisBody.length).toBeGreaterThan(100000);
     });
   });
 
