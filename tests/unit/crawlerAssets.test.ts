@@ -103,6 +103,27 @@ describe('Crawler Assets and Static Configuration (US3 / T044)', () => {
     });
   });
 
+  describe('public/assets PDF credentials', () => {
+    const resumePath = path.join(publicDir, 'assets', 'drlebedev-resume.pdf');
+    const thesisPath = path.join(publicDir, 'assets', 'download', 'thesis.pdf');
+
+    it('ensures drlebedev-resume.pdf exists and is a valid non-empty PDF', () => {
+      expect(fs.existsSync(resumePath)).toBe(true);
+      const stat = fs.statSync(resumePath);
+      expect(stat.size).toBeGreaterThan(50000);
+      const buffer = fs.readFileSync(resumePath);
+      expect(buffer.subarray(0, 5).toString('ascii')).toBe('%PDF-');
+    });
+
+    it('ensures download/thesis.pdf exists and is a valid non-empty PDF', () => {
+      expect(fs.existsSync(thesisPath)).toBe(true);
+      const stat = fs.statSync(thesisPath);
+      expect(stat.size).toBeGreaterThan(100000);
+      const buffer = fs.readFileSync(thesisPath);
+      expect(buffer.subarray(0, 5).toString('ascii')).toBe('%PDF-');
+    });
+  });
+
   describe('app.yaml', () => {
     const appYamlPath = path.join(rootDir, 'app.yaml');
 
